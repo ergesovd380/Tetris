@@ -1,0 +1,104 @@
+.header {
+// First Section
+  &_fsec {
+    @include flex-all-sb;
+    height: 94px;
+  }
+  &_account {
+    display: flex;
+
+    &-select {
+      padding: 8px 20px 10px;
+      margin-right: 124px;
+      border: 1px solid var(--black);
+      border-radius: 26px;
+      @include title_h5;
+
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+
+      background: url(../../assets/images/icons/select-arrow.svg) no-repeat;
+      background-position: 90% center;
+    }
+
+    &-data {
+      @include flex-all-sb;
+    }
+
+    &-img {
+      margin-right: 16px;
+      width: 39px;
+      height: 39px;
+      border: 1px solid var(--white);
+      border-radius: 50%;
+      box-shadow: 0px 4px 3px 1px rgba(0, 0, 0, 0.2);
+    }
+
+    &-out {
+      margin-left: 26px;
+    }
+  }
+
+// Second Section
+  &_ssec {
+    background-color: var(--green);
+  }
+  &_pages {
+    height: 52px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    color: var(--white);
+
+    &-item {
+      height: 100%;
+      cursor: pointer;
+      @include flex-all-center;
+
+      &:hover {
+        background-color: var(--orange);
+      }
+
+      &:is(.active) {
+        background-color: var(--orange);
+      }
+    }
+  }
+
+// Third Section
+  &_tsec {
+    background-color: var(--gray-header);
+
+    &-items {
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: end;
+    }
+
+    &-data {
+      margin-right: 40px;
+    }
+
+    &-heart {
+      margin-left: 18px;
+      position: relative;
+
+      &-count {
+        width: 18px;
+        height: 18px;
+        background-color: var(--orange);
+        color: var(--white);
+        border: none;
+        border-radius: 50%;
+
+        @include flex-all-center;
+        @include title_h6;
+
+        position: absolute;
+        top: -10px;
+        left: 10px;
+      }
+    }
+  }
+}

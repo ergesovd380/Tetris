@@ -1,0 +1,156 @@
+@font-face {
+  font-family: AireExterior;
+  src: url(../../assets/fonts/AireExterior.ttf);
+}
+@font-face {
+  font-family: Inter Bolt;
+  src: url(../../assets/fonts/Inter-Bold.ttf);
+}
+@font-face {
+  font-family: Inter Semi Bolt;
+  src: url(../../assets/fonts/Inter-SemiBold.ttf);
+}
+@font-face {
+  font-family: Inter Regular;
+  src: url(../../assets/fonts/Inter-Regular.ttf);
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+body{
+  background-color: var(--gray-bcg);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.header {
+  flex: 1 0 auto;
+}
+.footer {
+  flex: 0 0 auto;
+}
+
+.section {
+  margin: 30px 0 10px 0;
+
+  &_title {
+    display: flex;
+    align-items: end;
+
+    @include for-big-tablet {
+      @include flex-all-sb;
+    }
+  }
+
+  &_link {
+    margin: 0 0 7px 50px;
+    color: var(--dark);
+    text-decoration: underline;
+  }
+
+  &_banner {
+    margin-top: 30px;
+
+    @include for-tablet {
+      margin-top: 0;
+    }
+  }
+
+  &_categories {
+    margin: 0 0 10px 0;
+  }
+}
+
+.title {
+  @include for-tablet {
+    margin-top: 30px;
+  }
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+  color: var(--dark);
+
+  &:hover {
+    color: var(--dark);
+  }
+}
+
+dialog {
+  border: none;
+  border-radius: 5px;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--optianal-gray);
+
+  &_product {
+    display: none;
+    // 767.5px
+    @include for-tablet {
+      margin: 20px 0;
+      display: block;
+    }
+  }
+
+  &-vertical {
+    width: 1px;
+    min-height: 100%;
+    margin: 0 30px;
+    background-color: var(--optianal-gray);
+    // 767.5px
+    @include for-tablet {
+      display: none;
+    }
+  }
+
+  &-mob {
+    width: 1px;
+    min-height: 70%;
+    background-color: var(--optianal-gray);
+  }
+}
+
+.pagination-row {
+  margin-top: 30px;
+
+  @include for-tablet {
+    margin-top: 20px;
+  }
+}
+
+.pagination {
+  @include for-tablet {
+    justify-content: center;
+  }
+}
+
+.all_sb {
+  @include flex-all-sb;
+}
+
+.pointer {
+  cursor: pointer;
+}

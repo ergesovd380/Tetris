@@ -1,0 +1,38 @@
+.btn {
+
+  &_regular {
+    padding: 14px 39px;
+    background-color: var(--blue);
+    color: var(--white);
+    border: none;
+    border-radius: 10px;
+    
+    @include title_h4;
+
+    &:hover {
+      background-color: var(--orange);
+    }
+
+    &:is(.disabled) {
+      background-color: var(--gray);
+    }
+  }
+
+  &_small {
+    padding: 13px 25px;
+    background-color: var(--black);
+    color: var(--white);
+    border: none;
+    border-radius: 10px;
+    
+    @include title_h5;
+
+    &:hover {
+      background-color: var(--orange);
+    }
+
+    &:is(.disabled) {
+      background-color: var(--gray);
+    }
+  }
+}

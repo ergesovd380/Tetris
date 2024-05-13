@@ -1,0 +1,353 @@
+:root {
+  --bgc: #F6F4F0;
+  --white: #fff;
+  --blue: #00A0E2;
+  --orange: #FF6000;
+  --gray: #C2C2C2;
+  --black: #131313;
+  --green: #00AA40;
+  --gray-header: #ECE8DF;
+}
+
+/* stylelint-disable */
+@font-face {
+  font-family: AireExterior;
+  src: url(../../assets/fonts/AireExterior.ttf);
+}
+@font-face {
+  font-family: Inter Bolt;
+  src: url(../../assets/fonts/Inter-Bold.ttf);
+}
+@font-face {
+  font-family: Inter Semi Bolt;
+  src: url(../../assets/fonts/Inter-SemiBold.ttf);
+}
+@font-face {
+  font-family: Inter Regular;
+  src: url(../../assets/fonts/Inter-Regular.ttf);
+}
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+body {
+  background-color: var(--gray-bcg);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.header {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex: 0 0 auto;
+}
+
+.section {
+  margin: 30px 0 10px 0;
+}
+.section_title {
+  display: flex;
+  align-items: end;
+}
+@media (max-width: 991.5px) {
+  .section_title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.section_link {
+  margin: 0 0 7px 50px;
+  color: var(--dark);
+  text-decoration: underline;
+}
+.section_banner {
+  margin-top: 30px;
+}
+@media (max-width: 767.5px) {
+  .section_banner {
+    margin-top: 0;
+  }
+}
+.section_categories {
+  margin: 0 0 10px 0;
+}
+
+@media (max-width: 767.5px) {
+  .title {
+    margin-top: 30px;
+  }
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+  color: var(--dark);
+}
+a:hover {
+  color: var(--dark);
+}
+
+dialog {
+  border: none;
+  border-radius: 5px;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--optianal-gray);
+}
+.divider_product {
+  display: none;
+}
+@media (max-width: 767.5px) {
+  .divider_product {
+    margin: 20px 0;
+    display: block;
+  }
+}
+.divider-vertical {
+  width: 1px;
+  min-height: 100%;
+  margin: 0 30px;
+  background-color: var(--optianal-gray);
+}
+@media (max-width: 767.5px) {
+  .divider-vertical {
+    display: none;
+  }
+}
+.divider-mob {
+  width: 1px;
+  min-height: 70%;
+  background-color: var(--optianal-gray);
+}
+
+.pagination-row {
+  margin-top: 30px;
+}
+@media (max-width: 767.5px) {
+  .pagination-row {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 767.5px) {
+  .pagination {
+    justify-content: center;
+  }
+}
+
+.all_sb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.title_h1 {
+  font-family: "AireExterior";
+  font-size: 52px;
+  font-weight: 400;
+  line-height: 52px;
+}
+@media (max-width: 767.5px) {
+  .title_h1 {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+.title_h2 {
+  font-family: "Inter Bolt";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24.2px;
+}
+.title_h3 {
+  font-family: "Inter Bolt";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.09px;
+}
+.title_h4 {
+  font-family: "Inter Semi Bolt";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 18.75px;
+}
+.title_h5 {
+  font-family: "Inter Regular";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.41px;
+}
+.title_h6 {
+  font-family: "Inter Regular";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.06px;
+}
+
+.link {
+  font-family: "Inter Regular";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.41px;
+  text-decoration: underline;
+}
+
+.btn_regular {
+  padding: 14px 39px;
+  background-color: var(--blue);
+  color: var(--white);
+  border: none;
+  border-radius: 10px;
+  font-family: "Inter Semi Bolt";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 18.75px;
+}
+.btn_regular:hover {
+  background-color: var(--orange);
+}
+.btn_regular:is(.disabled) {
+  background-color: var(--gray);
+}
+.btn_small {
+  padding: 13px 25px;
+  background-color: var(--black);
+  color: var(--white);
+  border: none;
+  border-radius: 10px;
+  font-family: "Inter Regular";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.41px;
+}
+.btn_small:hover {
+  background-color: var(--orange);
+}
+.btn_small:is(.disabled) {
+  background-color: var(--gray);
+}
+
+.header_fsec {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 94px;
+}
+.header_account {
+  display: flex;
+}
+.header_account-select {
+  padding: 8px 20px 10px;
+  margin-right: 124px;
+  border: 1px solid var(--black);
+  border-radius: 26px;
+  font-family: "Inter Regular";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.41px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url(../../assets/images/icons/select-arrow.svg) no-repeat;
+  background-position: 90% center;
+}
+.header_account-data {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header_account-img {
+  margin-right: 16px;
+  width: 39px;
+  height: 39px;
+  border: 1px solid var(--white);
+  border-radius: 50%;
+  box-shadow: 0px 4px 3px 1px rgba(0, 0, 0, 0.2);
+}
+.header_account-out {
+  margin-left: 26px;
+}
+.header_ssec {
+  background-color: var(--green);
+}
+.header_pages {
+  height: 52px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  color: var(--white);
+}
+.header_pages-item {
+  height: 100%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header_pages-item:hover {
+  background-color: var(--orange);
+}
+.header_pages-item:is(.active) {
+  background-color: var(--orange);
+}
+.header_tsec {
+  background-color: var(--gray-header);
+}
+.header_tsec-items {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.header_tsec-data {
+  margin-right: 40px;
+}
+.header_tsec-heart {
+  margin-left: 18px;
+  position: relative;
+}
+.header_tsec-heart-count {
+  width: 18px;
+  height: 18px;
+  background-color: var(--orange);
+  color: var(--white);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inter Regular";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.06px;
+  position: absolute;
+  top: -10px;
+  left: 10px;
+}/*# sourceMappingURL=main.css.map */
