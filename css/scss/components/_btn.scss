@@ -9,7 +9,8 @@
     
     @include title_h4;
 
-    &:hover {
+    &:hover,
+    &:is(.active) {
       background-color: var(--orange);
     }
 
@@ -27,7 +28,8 @@
     
     @include title_h5;
 
-    &:hover {
+    &:hover,
+    &:is(.active) {
       background-color: var(--orange);
     }
 

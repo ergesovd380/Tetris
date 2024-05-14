@@ -20,54 +20,37 @@ html {
   height: 100%;
 }
 
-body{
-  background-color: var(--gray-bcg);
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+body {
+  min-height: 100vh;
+  margin: 0;
+  background-color: var(--bgc);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
-.header {
-  flex: 1 0 auto;
-}
-.footer {
-  flex: 0 0 auto;
+header {
+  min-height: 50px;
 }
 
-.section {
-  margin: 30px 0 10px 0;
+footer {
+  min-height: 50px;
+}
 
-  &_title {
-    display: flex;
-    align-items: end;
-
-    @include for-big-tablet {
-      @include flex-all-sb;
-    }
-  }
-
-  &_link {
-    margin: 0 0 7px 50px;
-    color: var(--dark);
-    text-decoration: underline;
-  }
-
-  &_banner {
-    margin-top: 30px;
-
-    @include for-tablet {
-      margin-top: 0;
-    }
-  }
-
-  &_categories {
-    margin: 0 0 10px 0;
-  }
+section {
+  margin-top: 50px;
 }
 
 .title {
-  @include for-tablet {
-    margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--white);
+
+  &:hover {
+    text-decoration: none;
+    color: var(--white);
   }
 }
 
@@ -75,20 +58,6 @@ img {
   height: auto;
   max-width: 100%;
   object-fit: cover;
-}
-
-a {
-  text-decoration: none;
-  color: var(--dark);
-
-  &:hover {
-    color: var(--dark);
-  }
-}
-
-dialog {
-  border: none;
-  border-radius: 5px;
 }
 
 .navbar-toggler:focus {
@@ -101,56 +70,25 @@ dialog {
   padding: 0;
 }
 
-.divider {
-  width: 100%;
-  height: 1px;
-  background-color: var(--optianal-gray);
-
-  &_product {
-    display: none;
-    // 767.5px
-    @include for-tablet {
-      margin: 20px 0;
-      display: block;
-    }
-  }
-
-  &-vertical {
-    width: 1px;
-    min-height: 100%;
-    margin: 0 30px;
-    background-color: var(--optianal-gray);
-    // 767.5px
-    @include for-tablet {
-      display: none;
-    }
-  }
-
-  &-mob {
-    width: 1px;
-    min-height: 70%;
-    background-color: var(--optianal-gray);
+input {
+  &:focus {
+    outline: none;
   }
 }
 
-.pagination-row {
-  margin-top: 30px;
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
 
-  @include for-tablet {
-    margin-top: 20px;
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  &:focus {
+    outline: none;
   }
-}
-
-.pagination {
-  @include for-tablet {
-    justify-content: center;
-  }
-}
-
-.all_sb {
-  @include flex-all-sb;
-}
-
-.pointer {
-  cursor: pointer;
 }

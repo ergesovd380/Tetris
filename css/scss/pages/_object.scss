@@ -1,0 +1,26 @@
+.object {
+  
+  &_title {
+    margin-bottom: 30px;
+  }
+
+  &_btn {
+    margin-right: 30px;
+  }
+
+  &_form {
+    margin-top: 30px;
+    padding: 30px;
+    background-color: var(--white);
+    border-radius: 5px;
+    
+    &-input {
+      margin-top: 20px;
+    }
+
+    &-flex {
+      @include flex-all-sb;
+    }
+  }
+}
+

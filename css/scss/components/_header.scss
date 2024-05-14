@@ -1,8 +1,12 @@
 .header {
 // First Section
   &_fsec {
-    @include flex-all-sb;
-    height: 94px;
+    background-color: var(--white);
+    
+    &-items {
+      height: 94px;
+      @include flex-all-sb;
+    }
   }
   &_account {
     display: flex;
@@ -13,10 +17,6 @@
       border: 1px solid var(--black);
       border-radius: 26px;
       @include title_h5;
-
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
 
       background: url(../../assets/images/icons/select-arrow.svg) no-repeat;
       background-position: 90% center;
@@ -52,13 +52,12 @@
 
     &-item {
       height: 100%;
+      position: relative;
       cursor: pointer;
+
       @include flex-all-center;
 
-      &:hover {
-        background-color: var(--orange);
-      }
-
+      &:hover,
       &:is(.active) {
         background-color: var(--orange);
       }
