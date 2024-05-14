@@ -1,0 +1,65 @@
+.nav-cards {
+  display: flex;
+  justify-content: end;
+}
+
+.cards-type {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+
+  &-icon {
+    margin-right: 10px;
+  }
+
+  &:is(.active) {
+    color: var(--orange);
+  }
+
+  &:is(.active) > div > .type_list,
+  &:is(.active) > div > .type_tile,
+  &:is(.active) > div > div > .type_chess,
+  &:is(.active) > div > .type_chess {
+    background-color: var(--orange);
+  }
+}
+
+.type {
+  &_list {
+    width: 15px;
+    height: 2px;
+    margin-bottom: 3px;
+    display: block;
+    border-radius: 1px;
+    background-color: var(--black);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &_tile {
+    width: 7px;
+    height: 6px;
+    margin: 0 1px 1px 0;
+    border-radius: 1px;
+    background-color: var(--black);
+  }
+
+  &_chess {
+    width: 7px;
+    height: 6px;
+    margin: 0 1px 1px 0;
+    border-radius: 1px;
+    background-color: var(--black);
+
+    &-top {
+      display: flex;
+    }
+
+    &-3 {
+      width: 15px;
+      height: 6px;
+    }
+  }
+}

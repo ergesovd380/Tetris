@@ -269,6 +269,59 @@ select:focus {
   left: 5%;
 }
 
+.nav-cards {
+  display: flex;
+  justify-content: end;
+}
+
+.cards-type {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+}
+.cards-type-icon {
+  margin-right: 10px;
+}
+.cards-type:is(.active) {
+  color: var(--orange);
+}
+.cards-type:is(.active) > div > .type_list, .cards-type:is(.active) > div > .type_tile, .cards-type:is(.active) > div > div > .type_chess, .cards-type:is(.active) > div > .type_chess {
+  background-color: var(--orange);
+}
+
+.type_list {
+  width: 15px;
+  height: 2px;
+  margin-bottom: 3px;
+  display: block;
+  border-radius: 1px;
+  background-color: var(--black);
+}
+.type_list:last-child {
+  margin-bottom: 0;
+}
+.type_tile {
+  width: 7px;
+  height: 6px;
+  margin: 0 1px 1px 0;
+  border-radius: 1px;
+  background-color: var(--black);
+}
+.type_chess {
+  width: 7px;
+  height: 6px;
+  margin: 0 1px 1px 0;
+  border-radius: 1px;
+  background-color: var(--black);
+}
+.type_chess-top {
+  display: flex;
+}
+.type_chess-3 {
+  width: 15px;
+  height: 6px;
+}
+
 .header_fsec {
   background-color: var(--white);
 }
@@ -383,4 +436,87 @@ select:focus {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.object_form-checkboxes {
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+}
+.object_form-types {
+  margin-top: 20px;
+  display: flex;
+}
+.object_form-types-radio {
+  width: 0;
+  height: 0;
+  position: absolute;
+  z-index: -1;
+}
+.object_form-types-checkbox-custom {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--gray-input);
+  border-radius: 5px;
+  vertical-align: sub;
+  position: relative;
+}
+.object_form-types-checkbox-custom::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  background-color: black;
+  background-image: url("../../assets/images/icons/checkbox.svg");
+  transform: scale(0);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+}
+.object_form-types-label {
+  margin-right: 30px;
+}
+.object_form-types-radio:checked + .object_form-types-label .object_form-types-checkbox-custom {
+  border: none;
+}
+.object_form-types-radio:checked + .object_form-types-label > .object_form-types-checkbox-custom::before {
+  transform: scale(1);
+}
+@media (max-width: 767.5px) {
+  .object_form-types-item {
+    margin-bottom: 20px;
+  }
+  .object_form-types-item:last-child {
+    margin: 0;
+  }
+}
+@media (max-width: 767.5px) {
+  .object_form-types {
+    display: block;
+  }
+}
+.object_form-btns {
+  margin-top: 58px;
+  display: flex;
+  align-items: center;
+  color: var(--gray-input);
+}
+.object_form-remove {
+  margin-left: 32px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.object_form-remove-garbage {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+}
+
+.cards {
+  margin-top: 40px;
 }/*# sourceMappingURL=main.css.map */

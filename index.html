@@ -199,12 +199,12 @@
                 <div>
                   <div class="title_h5 input_label">Срок сдачи</div>
                   <div class="custom-select custom-select_big title_h5">
-                    <div class="custom-select-selected-big way-selected">Выбор</div>
-                    <div class="custom-select-items way-items">
+                    <div class="custom-select-selected-big deadline-selected">Выбор</div>
+                    <div class="custom-select-items deadline-items">
                       <span class="custom-select-line-big"></span>
-                      <div class="custom-select-item way-item">100</div>
-                      <div class="custom-select-item way-item">200</div>
-                      <div class="custom-select-item way-item">300</div>
+                      <div class="custom-select-item deadline-item">100</div>
+                      <div class="custom-select-item deadline-item">200</div>
+                      <div class="custom-select-item deadline-item">300</div>
                     </div>  
                   </div>
                 </div>
@@ -213,24 +213,24 @@
                   <div class="col-6">
                     <div class="title_h5 input_label">Тип помещения</div>
                     <div class="custom-select custom-select_small title_h5">
-                      <div class="custom-select-selected number-selected">Выбор</div>
-                      <div class="custom-select-items number-items">
+                      <div class="custom-select-selected type-selected">Выбор</div>
+                      <div class="custom-select-items type-items">
                         <span class="custom-select-line"></span>
-                        <div class="custom-select-item number-item">100</div>
-                        <div class="custom-select-item number-item">200</div>
-                        <div class="custom-select-item number-item">300</div>
+                        <div class="custom-select-item type-item">100</div>
+                        <div class="custom-select-item type-item">200</div>
+                        <div class="custom-select-item type-item">300</div>
                       </div>  
                     </div>
                   </div>
                   <div class="col-6">
                     <div class="title_h5 input_label">Количество комнат</div>
                     <div class="custom-select custom-select_small title_h5">
-                      <div class="custom-select-selected korpus-selected">Выбор</div>
-                      <div class="custom-select-items korpus-items">
+                      <div class="custom-select-selected quantity-selected">Выбор</div>
+                      <div class="custom-select-items quantity-items">
                         <span class="custom-select-line"></span>
-                        <div class="custom-select-item korpus-item">100</div>
-                        <div class="custom-select-item korpus-item">200</div>
-                        <div class="custom-select-item korpus-item">300</div>
+                        <div class="custom-select-item quantity-item">100</div>
+                        <div class="custom-select-item quantity-item">200</div>
+                        <div class="custom-select-item quantity-item">300</div>
                       </div>  
                     </div>
                   </div>
@@ -248,12 +248,12 @@
                 <div class="object_form-input">
                   <div class="title_h5 input_label">Банк</div>
                   <div class="custom-select custom-select_big title_h5">
-                    <div class="custom-select-selected-big way-selected">Выбор</div>
-                    <div class="custom-select-items way-items">
+                    <div class="custom-select-selected-big bank-selected">Выбор</div>
+                    <div class="custom-select-items bank-items">
                       <span class="custom-select-line-big"></span>
-                      <div class="custom-select-item way-item">100</div>
-                      <div class="custom-select-item way-item">200</div>
-                      <div class="custom-select-item way-item">300</div>
+                      <div class="custom-select-item bank-item">100</div>
+                      <div class="custom-select-item bank-item">200</div>
+                      <div class="custom-select-item bank-item">300</div>
                     </div>  
                   </div>
                 </div>
@@ -264,12 +264,12 @@
                 <div>
                   <div class="title_h5 input_label">Срок передачи</div>
                   <div class="custom-select custom-select_big title_h5">
-                    <div class="custom-select-selected-big way-selected">Выбор</div>
-                    <div class="custom-select-items way-items">
+                    <div class="custom-select-selected-big term-selected">Выбор</div>
+                    <div class="custom-select-items term-items">
                       <span class="custom-select-line-big"></span>
-                      <div class="custom-select-item way-item">100</div>
-                      <div class="custom-select-item way-item">200</div>
-                      <div class="custom-select-item way-item">300</div>
+                      <div class="custom-select-item term-item">100</div>
+                      <div class="custom-select-item term-item">200</div>
+                      <div class="custom-select-item term-item">300</div>
                     </div>  
                   </div>
                 </div>
@@ -277,19 +277,53 @@
                 <div class="object_form-input">
                   <div class="title_h5 input_label">Отделка</div>
                   <div class="custom-select custom-select_big title_h5">
-                    <div class="custom-select-selected-big way-selected">Выбор</div>
-                    <div class="custom-select-items way-items">
+                    <div class="custom-select-selected-big finish-selected">Выбор</div>
+                    <div class="custom-select-items finish-items">
                       <span class="custom-select-line-big"></span>
-                      <div class="custom-select-item way-item">100</div>
-                      <div class="custom-select-item way-item">200</div>
-                      <div class="custom-select-item way-item">300</div>
+                      <div class="custom-select-item finish-item">100</div>
+                      <div class="custom-select-item finish-item">200</div>
+                      <div class="custom-select-item finish-item">300</div>
                     </div>  
+                  </div>
+                </div>
+                <!-- Checkboxes -->
+                <div class="object_form-checkboxes">
+                  <!-- Балкон -->
+                  <div class="object_form-types-item">
+                    <input class="object_form-types-radio" checked type="radio" name="checkbox-type" id="balcony">
+                    <label for="balcony" class="object_form-types-label title_h5">
+                      <span class="object_form-types-checkbox-custom"></span>
+                      Балкон
+                    </label>
+                  </div>
+                  <!-- Лоджия -->
+                  <div class="object_form-types-item">
+                    <input class="object_form-types-radio" type="radio" name="checkbox-type" id="loggia">
+                    <label for="loggia" class="object_form-types-label title_h5">
+                      <span class="object_form-types-checkbox-custom"></span>
+                      Лоджия
+                    </label>
+                  </div>
+                  <!-- Терраса -->
+                  <div class="object_form-types-item">
+                    <input class="object_form-types-radio" type="radio" name="checkbox-type" id="terrace">
+                    <label for="terrace" class="object_form-types-label title_h5">
+                      <span class="object_form-types-checkbox-custom"></span>
+                      Терраса
+                    </label>
+                  </div>
+                </div>
+                <!-- Btns -->
+                <div class="object_form-btns">
+                  <button class="btn_regular">Подобрать</button>
+                  <div class="object_form-remove">
+                    <img src="./assets/images/icons/garbage.svg" class="object_form-remove-garbage" alt="Garbage icon">
+                    <div class="link">Сбросить фильтр</div>
                   </div>
                 </div>
               </div>
             </div>
           </form>
-
         </div>
         <div 
           class="tab-pane fade" 
@@ -309,11 +343,80 @@
         </div>
       </div>
     </section>
+    <!-- Cards -->
+    <section class="container cards">
+      <!-- Cards type -->
+      <ul class="nav nav-cards" id="cards-tab" role="tablist">
+        <!-- Список -->
+        <li class="nav-item" role="presentation">
+          <div 
+            class="cards-type active" 
+            id="cards-tab-list" 
+            data-bs-toggle="pill" 
+            data-bs-target="#cards-list" 
+            role="tab" 
+            aria-controls="cards-list" 
+            aria-selected="true"
+          >
+            <div class="cards-type-icon">
+              <span class="type_list"></span>
+              <span class="type_list"></span>
+              <span class="type_list"></span>
+            </div>
+            Список
+          </div>
+        </li>
+        <!-- Плитка -->
+        <li class="nav-item" role="presentation">
+          <div
+            class="cards-type" 
+            id="cards-tab-tile" 
+            data-bs-toggle="pill" 
+            data-bs-target="#cards-tile" 
+            role="tab"
+            aria-controls="cards-tile" 
+            aria-selected="false"
+          >
+            <div>
+              <div class="type_tile"></div>
+              <div class="type_tile"></div>
+            </div>
+            <div class="cards-type-icon">
+              <div class="type_tile"></div>
+              <div class="type_tile"></div>
+            </div>
+            Плитка
+          </div>
+        </li>
+        <!-- Шахматка -->
+        <li class="nav-item" role="presentation">
+          <div
+            class="cards-type" 
+            id="cards-tab-tile" 
+            data-bs-toggle="pill" 
+            data-bs-target="#cards-tile" 
+            role="tab"
+            aria-controls="cards-tile" 
+            aria-selected="false"
+          >
+            <div class="cards-type-icon">
+              <div class="type_chess-top">
+                <div class="type_chess"></div>
+                <div class="type_chess"></div>
+              </div>
+              <div class="type_chess type_chess-3"></div>
+            </div>
+            Шахматка
+          </div>
+        </li>
+      </ul>
+
+    </section>
   </main>
 
   <footer class="footer">
     <div class="container">
-      <h1>Hello</h1>
+      <h1>Footer</h1>
     </div>
   </footer>
 

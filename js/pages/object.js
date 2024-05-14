@@ -54,6 +54,78 @@ floorSelected.addEventListener('click', ()=>{
     floorItems.classList.add('d-none');
   }
 })
+// Срок сдачи
+const deadlineSelected = document.querySelector('.deadline-selected');
+const deadlineItems = document.querySelector('.deadline-items');
+deadlineSelected.addEventListener('click', ()=>{
+  if(deadlineItems.classList.contains('d-none')) {
+    deadlineItems.classList.remove('d-none');
+    deadlineItems.classList.add('d-block');
+  } else {
+    deadlineItems.classList.remove('d-block');
+    deadlineItems.classList.add('d-none');
+  }
+})
+// Тип помещения
+const typeSelected = document.querySelector('.type-selected');
+const typeItems = document.querySelector('.type-items');
+typeSelected.addEventListener('click', ()=>{
+  if(typeItems.classList.contains('d-none')) {
+    typeItems.classList.remove('d-none');
+    typeItems.classList.add('d-block');
+  } else {
+    typeItems.classList.remove('d-block');
+    typeItems.classList.add('d-none');
+  }
+})
+// Количество комнат
+const quantitySelected = document.querySelector('.quantity-selected');
+const quantityItems = document.querySelector('.quantity-items');
+quantitySelected.addEventListener('click', ()=>{
+  if(quantityItems.classList.contains('d-none')) {
+    quantityItems.classList.remove('d-none');
+    quantityItems.classList.add('d-block');
+  } else {
+    quantityItems.classList.remove('d-block');
+    quantityItems.classList.add('d-none');
+  }
+})
+// Банк
+const bankSelected = document.querySelector('.bank-selected');
+const bankItems = document.querySelector('.bank-items');
+bankSelected.addEventListener('click', ()=>{
+  if(bankItems.classList.contains('d-none')) {
+    bankItems.classList.remove('d-none');
+    bankItems.classList.add('d-block');
+  } else {
+    bankItems.classList.remove('d-block');
+    bankItems.classList.add('d-none');
+  }
+})
+// Срок передачи
+const termSelected = document.querySelector('.term-selected');
+const termItems = document.querySelector('.term-items');
+termSelected.addEventListener('click', ()=>{
+  if(termItems.classList.contains('d-none')) {
+    termItems.classList.remove('d-none');
+    termItems.classList.add('d-block');
+  } else {
+    termItems.classList.remove('d-block');
+    termItems.classList.add('d-none');
+  }
+})
+// Отделка
+const finishSelected = document.querySelector('.finish-selected');
+const finishItems = document.querySelector('.finish-items');
+finishSelected.addEventListener('click', ()=>{
+  if(finishItems.classList.contains('d-none')) {
+    finishItems.classList.remove('d-none');
+    finishItems.classList.add('d-block');
+  } else {
+    finishItems.classList.remove('d-block');
+    finishItems.classList.add('d-none');
+  }
+})
 
 document.addEventListener("click", function(e) {
   // Номер
@@ -84,4 +156,47 @@ document.addEventListener("click", function(e) {
     floorItems.classList.remove('d-block');
     floorItems.classList.add('d-none');
   }
+  // Срок сдачи
+  if (e.target.classList.contains("deadline-item")) {
+    let item = e.target.innerText;
+    deadlineSelected.innerHTML = item;
+    deadlineItems.classList.remove('d-block');
+    deadlineItems.classList.add('d-none');
+  }
+  // Тип помещения
+  if (e.target.classList.contains("type-item")) {
+    let item = e.target.innerText;
+    typeSelected.innerHTML = item;
+    typeItems.classList.remove('d-block');
+    typeItems.classList.add('d-none');
+  }
+  // Количество комнат
+  if (e.target.classList.contains("quantity-item")) {
+    let item = e.target.innerText;
+    quantitySelected.innerHTML = item;
+    quantityItems.classList.remove('d-block');
+    quantityItems.classList.add('d-none');
+  }
+  // Банк
+  if (e.target.classList.contains("bank-item")) {
+    let item = e.target.innerText;
+    bankSelected.innerHTML = item;
+    bankItems.classList.remove('d-block');
+    bankItems.classList.add('d-none');
+  }
+  // Срок передачи
+  if (e.target.classList.contains("term-item")) {
+    let item = e.target.innerText;
+    termSelected.innerHTML = item;
+    termItems.classList.remove('d-block');
+    termItems.classList.add('d-none');
+  }
+  // Отделка
+  if (e.target.classList.contains("finish-item")) {
+    let item = e.target.innerText;
+    finishSelected.innerHTML = item;
+    finishItems.classList.remove('d-block');
+    finishItems.classList.add('d-none');
+  }
 });
+
