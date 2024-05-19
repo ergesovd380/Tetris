@@ -24,20 +24,14 @@ body {
   min-height: 100vh;
   margin: 0;
   background-color: var(--bgc);
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-}
-
-header {
-  min-height: 50px;
-}
-
-footer {
-  min-height: 50px;
 }
 
 section {
   margin-top: 50px;
+
+  @include for-tablet {
+    margin-top: 20px;
+  }
 }
 
 .title {
@@ -91,4 +85,18 @@ select {
   &:focus {
     outline: none;
   }
+}
+
+.offcanvas-header {
+  padding: 14px 8px;
+  position: relative;
+}
+.offcanvas-items {
+  padding: 40px 40px 0 40px;
+}
+.offcanvas-body {
+  max-width: 100%;
+}
+.offcanvas-footer {
+  background-color: var(--gray-header);
 }

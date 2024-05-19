@@ -1,0 +1,200 @@
+.object-card {
+  // title
+  &_addr {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+
+    &-text {
+      margin-right: 20px;
+    }
+  }
+
+  &_zaf {
+    margin-top: 20px;
+  }
+
+  // information
+  &_inf {
+    margin-top: 30px;
+
+    &-row1 {
+      padding: 10px 30px;
+      border-radius: 10px;
+      background-color: var(--white);
+      display: flex;
+      align-items: center;
+
+      @include for-small-laptop {
+        padding: 10px 20px;
+      }
+
+      @include for-tablet {
+        margin-top: 20px;
+      }
+
+      @include for-mobile {
+        padding: 10px;
+      }
+    }
+
+    &-divider {
+      width: 1px;
+      height: 63px;
+      margin: 0 23px 0 20px;
+      background-color: var(--gray-divider);
+
+      @include for-small-laptop {
+        margin: 0 10px;
+      }
+
+      @include for-big-tablet {
+        margin: 0 20px;
+      }
+
+      @include for-mobile {
+        margin: 0 10px;
+      }
+    }
+
+    &-size {
+      display: flex;
+      align-items: center;
+
+      &-icon {
+        padding: 2px 5px 5px;
+        margin-right: 12px;
+        border: 1.5px solid var(--black);
+        border-radius: 3px;
+      }
+    }
+
+    &-row2 {
+      min-height: 438px;
+      margin-top: 30px;
+      padding: 30px;
+      border-radius: 10px;
+      background-color: var(--white);
+
+      @include for-big-tablet {
+        min-height: auto;
+        margin-top: 20px;
+      }
+    }
+
+    &-data {
+      // height: 100%;
+      overflow: hidden;
+
+      &-title {
+        color: var(--gray-input);
+        margin-bottom: 20px;
+      }
+
+      &-btn {
+        margin-top: 30px;
+      }
+    }
+  }
+
+  // sale
+  &_sale {
+    margin-top: 20px;
+    display: flex;
+    
+    &-item {
+      padding: 30px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      color: var(--white);
+      border-radius: 10px;
+
+      &-1 {
+        margin-right: 15px;
+        background-image: url('../../../../assets/images/object-card/sale-1.svg');
+        border-bottom: 5px solid var(--green);
+
+        @include for-big-tablet {
+          margin-right: 0;
+        }
+      }
+      &-2 {
+        margin-left: 15px;
+        background-image: url('../../../../assets/images/object-card/sale-2.svg');
+        border-bottom: 5px solid var(--blue);
+
+        @include for-big-tablet {
+          margin-left: 0;
+          margin-top: 20px;
+        }
+      }
+    }
+
+    &-title {
+      max-width: 277px;
+    }
+
+    &-deadline {
+      margin-top: 11px;
+    }
+
+    &-text {
+      margin-top: 15px;
+
+      @include for-small-tablet {
+        width: 272px;
+      }
+    }
+
+    &-link {
+      margin-top: 16px;
+      display: flex;
+      justify-content: end;
+    }
+    &-link > a {
+      color: var(--orange);
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    @include for-big-tablet {
+      display: block;
+    }
+
+    @include for-tablet {
+      margin-top: 30px;
+    }
+  }
+
+  // filter
+  &_filter {
+    margin-top: 40px;
+  }
+}
+
+.form-switch .form-check-input {
+  width: 37px;
+  height: 20px;
+  margin-right: 10px;
+  background-image: url('../../../../assets/images/icons/checkbox-notactive.svg');
+  background-position: left center;
+  border: 2px solid #DCDCDC;
+  box-shadow: inset 0px 4px 3px 1px rgba(0, 0, 0, 0.1),;
+  border-radius: 2em;
+  transition: background-position .15s ease-in-out;
+
+  &:focus {
+    background-image: url('../../../../assets/images/icons/checkbox-notactive.svg');
+  }
+  &:checked {
+    background-color: var(--green);
+    background-image: url('../../../../assets/images/icons/checkbox-active.svg');
+    border: 2px solid #00AA40;
+  }
+}
+.form-check-label {
+  color: var(--gray-input);
+}

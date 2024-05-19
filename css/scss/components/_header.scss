@@ -20,6 +20,12 @@
 
       background: url(../../assets/images/icons/select-arrow.svg) no-repeat;
       background-position: 90% center;
+
+      @include for-big-tablet {
+        width: 100%;
+        margin-right: 0;
+        text-align: center;
+      }
     }
 
     &-data {
@@ -37,6 +43,16 @@
 
     &-out {
       margin-left: 26px;
+    }
+
+    &-mob {
+      position: absolute;
+      top: 40px;
+      left: 40px;
+    }
+
+    @include for-big-tablet {
+      display: none;
     }
   }
 
@@ -61,6 +77,26 @@
       &:is(.active) {
         background-color: var(--orange);
       }
+
+      @include for-big-tablet {
+        margin-top: 50px;
+        color: var(--black);
+
+        &:hover,
+        &:is(.active) {
+          color: var(--black);
+          background-color: transparent;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &-mob {
+      margin: 10px 0 40px;
+    }
+
+    @include for-big-tablet {
+      display: none;
     }
   }
 
@@ -73,10 +109,19 @@
       display: flex;
       align-items: center;
       justify-content: end;
+
+      @include for-big-tablet {
+        display: block;
+        text-align: center;
+      }
     }
 
     &-data {
       margin-right: 40px;
+
+      @include for-big-tablet {
+        margin: 0 0 20px 0;
+      }
     }
 
     &-heart {
@@ -98,6 +143,41 @@
         top: -10px;
         left: 10px;
       }
+
+      @include for-big-tablet {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+
+      }
     }
+
+    &-mob {
+      height: 170px;
+      padding: 40px;
+      background-color: var(--gray-header);
+      position: relative;
+    }
+
+    @include for-big-tablet {
+      display: none;
+    }
+  }
+
+  &_mobile {
+    display: none;
+
+    @include for-big-tablet {
+      display: block;
+    }
+  }
+
+  &_divider {
+    width: 1px;
+    height: 24px;
+    border-radius: 1px;
+    background-color: var(--white);
+    position: absolute;
+    right: 0;
   }
 }

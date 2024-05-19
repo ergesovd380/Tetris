@@ -9,28 +9,18 @@
     color: var(--gray-input);
     border: 1px solid var(--gray-input);
     border-radius: 5px;
-  }
 
-  &_small-select {
-    width: 178px;
-    padding: 15px 20px 14px;
-    color: var(--gray-input);
-    border: 1px solid var(--gray-input);
-    border-radius: 5px;
+    @include for-big-tablet {
+      width: 139px;
+    }
 
-    background: url(../../assets/images/icons/arrow-gray.svg) no-repeat;
-    background-position: 90% center;
-  }
+    @include for-tablet {
+      width: 160px;
+    }
 
-  &_big-select {
-    width: 100%;
-    padding: 15px 20px 14px;
-    color: var(--gray-input);
-    border: 1px solid var(--gray-input);
-    border-radius: 5px;
-
-    background: url(../../assets/images/icons/arrow-gray.svg) no-repeat;
-    background-position: 95% center;
+    @include for-mobile {
+      width: 139px;
+    }
   }
 }
 
@@ -41,16 +31,21 @@
   position: relative;
 
   &-selected {
-    padding: 15px 20px 14px;
     cursor: pointer;
     background: url(../../assets/images/icons/arrow-gray.svg) no-repeat;
-    background-position: 90% center;
+    // display: -webkit-box;
+    // -webkit-box-orient: vertical;
+    // -webkit-line-clamp: 1;
+    // overflow: hidden;
 
     &-big {
       padding: 15px 20px 14px;
-      cursor: pointer;
-      background: url(../../assets/images/icons/arrow-gray.svg) no-repeat;
       background-position: 95% center;
+    }
+
+    &-small {
+      padding: 15px 20px 14px;
+      background-position: 90% center;
     }
   }
 
@@ -68,29 +63,40 @@
     }
   }
   
-  &_small {
+  &-small {
     width: 178px;
+
+    @include for-big-tablet {
+      width: 139px;
+    }
+
+    @include for-tablet {
+      width: 160px;
+    }
+
+    @include for-mobile {
+      width: 139px;
+    }
   }
 
-  &_big {
+  &-big {
     width: 100%;
   }
 
   &-line {
-    width: 80%;
     height: 1px;
     background-color: var(--gray-input);
     position: absolute;
     top: 44px;
-    left: 10%;
 
     &-big {
       width: 90%;
-      height: 1px;
-      background-color: var(--gray-input);
-      position: absolute;
-      top: 44px;
       left: 5%;
+    }
+
+    &-small {
+      width: 80%;
+      left: 10%;
     }
   }
 }

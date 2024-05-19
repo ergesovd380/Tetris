@@ -8,7 +8,10 @@
 @import "./components/btn";
 @import "./components/input";
 @import "./components/card-types";
+@import "./components/swiper";
 @import "./components/header";
+@import "./components/footer";
 
 // Pages
-@import "./pages/object";
+@import "./pages/object/object";
+@import "./pages/object/object-card";

@@ -1,12 +1,19 @@
 .nav-cards {
   display: flex;
   justify-content: end;
+
+  &-object {
+    @include for-big-tablet {
+      display: none;
+    }
+  }
 }
 
 .cards-type {
   display: flex;
   align-items: center;
   margin-right: 30px;
+  cursor: pointer;
 
   &-icon {
     margin-right: 10px;

@@ -37,4 +37,12 @@
       background-color: var(--gray);
     }
   }
+
+  &_accardion {
+    width: 100%;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--white);
+  }
 }
