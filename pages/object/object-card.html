@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="../.../assets/images/logo/favicon.svg" type="image/x-icon">
+  <link rel="shortcut icon" href="../../assets/images/logo/favicon.svg" type="image/x-icon">
   <link rel="stylesheet" href="../../css/bootstrap.min.css">
   <link rel="stylesheet" href="../../css/normalize.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -138,7 +138,7 @@
   </header>
 
   <main class="container">
-    <!-- Object Section start -->
+    <!-- Object-card Section start -->
     <section class="object-card">
       <!-- Object title -->
       <div class="object-card_title">
@@ -305,13 +305,19 @@
         </div>
       </div>
     </section>
-    <!-- Object filter -->
+    <!-- Object-card filter -->
     <section class="object-card_filter">
       <!-- Object filter btns -->
       <div class="object_filter-btns">
-        <button class="btn_small object_btn active">Новостройки</button>
-        <button class="btn_small object_btn">Загородная</button>
-        <button class="btn_small object_btn">Зарубежная</button>
+        <button class="btn_small object_btn">Квартирография</button>
+        <button class="btn_small object_btn active" style="min-width: 195px; padding: 13px 20px;">Сводная информация</button>
+        <button class="btn_small object_btn">Отделка</button>
+        <button class="btn_small object_btn">Акции</button>
+        <button class="btn_small object_btn">Описание</button>
+        <button class="btn_small object_btn">Карта</button>
+        <button class="btn_small object_btn">Файлы</button>
+        <button class="btn_small object_btn">План</button>
+        <button class="btn_small object_btn">Новости</button>
       </div>
       <!-- Object filter title -->
       <div class="object_filter-title title_h1">Квартирография</div>
@@ -577,6 +583,1641 @@
               </div>
             </div>
           </form>
+        </div>
+      </div>
+    </section>
+    <!-- Object-card corpuse -->
+    <section class="object-card_corpuse">
+      <div class="object-card_corpuse-title">
+        <div class="title_h1">Корпус</div>
+        <div class="nav nav-cards" id="nav-tab" role="tablist">
+          <!-- Список -->
+          <div 
+            class="cards-type active" 
+            id="cards-tab-list" 
+            data-bs-toggle="tab" 
+            data-bs-target="#nav-list" 
+            role="tab" 
+            aria-controls="cards-list" 
+            aria-selected="true"
+          >
+            <!-- Icon -->
+            <div class="cards-type-icon">
+              <span class="type_list type_list-object"></span>
+              <span class="type_list type_list-object"></span>
+              <span class="type_list type_list-object"></span>
+            </div>
+            <span class="d-none d-sm-block">Список</span>
+          </div>
+          <!-- Плитка -->
+          <div 
+            class="cards-type" 
+            id="cards-tab-list" 
+            data-bs-toggle="tab" 
+            data-bs-target="#nav-tile" 
+            role="tab" 
+            aria-controls="cards-list" 
+            aria-selected="false"
+          >
+            <!-- Icon -->
+            <div>
+              <div class="type_tile type_tile-object"></div>
+              <div class="type_tile type_tile-object"></div>
+            </div>
+            <div class="cards-type-icon">
+              <div class="type_tile type_tile-object"></div>
+              <div class="type_tile type_tile-object"></div>
+            </div>
+            <span class="d-none d-sm-block">Плитка</span>
+          </div>
+          <!-- Шахматка -->
+          <div 
+            class="cards-type" 
+            id="cards-tab-list" 
+            data-bs-toggle="tab" 
+            data-bs-target="#nav-chess" 
+            role="tab" 
+            aria-controls="cards-list" 
+            aria-selected="false"
+          >
+            <!-- Icon -->
+            <div class="cards-type-icon">
+              <div class="type_chess-top">
+                <div class="type_chess type_chess-object"></div>
+                <div class="type_chess type_chess-object"></div>
+              </div>
+              <div class="type_chess type_chess-3 type_chess-3-object"></div>
+            </div>
+            <span class="d-none d-sm-block">Шахматка</span>
+          </div>
+        </div>
+      </div>
+      <div class="tab-content" id="nav-tabContent">
+        <!-- Type List -->
+        <div class="tab-pane fade show active" id="nav-list" role="tabpanel">
+          <div class="object-card_type">
+            <div class="accordion accordion-flush" id="accardionObjectList">
+              <div class="accordion-item">
+                <!-- List 1 -->
+                <div class="accordion-header accordion-list accordion-border">
+                  <div 
+                    class="row object-card_type-accordion-header collapsed"
+                    data-bs-toggle="collapse" 
+                    data-bs-target="#accardionObjectList1" 
+                  >
+                    <div class="col-6 col-sm-3 col-lg-2 object-card_type-accordion-header-title">
+                      <div class="title_h4">Студии</div>
+                    </div>
+                    <div class="object-card_type-accordion-header-center col-12 col-sm-5 col-md-6 col-lg-8">
+                      <div class="row">
+                        <div class="col-4 col-sm-5 col-xl-2">
+                          <div class="title_h5">от 27 м²</div>
+                        </div>
+                        <div class="col-8 col-sm-7 col-xl-10">
+                          <div class="title_h5">5,1–6,5 млн ₽</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3 col-lg-2 object-card_type-accordion-header-btn">
+                      <div class="link" style="margin-right: 10px;">19 предложений</div>
+                    </div>
+                  </div>
+                </div>
+                <div id="accardionObjectList1" class="accordion-collapse collapse" data-bs-parent="#accardionObjectList">
+                  <div class="object-card_type-list-body">
+                    <div class="object-card_type-list-body-column">
+                      <div class="object-card_type-list-body-number title_h5">№ 234</div>
+                      <div class="object-card_type-list-body-img">
+                        <img src="../../assets/images/object-card/object-card-list.svg" alt="Image">
+                      </div>
+                    </div>
+                    <div class="d-lg-flex align-items-center">
+                      <div class="object-card_type-list-body-center-f">
+                        <div class="object-card_type-list-body-item">
+                          <div class="title_h5 object-card_type-list-body-subtitle">Площадь</div>
+                          <div class="title_h5">25 м²</div>
+                        </div>
+                        <div class="object-card_type-list-body-item">
+                          <div class="title_h5 object-card_type-list-body-subtitle">Цена</div>
+                          <div class="title_h5">3 500 000 ₽</div>
+                        </div>
+                      </div>
+                      <div class="object-card_type-list-body-center">
+                        <div class="object-card_type-list-body-item">
+                          <div class="title_h5 object-card_type-list-body-subtitle">Цена за м²</div>
+                          <div class="title_h5">150 000 ₽</div>
+                        </div>
+                        <div class="object-card_type-list-body-item">
+                          <div class="title_h5 object-card_type-list-body-subtitle">Этаж</div>
+                          <div class="title_h5">4</div>
+                        </div>
+                      </div>
+                      <div class="object-card_type-list-body-center">
+                        <div class="object-card_type-list-body-item">
+                          <div class="title_h5 object-card_type-list-body-subtitle">Отделка</div>
+                          <div class="title_h5">Чистовая</div>
+                        </div>
+                        <div class="object-card_type-list-body-status">
+                          <div class="title_h5 object-card_type-list-body-subtitle">Статус</div>
+                          <div class="title_h5">Чистовая</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="object-card_type-list-body-heart"></div>
+                  </div>
+                  <div class="object-card_type-list-body">
+                    <div class="object-card_type-list-body-column">
+                      <div class="object-card_type-list-body-number title_h5">№ 234</div>
+                      <div class="object-card_type-list-body-img">
+                        <img src="../../assets/images/object-card/object-card-list.svg" alt="Image">
+                      </div>
+                    </div>
+                    <div class="d-lg-flex align-items-center">
+                      <div class="object-card_type-list-body-center-f">
+                        <div class="object-card_type-list-body-item">
+                          <div class="title_h5 object-card_type-list-body-subtitle">Площадь</div>
+                          <div class="title_h5">25 м²</div>
+                        </div>
+                        <div class="object-card_type-list-body-item">
+                          <div class="title_h5 object-card_type-list-body-subtitle">Цена</div>
+                          <div class="title_h5">3 500 000 ₽</div>
+                        </div>
+                      </div>
+                      <div class="object-card_type-list-body-center">
+                        <div class="object-card_type-list-body-item">
+                          <div class="title_h5 object-card_type-list-body-subtitle">Цена за м²</div>
+                          <div class="title_h5">150 000 ₽</div>
+                        </div>
+                        <div class="object-card_type-list-body-item">
+                          <div class="title_h5 object-card_type-list-body-subtitle">Этаж</div>
+                          <div class="title_h5">4</div>
+                        </div>
+                      </div>
+                      <div class="object-card_type-list-body-center">
+                        <div class="object-card_type-list-body-item">
+                          <div class="title_h5 object-card_type-list-body-subtitle">Отделка</div>
+                          <div class="title_h5">Чистовая</div>
+                        </div>
+                        <div class="object-card_type-list-body-status">
+                          <div class="title_h5 object-card_type-list-body-subtitle">Статус</div>
+                          <div class="title_h5">Чистовая</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="object-card_type-list-body-heart"></div>
+                  </div>
+                </div>
+                <!-- List 2 -->
+                <div class="accordion-header accordion-list accordion-border">
+                  <div 
+                    class="row object-card_type-accordion-header collapsed"
+                    data-bs-toggle="collapse" 
+                    data-bs-target="#accardionObjectList2" 
+                  >
+                    <div class="col-6 col-sm-3 col-lg-2 object-card_type-accordion-header-title">
+                      <div class="title_h4">1-комнатые</div>
+                    </div>
+                    <div class="object-card_type-accordion-header-center col-12 col-sm-5 col-md-6 col-lg-8">
+                      <div class="row">
+                        <div class="col-4 col-sm-5 col-xl-2">
+                          <div class="title_h5">от 27 м²</div>
+                        </div>
+                        <div class="col-8 col-sm-7 col-xl-10">
+                          <div class="title_h5">5,1–6,5 млн ₽</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3 col-lg-2 object-card_type-accordion-header-btn">
+                      <div class="link" style="margin-right: 10px;">2 предложений</div>
+                    </div>
+                  </div>
+                </div>
+                <div id="accardionObjectList2" class="accordion-collapse collapse" data-bs-parent="#accardionObjectList">
+                  <div class="object-card_type-list-body">
+                    <div class="object-card_type-list-body-column">
+                      <div class="object-card_type-list-body-number title_h5">№ 234</div>
+                      <div class="object-card_type-list-body-img">
+                        <img src="../../assets/images/object-card/object-card-list.svg" alt="Image">
+                      </div>
+                    </div>
+                    <div class="d-lg-flex align-items-center">
+                      <div class="object-card_type-list-body-center-f">
+                        <div class="object-card_type-list-body-item">
+                          <div class="title_h5 object-card_type-list-body-subtitle">Площадь</div>
+                          <div class="title_h5">25 м²</div>
+                        </div>
+                        <div class="object-card_type-list-body-item">
+                          <div class="title_h5 object-card_type-list-body-subtitle">Цена</div>
+                          <div class="title_h5">3 500 000 ₽</div>
+                        </div>
+                      </div>
+                      <div class="object-card_type-list-body-center">
+                        <div class="object-card_type-list-body-item">
+                          <div class="title_h5 object-card_type-list-body-subtitle">Цена за м²</div>
+                          <div class="title_h5">150 000 ₽</div>
+                        </div>
+                        <div class="object-card_type-list-body-item">
+                          <div class="title_h5 object-card_type-list-body-subtitle">Этаж</div>
+                          <div class="title_h5">4</div>
+                        </div>
+                      </div>
+                      <div class="object-card_type-list-body-center">
+                        <div class="object-card_type-list-body-item">
+                          <div class="title_h5 object-card_type-list-body-subtitle">Отделка</div>
+                          <div class="title_h5">Чистовая</div>
+                        </div>
+                        <div class="object-card_type-list-body-status">
+                          <div class="title_h5 object-card_type-list-body-subtitle">Статус</div>
+                          <div class="title_h5">Чистовая</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="object-card_type-list-body-heart"></div>
+                  </div>
+                  <div class="object-card_type-list-body">
+                    <div class="object-card_type-list-body-column">
+                      <div class="object-card_type-list-body-number title_h5">№ 234</div>
+                      <div class="object-card_type-list-body-img">
+                        <img src="../../assets/images/object-card/object-card-list.svg" alt="Image">
+                      </div>
+                    </div>
+                    <div class="d-lg-flex align-items-center">
+                      <div class="object-card_type-list-body-center-f">
+                        <div class="object-card_type-list-body-item">
+                          <div class="title_h5 object-card_type-list-body-subtitle">Площадь</div>
+                          <div class="title_h5">25 м²</div>
+                        </div>
+                        <div class="object-card_type-list-body-item">
+                          <div class="title_h5 object-card_type-list-body-subtitle">Цена</div>
+                          <div class="title_h5">3 500 000 ₽</div>
+                        </div>
+                      </div>
+                      <div class="object-card_type-list-body-center">
+                        <div class="object-card_type-list-body-item">
+                          <div class="title_h5 object-card_type-list-body-subtitle">Цена за м²</div>
+                          <div class="title_h5">150 000 ₽</div>
+                        </div>
+                        <div class="object-card_type-list-body-item">
+                          <div class="title_h5 object-card_type-list-body-subtitle">Этаж</div>
+                          <div class="title_h5">4</div>
+                        </div>
+                      </div>
+                      <div class="object-card_type-list-body-center">
+                        <div class="object-card_type-list-body-item">
+                          <div class="title_h5 object-card_type-list-body-subtitle">Отделка</div>
+                          <div class="title_h5">Чистовая</div>
+                        </div>
+                        <div class="object-card_type-list-body-status">
+                          <div class="title_h5 object-card_type-list-body-subtitle">Статус</div>
+                          <div class="title_h5">Чистовая</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="object-card_type-list-body-heart"></div>
+                  </div>
+                </div>
+                <!-- List 3 -->
+                <div class="accordion-header accordion-list accordion-border">
+                  <div 
+                    class="row object-card_type-accordion-header collapsed"
+                    data-bs-toggle="collapse" 
+                    data-bs-target="#accardionObjectList3" 
+                  >
+                    <div class="col-6 col-sm-3 col-lg-2 object-card_type-accordion-header-title">
+                      <div class="title_h4">2-комнатые</div>
+                    </div>
+                    <div class="object-card_type-accordion-header-center col-12 col-sm-5 col-md-6 col-lg-8">
+                      <div class="row">
+                        <div class="col-4 col-sm-5 col-xl-2">
+                          <div class="title_h5">от 27 м²</div>
+                        </div>
+                        <div class="col-8 col-sm-7 col-xl-10">
+                          <div class="title_h5">5,1–6,5 млн ₽</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3 col-lg-2 object-card_type-accordion-header-btn">
+                      <div class="link" style="margin-right: 10px;">2 предложений</div>
+                    </div>
+                  </div>
+                </div>
+                <div id="accardionObjectList3" class="accordion-collapse collapse" data-bs-parent="#accardionObjectList">
+                  <div class="object-card_type-list-body">
+                    <div class="object-card_type-list-body-column">
+                      <div class="object-card_type-list-body-number title_h5">№ 234</div>
+                      <div class="object-card_type-list-body-img">
+                        <img src="../../assets/images/object-card/object-card-list.svg" alt="Image">
+                      </div>
+                    </div>
+                    <div class="d-lg-flex align-items-center">
+                      <div class="object-card_type-list-body-center-f">
+                        <div class="object-card_type-list-body-item">
+                          <div class="title_h5 object-card_type-list-body-subtitle">Площадь</div>
+                          <div class="title_h5">25 м²</div>
+                        </div>
+                        <div class="object-card_type-list-body-item">
+                          <div class="title_h5 object-card_type-list-body-subtitle">Цена</div>
+                          <div class="title_h5">3 500 000 ₽</div>
+                        </div>
+                      </div>
+                      <div class="object-card_type-list-body-center">
+                        <div class="object-card_type-list-body-item">
+                          <div class="title_h5 object-card_type-list-body-subtitle">Цена за м²</div>
+                          <div class="title_h5">150 000 ₽</div>
+                        </div>
+                        <div class="object-card_type-list-body-item">
+                          <div class="title_h5 object-card_type-list-body-subtitle">Этаж</div>
+                          <div class="title_h5">4</div>
+                        </div>
+                      </div>
+                      <div class="object-card_type-list-body-center">
+                        <div class="object-card_type-list-body-item">
+                          <div class="title_h5 object-card_type-list-body-subtitle">Отделка</div>
+                          <div class="title_h5">Чистовая</div>
+                        </div>
+                        <div class="object-card_type-list-body-status">
+                          <div class="title_h5 object-card_type-list-body-subtitle">Статус</div>
+                          <div class="title_h5">Чистовая</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="object-card_type-list-body-heart"></div>
+                  </div>
+                  <div class="object-card_type-list-body">
+                    <div class="object-card_type-list-body-column">
+                      <div class="object-card_type-list-body-number title_h5">№ 234</div>
+                      <div class="object-card_type-list-body-img">
+                        <img src="../../assets/images/object-card/object-card-list.svg" alt="Image">
+                      </div>
+                    </div>
+                    <div class="d-lg-flex align-items-center">
+                      <div class="object-card_type-list-body-center-f">
+                        <div class="object-card_type-list-body-item">
+                          <div class="title_h5 object-card_type-list-body-subtitle">Площадь</div>
+                          <div class="title_h5">25 м²</div>
+                        </div>
+                        <div class="object-card_type-list-body-item">
+                          <div class="title_h5 object-card_type-list-body-subtitle">Цена</div>
+                          <div class="title_h5">3 500 000 ₽</div>
+                        </div>
+                      </div>
+                      <div class="object-card_type-list-body-center">
+                        <div class="object-card_type-list-body-item">
+                          <div class="title_h5 object-card_type-list-body-subtitle">Цена за м²</div>
+                          <div class="title_h5">150 000 ₽</div>
+                        </div>
+                        <div class="object-card_type-list-body-item">
+                          <div class="title_h5 object-card_type-list-body-subtitle">Этаж</div>
+                          <div class="title_h5">4</div>
+                        </div>
+                      </div>
+                      <div class="object-card_type-list-body-center">
+                        <div class="object-card_type-list-body-item">
+                          <div class="title_h5 object-card_type-list-body-subtitle">Отделка</div>
+                          <div class="title_h5">Чистовая</div>
+                        </div>
+                        <div class="object-card_type-list-body-status">
+                          <div class="title_h5 object-card_type-list-body-subtitle">Статус</div>
+                          <div class="title_h5">Чистовая</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="object-card_type-list-body-heart"></div>
+                  </div>
+                </div>
+                <!-- List 4 -->
+                <div class="accordion-header accordion-list accordion-border">
+                  <div 
+                    class="row object-card_type-accordion-header collapsed"
+                    data-bs-toggle="collapse" 
+                    data-bs-target="#accardionObjectList4" 
+                  >
+                    <div class="col-6 col-sm-3 col-lg-2 object-card_type-accordion-header-title">
+                      <div class="title_h4">3-комнатые</div>
+                    </div>
+                    <div class="object-card_type-accordion-header-center col-12 col-sm-5 col-md-6 col-lg-8">
+                      <div class="row">
+                        <div class="col-4 col-sm-5 col-xl-2">
+                          <div class="title_h5">от 27 м²</div>
+                        </div>
+                        <div class="col-8 col-sm-7 col-xl-10">
+                          <div class="title_h5">5,1–6,5 млн ₽</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3 col-lg-2 object-card_type-accordion-header-btn">
+                      <div class="link" style="margin-right: 10px;">2 предложений</div>
+                    </div>
+                  </div>
+                </div>
+                <div id="accardionObjectList4" class="accordion-collapse collapse" data-bs-parent="#accardionObjectList">
+                  <div class="object-card_type-list-body">
+                    <div class="object-card_type-list-body-column">
+                      <div class="object-card_type-list-body-number title_h5">№ 234</div>
+                      <div class="object-card_type-list-body-img">
+                        <img src="../../assets/images/object-card/object-card-list.svg" alt="Image">
+                      </div>
+                    </div>
+                    <div class="d-lg-flex align-items-center">
+                      <div class="object-card_type-list-body-center-f">
+                        <div class="object-card_type-list-body-item">
+                          <div class="title_h5 object-card_type-list-body-subtitle">Площадь</div>
+                          <div class="title_h5">25 м²</div>
+                        </div>
+                        <div class="object-card_type-list-body-item">
+                          <div class="title_h5 object-card_type-list-body-subtitle">Цена</div>
+                          <div class="title_h5">3 500 000 ₽</div>
+                        </div>
+                      </div>
+                      <div class="object-card_type-list-body-center">
+                        <div class="object-card_type-list-body-item">
+                          <div class="title_h5 object-card_type-list-body-subtitle">Цена за м²</div>
+                          <div class="title_h5">150 000 ₽</div>
+                        </div>
+                        <div class="object-card_type-list-body-item">
+                          <div class="title_h5 object-card_type-list-body-subtitle">Этаж</div>
+                          <div class="title_h5">4</div>
+                        </div>
+                      </div>
+                      <div class="object-card_type-list-body-center">
+                        <div class="object-card_type-list-body-item">
+                          <div class="title_h5 object-card_type-list-body-subtitle">Отделка</div>
+                          <div class="title_h5">Чистовая</div>
+                        </div>
+                        <div class="object-card_type-list-body-status">
+                          <div class="title_h5 object-card_type-list-body-subtitle">Статус</div>
+                          <div class="title_h5">Чистовая</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="object-card_type-list-body-heart"></div>
+                  </div>
+                  <div class="object-card_type-list-body">
+                    <div class="object-card_type-list-body-column">
+                      <div class="object-card_type-list-body-number title_h5">№ 234</div>
+                      <div class="object-card_type-list-body-img">
+                        <img src="../../assets/images/object-card/object-card-list.svg" alt="Image">
+                      </div>
+                    </div>
+                    <div class="d-lg-flex align-items-center">
+                      <div class="object-card_type-list-body-center-f">
+                        <div class="object-card_type-list-body-item">
+                          <div class="title_h5 object-card_type-list-body-subtitle">Площадь</div>
+                          <div class="title_h5">25 м²</div>
+                        </div>
+                        <div class="object-card_type-list-body-item">
+                          <div class="title_h5 object-card_type-list-body-subtitle">Цена</div>
+                          <div class="title_h5">3 500 000 ₽</div>
+                        </div>
+                      </div>
+                      <div class="object-card_type-list-body-center">
+                        <div class="object-card_type-list-body-item">
+                          <div class="title_h5 object-card_type-list-body-subtitle">Цена за м²</div>
+                          <div class="title_h5">150 000 ₽</div>
+                        </div>
+                        <div class="object-card_type-list-body-item">
+                          <div class="title_h5 object-card_type-list-body-subtitle">Этаж</div>
+                          <div class="title_h5">4</div>
+                        </div>
+                      </div>
+                      <div class="object-card_type-list-body-center">
+                        <div class="object-card_type-list-body-item">
+                          <div class="title_h5 object-card_type-list-body-subtitle">Отделка</div>
+                          <div class="title_h5">Чистовая</div>
+                        </div>
+                        <div class="object-card_type-list-body-status">
+                          <div class="title_h5 object-card_type-list-body-subtitle">Статус</div>
+                          <div class="title_h5">Чистовая</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="object-card_type-list-body-heart"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Type Tile -->
+        <div class="tab-pane fade" id="nav-tile" role="tabpanel">
+          <div class="object-card_type">
+            <div class="accordion accordion-flush" id="accardionObjectTile">
+              <div class="accordion-item">
+                <!-- List 1 -->
+                <div class="accordion-header accordion-border">
+                  <div 
+                    class="row object-card_type-accordion-header collapsed"
+                    data-bs-toggle="collapse" 
+                    data-bs-target="#accardionObjectTile1" 
+                  >
+                    <div class="col-6 col-sm-3 col-lg-2 object-card_type-accordion-header-title">
+                      <div class="title_h4">Студии</div>
+                    </div>
+                    <div class="object-card_type-accordion-header-center col-12 col-sm-5 col-md-6 col-lg-8">
+                      <div class="row">
+                        <div class="col-4 col-sm-5 col-xl-2">
+                          <div class="title_h5">от 27 м²</div>
+                        </div>
+                        <div class="col-8 col-sm-7 col-xl-10">
+                          <div class="title_h5">5,1–6,5 млн ₽</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3 col-lg-2 object-card_type-accordion-header-btn">
+                      <div class="link" style="margin-right: 10px;">19 предложений</div>
+                    </div>
+                  </div>
+                </div>
+                <div id="accardionObjectTile1" class="accordion-collapse collapse" data-bs-parent="#accardionObjectTile">
+                  <div class="object-card_type-tile">
+                    <!-- Card 1 -->
+                    <div class="object-card_type-tile-item">
+                      <div class="object-card_type-tile-item-head">
+                        <div class="title_h2" style="color: var(--gray-input);">24 м²</div>
+                        <img src="../../assets/images/object-card/object-card-tile.svg" alt="Img">
+                        <div class="object-card_type-list-body-heart"></div>
+                      </div>
+                      <div class="object-card_type-tile-item-body">
+                        <div class="row">
+                          <div class="object-card_type-tile-item-body-subtitle col-3 title_h5">Этаж</div>
+                          <div class="object-card_type-tile-item-body-text col-9 title_h5">4</div>
+                          <div class="object-card_type-tile-item-body-subtitle col-3 title_h5">Отделка</div>
+                          <div class="object-card_type-tile-item-body-text col-9 title_h5">Чистовая</div>
+                          <div class="object-card_type-tile-item-body-subtitle col-3 title_h5">Статус</div>
+                          <div class="object-card_type-tile-item-body-text col-9 title_h5">Свободна</div>
+                        </div>
+                        <div class="object-card_type-tile-item-body-cost title_h2">3 500 000 ₽</div>
+                        <div class="object-card_type-tile-item-body-costm2 title_h5">150 000 ₽ м²</div>
+                        <div class="object-card_type-tile-item-body-number title_h5">№ 234</div>
+                      </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="object-card_type-tile-item">
+                      <div class="object-card_type-tile-item-head">
+                        <div class="title_h2" style="color: var(--gray-input);">24 м²</div>
+                        <img src="../../assets/images/object-card/object-card-tile.svg" alt="Img">
+                        <div class="object-card_type-list-body-heart"></div>
+                      </div>
+                      <div class="object-card_type-tile-item-body">
+                        <div class="row">
+                          <div class="object-card_type-tile-item-body-subtitle col-3 title_h5">Этаж</div>
+                          <div class="object-card_type-tile-item-body-text col-9 title_h5">4</div>
+                          <div class="object-card_type-tile-item-body-subtitle col-3 title_h5">Отделка</div>
+                          <div class="object-card_type-tile-item-body-text col-9 title_h5">Чистовая</div>
+                          <div class="object-card_type-tile-item-body-subtitle col-3 title_h5">Статус</div>
+                          <div class="object-card_type-tile-item-body-text col-9 title_h5">Свободна</div>
+                        </div>
+                        <div class="object-card_type-tile-item-body-cost title_h2">3 500 000 ₽</div>
+                        <div class="object-card_type-tile-item-body-costm2 title_h5">150 000 ₽ м²</div>
+                        <div class="object-card_type-tile-item-body-number title_h5">№ 234</div>
+                      </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="object-card_type-tile-item">
+                      <div class="object-card_type-tile-item-head">
+                        <div class="title_h2" style="color: var(--gray-input);">24 м²</div>
+                        <img src="../../assets/images/object-card/object-card-tile.svg" alt="Img">
+                        <div class="object-card_type-list-body-heart"></div>
+                      </div>
+                      <div class="object-card_type-tile-item-body">
+                        <div class="row">
+                          <div class="object-card_type-tile-item-body-subtitle col-3 title_h5">Этаж</div>
+                          <div class="object-card_type-tile-item-body-text col-9 title_h5">4</div>
+                          <div class="object-card_type-tile-item-body-subtitle col-3 title_h5">Отделка</div>
+                          <div class="object-card_type-tile-item-body-text col-9 title_h5">Чистовая</div>
+                          <div class="object-card_type-tile-item-body-subtitle col-3 title_h5">Статус</div>
+                          <div class="object-card_type-tile-item-body-text col-9 title_h5">Свободна</div>
+                        </div>
+                        <div class="object-card_type-tile-item-body-cost title_h2">3 500 000 ₽</div>
+                        <div class="object-card_type-tile-item-body-costm2 title_h5">150 000 ₽ м²</div>
+                        <div class="object-card_type-tile-item-body-number title_h5">№ 234</div>
+                      </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="object-card_type-tile-item">
+                      <div class="object-card_type-tile-item-head">
+                        <div class="title_h2" style="color: var(--gray-input);">24 м²</div>
+                        <img src="../../assets/images/object-card/object-card-tile.svg" alt="Img">
+                        <div class="object-card_type-list-body-heart"></div>
+                      </div>
+                      <div class="object-card_type-tile-item-body">
+                        <div class="row">
+                          <div class="object-card_type-tile-item-body-subtitle col-3 title_h5">Этаж</div>
+                          <div class="object-card_type-tile-item-body-text col-9 title_h5">4</div>
+                          <div class="object-card_type-tile-item-body-subtitle col-3 title_h5">Отделка</div>
+                          <div class="object-card_type-tile-item-body-text col-9 title_h5">Чистовая</div>
+                          <div class="object-card_type-tile-item-body-subtitle col-3 title_h5">Статус</div>
+                          <div class="object-card_type-tile-item-body-text col-9 title_h5">Свободна</div>
+                        </div>
+                        <div class="object-card_type-tile-item-body-cost title_h2">3 500 000 ₽</div>
+                        <div class="object-card_type-tile-item-body-costm2 title_h5">150 000 ₽ м²</div>
+                        <div class="object-card_type-tile-item-body-number title_h5">№ 234</div>
+                      </div>
+                    </div>
+                    <!-- Card 5 -->
+                    <div class="object-card_type-tile-item">
+                      <div class="object-card_type-tile-item-head">
+                        <div class="title_h2" style="color: var(--gray-input);">24 м²</div>
+                        <img src="../../assets/images/object-card/object-card-tile.svg" alt="Img">
+                        <div class="object-card_type-list-body-heart"></div>
+                      </div>
+                      <div class="object-card_type-tile-item-body">
+                        <div class="row">
+                          <div class="object-card_type-tile-item-body-subtitle col-3 title_h5">Этаж</div>
+                          <div class="object-card_type-tile-item-body-text col-9 title_h5">4</div>
+                          <div class="object-card_type-tile-item-body-subtitle col-3 title_h5">Отделка</div>
+                          <div class="object-card_type-tile-item-body-text col-9 title_h5">Чистовая</div>
+                          <div class="object-card_type-tile-item-body-subtitle col-3 title_h5">Статус</div>
+                          <div class="object-card_type-tile-item-body-text col-9 title_h5">Свободна</div>
+                        </div>
+                        <div class="object-card_type-tile-item-body-cost title_h2">3 500 000 ₽</div>
+                        <div class="object-card_type-tile-item-body-costm2 title_h5">150 000 ₽ м²</div>
+                        <div class="object-card_type-tile-item-body-number title_h5">№ 234</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- List 2 -->
+                <div class="accordion-header accordion-border">
+                  <div 
+                    class="row object-card_type-accordion-header collapsed"
+                    data-bs-toggle="collapse" 
+                    data-bs-target="#accardionObjectTile2" 
+                  >
+                    <div class="col-6 col-sm-3 col-lg-2 object-card_type-accordion-header-title">
+                      <div class="title_h4">1-комнатые</div>
+                    </div>
+                    <div class="object-card_type-accordion-header-center col-12 col-sm-5 col-md-6 col-lg-8">
+                      <div class="row">
+                        <div class="col-4 col-sm-5 col-xl-2">
+                          <div class="title_h5">от 27 м²</div>
+                        </div>
+                        <div class="col-8 col-sm-7 col-xl-10">
+                          <div class="title_h5">5,1–6,5 млн ₽</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3 col-lg-2 object-card_type-accordion-header-btn">
+                      <div class="link" style="margin-right: 10px;">2 предложений</div>
+                    </div>
+                  </div>
+                </div>
+                <div id="accardionObjectTile2" class="accordion-collapse collapse" data-bs-parent="#accardionObjectTile">
+                  <div class="object-card_type-tile">
+                    <!-- Card 1 -->
+                    <div class="object-card_type-tile-item">
+                      <div class="object-card_type-tile-item-head">
+                        <div class="title_h2" style="color: var(--gray-input);">24 м²</div>
+                        <img src="../../assets/images/object-card/object-card-tile.svg" alt="Img">
+                        <div class="object-card_type-list-body-heart"></div>
+                      </div>
+                      <div class="object-card_type-tile-item-body">
+                        <div class="row">
+                          <div class="object-card_type-tile-item-body-subtitle col-3 title_h5">Этаж</div>
+                          <div class="object-card_type-tile-item-body-text col-9 title_h5">4</div>
+                          <div class="object-card_type-tile-item-body-subtitle col-3 title_h5">Отделка</div>
+                          <div class="object-card_type-tile-item-body-text col-9 title_h5">Чистовая</div>
+                          <div class="object-card_type-tile-item-body-subtitle col-3 title_h5">Статус</div>
+                          <div class="object-card_type-tile-item-body-text col-9 title_h5">Свободна</div>
+                        </div>
+                        <div class="object-card_type-tile-item-body-cost title_h2">3 500 000 ₽</div>
+                        <div class="object-card_type-tile-item-body-costm2 title_h5">150 000 ₽ м²</div>
+                        <div class="object-card_type-tile-item-body-number title_h5">№ 234</div>
+                      </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="object-card_type-tile-item">
+                      <div class="object-card_type-tile-item-head">
+                        <div class="title_h2" style="color: var(--gray-input);">24 м²</div>
+                        <img src="../../assets/images/object-card/object-card-tile.svg" alt="Img">
+                        <div class="object-card_type-list-body-heart"></div>
+                      </div>
+                      <div class="object-card_type-tile-item-body">
+                        <div class="row">
+                          <div class="object-card_type-tile-item-body-subtitle col-3 title_h5">Этаж</div>
+                          <div class="object-card_type-tile-item-body-text col-9 title_h5">4</div>
+                          <div class="object-card_type-tile-item-body-subtitle col-3 title_h5">Отделка</div>
+                          <div class="object-card_type-tile-item-body-text col-9 title_h5">Чистовая</div>
+                          <div class="object-card_type-tile-item-body-subtitle col-3 title_h5">Статус</div>
+                          <div class="object-card_type-tile-item-body-text col-9 title_h5">Свободна</div>
+                        </div>
+                        <div class="object-card_type-tile-item-body-cost title_h2">3 500 000 ₽</div>
+                        <div class="object-card_type-tile-item-body-costm2 title_h5">150 000 ₽ м²</div>
+                        <div class="object-card_type-tile-item-body-number title_h5">№ 234</div>
+                      </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="object-card_type-tile-item">
+                      <div class="object-card_type-tile-item-head">
+                        <div class="title_h2" style="color: var(--gray-input);">24 м²</div>
+                        <img src="../../assets/images/object-card/object-card-tile.svg" alt="Img">
+                        <div class="object-card_type-list-body-heart"></div>
+                      </div>
+                      <div class="object-card_type-tile-item-body">
+                        <div class="row">
+                          <div class="object-card_type-tile-item-body-subtitle col-3 title_h5">Этаж</div>
+                          <div class="object-card_type-tile-item-body-text col-9 title_h5">4</div>
+                          <div class="object-card_type-tile-item-body-subtitle col-3 title_h5">Отделка</div>
+                          <div class="object-card_type-tile-item-body-text col-9 title_h5">Чистовая</div>
+                          <div class="object-card_type-tile-item-body-subtitle col-3 title_h5">Статус</div>
+                          <div class="object-card_type-tile-item-body-text col-9 title_h5">Свободна</div>
+                        </div>
+                        <div class="object-card_type-tile-item-body-cost title_h2">3 500 000 ₽</div>
+                        <div class="object-card_type-tile-item-body-costm2 title_h5">150 000 ₽ м²</div>
+                        <div class="object-card_type-tile-item-body-number title_h5">№ 234</div>
+                      </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="object-card_type-tile-item">
+                      <div class="object-card_type-tile-item-head">
+                        <div class="title_h2" style="color: var(--gray-input);">24 м²</div>
+                        <img src="../../assets/images/object-card/object-card-tile.svg" alt="Img">
+                        <div class="object-card_type-list-body-heart"></div>
+                      </div>
+                      <div class="object-card_type-tile-item-body">
+                        <div class="row">
+                          <div class="object-card_type-tile-item-body-subtitle col-3 title_h5">Этаж</div>
+                          <div class="object-card_type-tile-item-body-text col-9 title_h5">4</div>
+                          <div class="object-card_type-tile-item-body-subtitle col-3 title_h5">Отделка</div>
+                          <div class="object-card_type-tile-item-body-text col-9 title_h5">Чистовая</div>
+                          <div class="object-card_type-tile-item-body-subtitle col-3 title_h5">Статус</div>
+                          <div class="object-card_type-tile-item-body-text col-9 title_h5">Свободна</div>
+                        </div>
+                        <div class="object-card_type-tile-item-body-cost title_h2">3 500 000 ₽</div>
+                        <div class="object-card_type-tile-item-body-costm2 title_h5">150 000 ₽ м²</div>
+                        <div class="object-card_type-tile-item-body-number title_h5">№ 234</div>
+                      </div>
+                    </div>
+                    <!-- Card 5 -->
+                    <div class="object-card_type-tile-item">
+                      <div class="object-card_type-tile-item-head">
+                        <div class="title_h2" style="color: var(--gray-input);">24 м²</div>
+                        <img src="../../assets/images/object-card/object-card-tile.svg" alt="Img">
+                        <div class="object-card_type-list-body-heart"></div>
+                      </div>
+                      <div class="object-card_type-tile-item-body">
+                        <div class="row">
+                          <div class="object-card_type-tile-item-body-subtitle col-3 title_h5">Этаж</div>
+                          <div class="object-card_type-tile-item-body-text col-9 title_h5">4</div>
+                          <div class="object-card_type-tile-item-body-subtitle col-3 title_h5">Отделка</div>
+                          <div class="object-card_type-tile-item-body-text col-9 title_h5">Чистовая</div>
+                          <div class="object-card_type-tile-item-body-subtitle col-3 title_h5">Статус</div>
+                          <div class="object-card_type-tile-item-body-text col-9 title_h5">Свободна</div>
+                        </div>
+                        <div class="object-card_type-tile-item-body-cost title_h2">3 500 000 ₽</div>
+                        <div class="object-card_type-tile-item-body-costm2 title_h5">150 000 ₽ м²</div>
+                        <div class="object-card_type-tile-item-body-number title_h5">№ 234</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- List 3 -->
+                <div class="accordion-header accordion-border">
+                  <div 
+                    class="row object-card_type-accordion-header collapsed"
+                    data-bs-toggle="collapse" 
+                    data-bs-target="#accardionObjectTile3" 
+                  >
+                    <div class="col-6 col-sm-3 col-lg-2 object-card_type-accordion-header-title">
+                      <div class="title_h4">2-комнатые</div>
+                    </div>
+                    <div class="object-card_type-accordion-header-center col-12 col-sm-5 col-md-6 col-lg-8">
+                      <div class="row">
+                        <div class="col-4 col-sm-5 col-xl-2">
+                          <div class="title_h5">от 27 м²</div>
+                        </div>
+                        <div class="col-8 col-sm-7 col-xl-10">
+                          <div class="title_h5">5,1–6,5 млн ₽</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3 col-lg-2 object-card_type-accordion-header-btn">
+                      <div class="link" style="margin-right: 10px;">2 предложений</div>
+                    </div>
+                  </div>
+                </div>
+                <div id="accardionObjectTile3" class="accordion-collapse collapse" data-bs-parent="#accardionObjectTile">
+                  <div class="object-card_type-tile">
+                    <!-- Card 1 -->
+                    <div class="object-card_type-tile-item">
+                      <div class="object-card_type-tile-item-head">
+                        <div class="title_h2" style="color: var(--gray-input);">24 м²</div>
+                        <img src="../../assets/images/object-card/object-card-tile.svg" alt="Img">
+                        <div class="object-card_type-list-body-heart"></div>
+                      </div>
+                      <div class="object-card_type-tile-item-body">
+                        <div class="row">
+                          <div class="object-card_type-tile-item-body-subtitle col-3 title_h5">Этаж</div>
+                          <div class="object-card_type-tile-item-body-text col-9 title_h5">4</div>
+                          <div class="object-card_type-tile-item-body-subtitle col-3 title_h5">Отделка</div>
+                          <div class="object-card_type-tile-item-body-text col-9 title_h5">Чистовая</div>
+                          <div class="object-card_type-tile-item-body-subtitle col-3 title_h5">Статус</div>
+                          <div class="object-card_type-tile-item-body-text col-9 title_h5">Свободна</div>
+                        </div>
+                        <div class="object-card_type-tile-item-body-cost title_h2">3 500 000 ₽</div>
+                        <div class="object-card_type-tile-item-body-costm2 title_h5">150 000 ₽ м²</div>
+                        <div class="object-card_type-tile-item-body-number title_h5">№ 234</div>
+                      </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="object-card_type-tile-item">
+                      <div class="object-card_type-tile-item-head">
+                        <div class="title_h2" style="color: var(--gray-input);">24 м²</div>
+                        <img src="../../assets/images/object-card/object-card-tile.svg" alt="Img">
+                        <div class="object-card_type-list-body-heart"></div>
+                      </div>
+                      <div class="object-card_type-tile-item-body">
+                        <div class="row">
+                          <div class="object-card_type-tile-item-body-subtitle col-3 title_h5">Этаж</div>
+                          <div class="object-card_type-tile-item-body-text col-9 title_h5">4</div>
+                          <div class="object-card_type-tile-item-body-subtitle col-3 title_h5">Отделка</div>
+                          <div class="object-card_type-tile-item-body-text col-9 title_h5">Чистовая</div>
+                          <div class="object-card_type-tile-item-body-subtitle col-3 title_h5">Статус</div>
+                          <div class="object-card_type-tile-item-body-text col-9 title_h5">Свободна</div>
+                        </div>
+                        <div class="object-card_type-tile-item-body-cost title_h2">3 500 000 ₽</div>
+                        <div class="object-card_type-tile-item-body-costm2 title_h5">150 000 ₽ м²</div>
+                        <div class="object-card_type-tile-item-body-number title_h5">№ 234</div>
+                      </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="object-card_type-tile-item">
+                      <div class="object-card_type-tile-item-head">
+                        <div class="title_h2" style="color: var(--gray-input);">24 м²</div>
+                        <img src="../../assets/images/object-card/object-card-tile.svg" alt="Img">
+                        <div class="object-card_type-list-body-heart"></div>
+                      </div>
+                      <div class="object-card_type-tile-item-body">
+                        <div class="row">
+                          <div class="object-card_type-tile-item-body-subtitle col-3 title_h5">Этаж</div>
+                          <div class="object-card_type-tile-item-body-text col-9 title_h5">4</div>
+                          <div class="object-card_type-tile-item-body-subtitle col-3 title_h5">Отделка</div>
+                          <div class="object-card_type-tile-item-body-text col-9 title_h5">Чистовая</div>
+                          <div class="object-card_type-tile-item-body-subtitle col-3 title_h5">Статус</div>
+                          <div class="object-card_type-tile-item-body-text col-9 title_h5">Свободна</div>
+                        </div>
+                        <div class="object-card_type-tile-item-body-cost title_h2">3 500 000 ₽</div>
+                        <div class="object-card_type-tile-item-body-costm2 title_h5">150 000 ₽ м²</div>
+                        <div class="object-card_type-tile-item-body-number title_h5">№ 234</div>
+                      </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="object-card_type-tile-item">
+                      <div class="object-card_type-tile-item-head">
+                        <div class="title_h2" style="color: var(--gray-input);">24 м²</div>
+                        <img src="../../assets/images/object-card/object-card-tile.svg" alt="Img">
+                        <div class="object-card_type-list-body-heart"></div>
+                      </div>
+                      <div class="object-card_type-tile-item-body">
+                        <div class="row">
+                          <div class="object-card_type-tile-item-body-subtitle col-3 title_h5">Этаж</div>
+                          <div class="object-card_type-tile-item-body-text col-9 title_h5">4</div>
+                          <div class="object-card_type-tile-item-body-subtitle col-3 title_h5">Отделка</div>
+                          <div class="object-card_type-tile-item-body-text col-9 title_h5">Чистовая</div>
+                          <div class="object-card_type-tile-item-body-subtitle col-3 title_h5">Статус</div>
+                          <div class="object-card_type-tile-item-body-text col-9 title_h5">Свободна</div>
+                        </div>
+                        <div class="object-card_type-tile-item-body-cost title_h2">3 500 000 ₽</div>
+                        <div class="object-card_type-tile-item-body-costm2 title_h5">150 000 ₽ м²</div>
+                        <div class="object-card_type-tile-item-body-number title_h5">№ 234</div>
+                      </div>
+                    </div>
+                    <!-- Card 5 -->
+                    <div class="object-card_type-tile-item">
+                      <div class="object-card_type-tile-item-head">
+                        <div class="title_h2" style="color: var(--gray-input);">24 м²</div>
+                        <img src="../../assets/images/object-card/object-card-tile.svg" alt="Img">
+                        <div class="object-card_type-list-body-heart"></div>
+                      </div>
+                      <div class="object-card_type-tile-item-body">
+                        <div class="row">
+                          <div class="object-card_type-tile-item-body-subtitle col-3 title_h5">Этаж</div>
+                          <div class="object-card_type-tile-item-body-text col-9 title_h5">4</div>
+                          <div class="object-card_type-tile-item-body-subtitle col-3 title_h5">Отделка</div>
+                          <div class="object-card_type-tile-item-body-text col-9 title_h5">Чистовая</div>
+                          <div class="object-card_type-tile-item-body-subtitle col-3 title_h5">Статус</div>
+                          <div class="object-card_type-tile-item-body-text col-9 title_h5">Свободна</div>
+                        </div>
+                        <div class="object-card_type-tile-item-body-cost title_h2">3 500 000 ₽</div>
+                        <div class="object-card_type-tile-item-body-costm2 title_h5">150 000 ₽ м²</div>
+                        <div class="object-card_type-tile-item-body-number title_h5">№ 234</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- List 4 -->
+                <div class="accordion-header accordion-border">
+                  <div 
+                    class="row object-card_type-accordion-header collapsed"
+                    data-bs-toggle="collapse" 
+                    data-bs-target="#accardionObjectTile4" 
+                  >
+                    <div class="col-6 col-sm-3 col-lg-2 object-card_type-accordion-header-title">
+                      <div class="title_h4">3-комнатые</div>
+                    </div>
+                    <div class="object-card_type-accordion-header-center col-12 col-sm-5 col-md-6 col-lg-8">
+                      <div class="row">
+                        <div class="col-4 col-sm-5 col-xl-2">
+                          <div class="title_h5">от 27 м²</div>
+                        </div>
+                        <div class="col-8 col-sm-7 col-xl-10">
+                          <div class="title_h5">5,1–6,5 млн ₽</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3 col-lg-2 object-card_type-accordion-header-btn">
+                      <div class="link" style="margin-right: 10px;">2 предложений</div>
+                    </div>
+                  </div>
+                </div>
+                <div id="accardionObjectTile4" class="accordion-collapse collapse" data-bs-parent="#accardionObjectTile">
+                  <div class="object-card_type-tile">
+                    <!-- Card 1 -->
+                    <div class="object-card_type-tile-item">
+                      <div class="object-card_type-tile-item-head">
+                        <div class="title_h2" style="color: var(--gray-input);">24 м²</div>
+                        <img src="../../assets/images/object-card/object-card-tile.svg" alt="Img">
+                        <div class="object-card_type-list-body-heart"></div>
+                      </div>
+                      <div class="object-card_type-tile-item-body">
+                        <div class="row">
+                          <div class="object-card_type-tile-item-body-subtitle col-3 title_h5">Этаж</div>
+                          <div class="object-card_type-tile-item-body-text col-9 title_h5">4</div>
+                          <div class="object-card_type-tile-item-body-subtitle col-3 title_h5">Отделка</div>
+                          <div class="object-card_type-tile-item-body-text col-9 title_h5">Чистовая</div>
+                          <div class="object-card_type-tile-item-body-subtitle col-3 title_h5">Статус</div>
+                          <div class="object-card_type-tile-item-body-text col-9 title_h5">Свободна</div>
+                        </div>
+                        <div class="object-card_type-tile-item-body-cost title_h2">3 500 000 ₽</div>
+                        <div class="object-card_type-tile-item-body-costm2 title_h5">150 000 ₽ м²</div>
+                        <div class="object-card_type-tile-item-body-number title_h5">№ 234</div>
+                      </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="object-card_type-tile-item">
+                      <div class="object-card_type-tile-item-head">
+                        <div class="title_h2" style="color: var(--gray-input);">24 м²</div>
+                        <img src="../../assets/images/object-card/object-card-tile.svg" alt="Img">
+                        <div class="object-card_type-list-body-heart"></div>
+                      </div>
+                      <div class="object-card_type-tile-item-body">
+                        <div class="row">
+                          <div class="object-card_type-tile-item-body-subtitle col-3 title_h5">Этаж</div>
+                          <div class="object-card_type-tile-item-body-text col-9 title_h5">4</div>
+                          <div class="object-card_type-tile-item-body-subtitle col-3 title_h5">Отделка</div>
+                          <div class="object-card_type-tile-item-body-text col-9 title_h5">Чистовая</div>
+                          <div class="object-card_type-tile-item-body-subtitle col-3 title_h5">Статус</div>
+                          <div class="object-card_type-tile-item-body-text col-9 title_h5">Свободна</div>
+                        </div>
+                        <div class="object-card_type-tile-item-body-cost title_h2">3 500 000 ₽</div>
+                        <div class="object-card_type-tile-item-body-costm2 title_h5">150 000 ₽ м²</div>
+                        <div class="object-card_type-tile-item-body-number title_h5">№ 234</div>
+                      </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="object-card_type-tile-item">
+                      <div class="object-card_type-tile-item-head">
+                        <div class="title_h2" style="color: var(--gray-input);">24 м²</div>
+                        <img src="../../assets/images/object-card/object-card-tile.svg" alt="Img">
+                        <div class="object-card_type-list-body-heart"></div>
+                      </div>
+                      <div class="object-card_type-tile-item-body">
+                        <div class="row">
+                          <div class="object-card_type-tile-item-body-subtitle col-3 title_h5">Этаж</div>
+                          <div class="object-card_type-tile-item-body-text col-9 title_h5">4</div>
+                          <div class="object-card_type-tile-item-body-subtitle col-3 title_h5">Отделка</div>
+                          <div class="object-card_type-tile-item-body-text col-9 title_h5">Чистовая</div>
+                          <div class="object-card_type-tile-item-body-subtitle col-3 title_h5">Статус</div>
+                          <div class="object-card_type-tile-item-body-text col-9 title_h5">Свободна</div>
+                        </div>
+                        <div class="object-card_type-tile-item-body-cost title_h2">3 500 000 ₽</div>
+                        <div class="object-card_type-tile-item-body-costm2 title_h5">150 000 ₽ м²</div>
+                        <div class="object-card_type-tile-item-body-number title_h5">№ 234</div>
+                      </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="object-card_type-tile-item">
+                      <div class="object-card_type-tile-item-head">
+                        <div class="title_h2" style="color: var(--gray-input);">24 м²</div>
+                        <img src="../../assets/images/object-card/object-card-tile.svg" alt="Img">
+                        <div class="object-card_type-list-body-heart"></div>
+                      </div>
+                      <div class="object-card_type-tile-item-body">
+                        <div class="row">
+                          <div class="object-card_type-tile-item-body-subtitle col-3 title_h5">Этаж</div>
+                          <div class="object-card_type-tile-item-body-text col-9 title_h5">4</div>
+                          <div class="object-card_type-tile-item-body-subtitle col-3 title_h5">Отделка</div>
+                          <div class="object-card_type-tile-item-body-text col-9 title_h5">Чистовая</div>
+                          <div class="object-card_type-tile-item-body-subtitle col-3 title_h5">Статус</div>
+                          <div class="object-card_type-tile-item-body-text col-9 title_h5">Свободна</div>
+                        </div>
+                        <div class="object-card_type-tile-item-body-cost title_h2">3 500 000 ₽</div>
+                        <div class="object-card_type-tile-item-body-costm2 title_h5">150 000 ₽ м²</div>
+                        <div class="object-card_type-tile-item-body-number title_h5">№ 234</div>
+                      </div>
+                    </div>
+                    <!-- Card 5 -->
+                    <div class="object-card_type-tile-item">
+                      <div class="object-card_type-tile-item-head">
+                        <div class="title_h2" style="color: var(--gray-input);">24 м²</div>
+                        <img src="../../assets/images/object-card/object-card-tile.svg" alt="Img">
+                        <div class="object-card_type-list-body-heart"></div>
+                      </div>
+                      <div class="object-card_type-tile-item-body">
+                        <div class="row">
+                          <div class="object-card_type-tile-item-body-subtitle col-3 title_h5">Этаж</div>
+                          <div class="object-card_type-tile-item-body-text col-9 title_h5">4</div>
+                          <div class="object-card_type-tile-item-body-subtitle col-3 title_h5">Отделка</div>
+                          <div class="object-card_type-tile-item-body-text col-9 title_h5">Чистовая</div>
+                          <div class="object-card_type-tile-item-body-subtitle col-3 title_h5">Статус</div>
+                          <div class="object-card_type-tile-item-body-text col-9 title_h5">Свободна</div>
+                        </div>
+                        <div class="object-card_type-tile-item-body-cost title_h2">3 500 000 ₽</div>
+                        <div class="object-card_type-tile-item-body-costm2 title_h5">150 000 ₽ м²</div>
+                        <div class="object-card_type-tile-item-body-number title_h5">№ 234</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Type Chess -->
+        <div class="tab-pane fade" id="nav-chess" role="tabpanel">
+          <div class="object-card_type object-card_type-chess">
+            <div class="object-card_type-chess-section">
+              <div class="title_h2">Секция 1</div>
+              <!-- 5 этаж -->
+              <div class="object-card_type-chess-section-row">
+                <div class="object-card_type-chess-section-row-subtitle title_h4">5 этаж</div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h4">2К кв</div>
+                  <div class="object-card_type-chess-item-text-big object-card_type-chess-number title_h5">№ 234</div>
+                  <div class="object-card_type-chess-item-costm2-big title_h4">154 м²</div>
+                  <div class="object-card_type-chess-item-text-big title_h4">13 450 000 ₽</div>
+                </div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h4">2К кв</div>
+                  <div class="object-card_type-chess-item-text-big object-card_type-chess-number title_h5">№ 234</div>
+                  <div class="object-card_type-chess-item-costm2-big title_h4">154 м²</div>
+                  <div class="object-card_type-chess-item-text-big title_h4">13 450 000 ₽</div>
+                </div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h4">2К кв</div>
+                  <div class="object-card_type-chess-item-text-big object-card_type-chess-number title_h5">№ 234</div>
+                  <div class="object-card_type-chess-item-costm2-big title_h4">154 м²</div>
+                  <div class="object-card_type-chess-item-text-big title_h4">13 450 000 ₽</div>
+                </div>
+              </div>
+              <!-- 4 этаж -->
+              <div class="object-card_type-chess-section-row">
+                <div class="object-card_type-chess-section-row-subtitle title_h4">4 этаж</div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h4">2К кв</div>
+                  <div class="object-card_type-chess-item-text-big object-card_type-chess-number title_h5">№ 234</div>
+                  <div class="object-card_type-chess-item-costm2-big title_h4">154 м²</div>
+                  <div class="object-card_type-chess-item-text-big title_h4">13 450 000 ₽</div>
+                </div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h4">2К кв</div>
+                  <div class="object-card_type-chess-item-text-big object-card_type-chess-number title_h5">№ 234</div>
+                  <div class="object-card_type-chess-item-costm2-big title_h4">154 м²</div>
+                  <div class="object-card_type-chess-item-text-big title_h4">13 450 000 ₽</div>
+                </div>
+              </div>
+              <!-- 3 этаж -->
+              <div class="object-card_type-chess-section-row">
+                <div class="object-card_type-chess-section-row-subtitle title_h4">3 этаж</div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h5">2К кв</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h5">2К кв</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h5">2К кв</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h5">2К кв</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+                <div class="object-card_type-chess-item bron">
+                  <div class="title_h5">2К кв</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h5">2К кв</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+              </div>
+              <!-- 2 этаж -->
+              <div class="object-card_type-chess-section-row">
+                <div class="object-card_type-chess-section-row-subtitle title_h4">2 этаж</div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h5">2К кв</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h5">2К кв</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+                <div class="object-card_type-chess-item active">
+                  <div class="title_h5">2К кв</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h5">2К кв</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h5">2К кв</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h5">2К кв</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+              </div>
+              <!-- 1 этаж -->
+              <div class="object-card_type-chess-section-row">
+                <div class="object-card_type-chess-section-row-subtitle title_h4">1 этаж</div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h5">2К кв</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h5">2К кв</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h5">2К кв</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h5">2К кв</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h5">2К кв</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h5">2К кв</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h5">2К кв</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h5">2К кв</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+              </div>
+              <div class="object-card_type-chess-section-row">
+                <div class="object-card_type-chess-item">
+                  <div class="title_h4">2К кв</div>
+                  <div class="object-card_type-chess-item-text-big object-card_type-chess-number title_h5">№ 234</div>
+                  <div class="object-card_type-chess-item-costm2-big title_h4">154 м²</div>
+                  <div class="object-card_type-chess-item-text-big title_h4">13 450 000 ₽</div>
+                </div>
+              </div>
+              <!-- Дополнительная строка -->
+              <div class="object-card_type-chess-section-row">
+                <div class="object-card_type-chess-item">
+                  <div class="title_h5">Кл</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h5">Кл</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h5">Кл</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h5">Кл</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h5">Кл</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h5">Кл</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="object-card_type-chess-section">
+              <div class="title_h2">Секция 2</div>
+              <!-- 5 этаж -->
+              <div class="object-card_type-chess-section-row">
+                <div class="object-card_type-chess-section-row-subtitle title_h4">5 этаж</div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h4">2К кв</div>
+                  <div class="object-card_type-chess-item-text-big object-card_type-chess-number title_h5">№ 234</div>
+                  <div class="object-card_type-chess-item-costm2-big title_h4">154 м²</div>
+                  <div class="object-card_type-chess-item-text-big title_h4">13 450 000 ₽</div>
+                </div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h4">2К кв</div>
+                  <div class="object-card_type-chess-item-text-big object-card_type-chess-number title_h5">№ 234</div>
+                  <div class="object-card_type-chess-item-costm2-big title_h4">154 м²</div>
+                  <div class="object-card_type-chess-item-text-big title_h4">13 450 000 ₽</div>
+                </div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h4">2К кв</div>
+                  <div class="object-card_type-chess-item-text-big object-card_type-chess-number title_h5">№ 234</div>
+                  <div class="object-card_type-chess-item-costm2-big title_h4">154 м²</div>
+                  <div class="object-card_type-chess-item-text-big title_h4">13 450 000 ₽</div>
+                </div>
+              </div>
+              <!-- 4 этаж -->
+              <div class="object-card_type-chess-section-row">
+                <div class="object-card_type-chess-section-row-subtitle title_h4">4 этаж</div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h4">2К кв</div>
+                  <div class="object-card_type-chess-item-text-big object-card_type-chess-number title_h5">№ 234</div>
+                  <div class="object-card_type-chess-item-costm2-big title_h4">154 м²</div>
+                  <div class="object-card_type-chess-item-text-big title_h4">13 450 000 ₽</div>
+                </div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h4">2К кв</div>
+                  <div class="object-card_type-chess-item-text-big object-card_type-chess-number title_h5">№ 234</div>
+                  <div class="object-card_type-chess-item-costm2-big title_h4">154 м²</div>
+                  <div class="object-card_type-chess-item-text-big title_h4">13 450 000 ₽</div>
+                </div>
+              </div>
+              <!-- 3 этаж -->
+              <div class="object-card_type-chess-section-row">
+                <div class="object-card_type-chess-section-row-subtitle title_h4">3 этаж</div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h5">2К кв</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h5">2К кв</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h5">2К кв</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h5">2К кв</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h5">2К кв</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h5">2К кв</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+              </div>
+              <!-- 2 этаж -->
+              <div class="object-card_type-chess-section-row">
+                <div class="object-card_type-chess-section-row-subtitle title_h4">2 этаж</div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h5">2К кв</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h5">2К кв</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h5">2К кв</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h5">2К кв</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h5">2К кв</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h5">2К кв</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+              </div>
+              <!-- 1 этаж -->
+              <div class="object-card_type-chess-section-row">
+                <div class="object-card_type-chess-section-row-subtitle title_h4">1 этаж</div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h5">2К кв</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h5">2К кв</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h5">2К кв</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h5">2К кв</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h5">2К кв</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h5">2К кв</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h5">2К кв</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h5">2К кв</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="object-card_type-chess-section">
+              <div class="title_h2">Секция 3</div>
+              <!-- 5 этаж -->
+              <div class="object-card_type-chess-section-row">
+                <div class="object-card_type-chess-section-row-subtitle title_h4">5 этаж</div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h4">2К кв</div>
+                  <div class="object-card_type-chess-item-text-big object-card_type-chess-number title_h5">№ 234</div>
+                  <div class="object-card_type-chess-item-costm2-big title_h4">154 м²</div>
+                  <div class="object-card_type-chess-item-text-big title_h4">13 450 000 ₽</div>
+                </div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h4">2К кв</div>
+                  <div class="object-card_type-chess-item-text-big object-card_type-chess-number title_h5">№ 234</div>
+                  <div class="object-card_type-chess-item-costm2-big title_h4">154 м²</div>
+                  <div class="object-card_type-chess-item-text-big title_h4">13 450 000 ₽</div>
+                </div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h4">2К кв</div>
+                  <div class="object-card_type-chess-item-text-big object-card_type-chess-number title_h5">№ 234</div>
+                  <div class="object-card_type-chess-item-costm2-big title_h4">154 м²</div>
+                  <div class="object-card_type-chess-item-text-big title_h4">13 450 000 ₽</div>
+                </div>
+              </div>
+              <!-- 4 этаж -->
+              <div class="object-card_type-chess-section-row">
+                <div class="object-card_type-chess-section-row-subtitle title_h4">4 этаж</div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h4">2К кв</div>
+                  <div class="object-card_type-chess-item-text-big object-card_type-chess-number title_h5">№ 234</div>
+                  <div class="object-card_type-chess-item-costm2-big title_h4">154 м²</div>
+                  <div class="object-card_type-chess-item-text-big title_h4">13 450 000 ₽</div>
+                </div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h4">2К кв</div>
+                  <div class="object-card_type-chess-item-text-big object-card_type-chess-number title_h5">№ 234</div>
+                  <div class="object-card_type-chess-item-costm2-big title_h4">154 м²</div>
+                  <div class="object-card_type-chess-item-text-big title_h4">13 450 000 ₽</div>
+                </div>
+              </div>
+              <!-- 3 этаж -->
+              <div class="object-card_type-chess-section-row">
+                <div class="object-card_type-chess-section-row-subtitle title_h4">3 этаж</div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h5">2К кв</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h5">2К кв</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h5">2К кв</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h5">2К кв</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+                <div class="object-card_type-chess-item bron">
+                  <div class="title_h5">2К кв</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h5">2К кв</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+              </div>
+              <!-- 2 этаж -->
+              <div class="object-card_type-chess-section-row">
+                <div class="object-card_type-chess-section-row-subtitle title_h4">2 этаж</div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h5">2К кв</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h5">2К кв</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+                <div class="object-card_type-chess-item active">
+                  <div class="title_h5">2К кв</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h5">2К кв</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h5">2К кв</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h5">2К кв</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+              </div>
+              <!-- 1 этаж -->
+              <div class="object-card_type-chess-section-row">
+                <div class="object-card_type-chess-section-row-subtitle title_h4">1 этаж</div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h5">2К кв</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h5">2К кв</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h5">2К кв</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h5">2К кв</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h5">2К кв</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h5">2К кв</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h5">2К кв</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+                <div class="object-card_type-chess-item">
+                  <div class="title_h5">2К кв</div>
+                  <div class="object-card_type-chess-item-text-small object-card_type-chess-number title_h6">№ 234</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">154 м²</div>
+                  <div class="object-card_type-chess-item-text-small title_h6">13,4м.₽</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

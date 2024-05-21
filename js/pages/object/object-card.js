@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   dividerHeader()
+  dividerList()
 })
 
 document.addEventListener("click", function(e) {
@@ -62,7 +63,6 @@ window.addEventListener('resize', () => {
     }
   }
 })
-
 
 function dividerHeader() {
   const item1 = document.querySelector('.header_pages-item1');
@@ -116,6 +116,26 @@ function dividerHeader() {
     document.querySelector('.header_divider5').classList.add('d-none');
     return;
   }
+}
+
+function dividerList() {
+  const dividers = document.querySelectorAll('.accordion-border');
+  const list = [];
+  const tile = [];
+
+  for(let i=0; i<dividers.length; i++) {
+    if(dividers[i].classList.contains('accordion-list')) {
+      list.push(dividers[i]);
+    } else {
+      tile.push(dividers[i]);
+    }
+  }
+
+  const lastChildList = list.length - 1;
+  list[lastChildList].classList.remove('accordion-border');
+
+  const lastChildTile = tile.length - 1;
+  tile[lastChildTile].classList.remove('accordion-border');
 }
 
 const swiper = new Swiper(".swiper-small", {
