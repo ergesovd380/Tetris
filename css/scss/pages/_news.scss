@@ -1,0 +1,48 @@
+  // News
+  .news {
+    margin-top: 20px;
+
+    &-img {
+      width: 100%;
+      height: 242px;
+      border-radius: 10px;
+      position: relative;
+
+      &-item {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+      }
+
+      @include for-big-tablet {
+        height: 226px;
+      }
+    }
+
+    &-date {
+      padding: 1px 7px;
+      border-radius: 5px;
+      color: var(--white);
+      background-color: var(--black);
+      position: absolute;
+      top: 13px;
+      right: 20px;
+
+      &-modal {
+        top: 20px;
+      }
+    }
+
+    &-title {
+      margin-top: 20px;
+      cursor: pointer;
+
+      @include for-tablet {
+        margin-top: 15px;
+      }
+    }
+
+    &-text {
+      margin-top: 10px;
+    }
+  }

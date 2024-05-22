@@ -32,9 +32,45 @@
       width: 103px;
       height: 100%;
     }
+
+    @include for-tablet {
+      display: none;
+    }
   }
 
   &-small .swiper-slide-thumb-active > img {
+    border: 2px solid var(--orange);
+    border-radius: 10px;
+  }
+
+  &-modal-b {
+    max-width: 473px;
+    height: 330px;
+
+    @include for-big-tablet {
+      width: 100%;
+    }
+
+    @include for-small-tablet {
+      height: 219px;
+    }
+  }
+
+  &-modal-s {
+    height: 53px;
+    margin: 20px 0;
+
+    &_item > img {
+      width: 79px;
+      height: 100%;
+    }
+
+    @include for-big-tablet {
+      display: none;
+    }
+  }
+
+  &-modal-s .swiper-slide-thumb-active > img {
     border: 2px solid var(--orange);
     border-radius: 10px;
   }

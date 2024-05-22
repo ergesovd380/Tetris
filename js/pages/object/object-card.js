@@ -8,12 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const withWindow = window.innerWidth;
   if(withWindow < 768) {
     document.querySelector('.accordion-collapse').classList.add('collapse')
-    document.querySelector('.swiper-small').classList.add('d-none');
   } else {
     document.querySelector('.accordion-collapse').classList.remove('collapse')
-    if(document.querySelector('.swiper-small').classList.contains('d-none')) {
-      document.querySelector('.swiper-small').classList.remove('d-none');
-    }
   }
 
   dividerHeader()
@@ -53,17 +49,7 @@ document.addEventListener("click", function(e) {
   }
 });
 
-window.addEventListener('resize', () => {
-  const withWindow = window.innerWidth;
-  if(withWindow < 768) {
-    document.querySelector('.swiper-small').classList.add('d-none');
-  } else {
-    if(document.querySelector('.swiper-small').classList.contains('d-none')) {
-      document.querySelector('.swiper-small').classList.remove('d-none');
-    }
-  }
-})
-
+// Header divider
 function dividerHeader() {
   const item1 = document.querySelector('.header_pages-item1');
   const item2 = document.querySelector('.header_pages-item2');
@@ -138,7 +124,8 @@ function dividerList() {
   tile[lastChildTile].classList.remove('accordion-border');
 }
 
-const swiper = new Swiper(".swiper-small", {
+// Swipers
+const swiperSmall = new Swiper(".swiper-s1", {
   spaceBetween: 20,
   slidesPerView: 7,
   freeMode: true,
@@ -152,14 +139,14 @@ const swiper = new Swiper(".swiper-small", {
     }
   }
 });
-const swiper2 = new Swiper(".swiper-big", {
+const swiperBig = new Swiper(".swiper-b1", {
   spaceBetween: 10,
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".swiper-next1",
+    prevEl: ".swiper-prev1",
   },
   thumbs: {
-    swiper: swiper,
+    swiper: swiperSmall,
   },
   breakpoints: {
     768: {
@@ -173,3 +160,94 @@ const swiper2 = new Swiper(".swiper-big", {
     }
   }
 });
+
+const swiperSmall1 = new Swiper(".swiper-s2", {
+  spaceBetween: 20,
+  slidesPerView: 7,
+  freeMode: true,
+  watchSlidesProgress: true,
+  breakpoints: {
+    1200: {
+        slidesPerView: 7,
+    },
+    300: {
+        slidesPerView: 6,
+    }
+  }
+});
+const swiperBig1 = new Swiper(".swiper-b2", {
+  spaceBetween: 10,
+  navigation: {
+    nextEl: ".swiper-next2",
+    prevEl: ".swiper-prev2",
+  },
+  thumbs: {
+    swiper: swiperSmall1,
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 1,
+      loop: false
+    },
+    300: {
+      slidesPerView: 1.2,
+      spaceBetween: 20,
+      loop: true
+    }
+  }
+});
+
+const swiperModalS = new Swiper(".swiper-modal-s", {
+  spaceBetween: 20,
+  slidesPerView: 5,
+  freeMode: true,
+  watchSlidesProgress: true,
+  breakpoints: {
+    1200: {
+        slidesPerView: 5,
+    },
+    300: {
+        slidesPerView: 4,
+    }
+  }
+});
+const swiperModalB = new Swiper(".swiper-modal-b", {
+  spaceBetween: 10,
+  thumbs: {
+    swiper: swiperModalS,
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 1,
+      loop: false
+    },
+    300: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      loop: true
+    }
+  }
+});
+
+// Modal Зафиксировать клиента
+const fileName = document.querySelector('.modal-zaf-added');
+window.addEventListener('DOMContentLoaded', () => {
+  fileName.classList.add('d-none');
+});
+function updateFileProj() {
+  const fileNameText = document.querySelector('.modal-zaf-added-name');
+  if (document.getElementById('add-doc').files.length > 0) {
+    fileName.classList.remove('d-none');
+    fileNameText.innerHTML = document.getElementById('add-doc').files[0].name;
+  };
+};
+function deleteFileProj() {
+  const fileNameText = document.querySelector('.modal-zaf-added-name');
+  if (document.getElementById('add-doc').files.length > 0) {
+    console.log('Start')
+    fileName.classList.add('d-none');
+    fileNameText.innerHTML = '';
+    const files = document.getElementById('add-doc').files;
+    Object.keys(files).forEach(key => delete items[key]);
+  };
+};

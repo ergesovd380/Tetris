@@ -22,6 +22,21 @@
       width: 139px;
     }
   }
+
+  &_big {
+    width: 100%;
+    padding: 15px 20px 14px;
+    color: var(--gray-input);
+    border: 1px solid var(--gray-input);
+    border-radius: 5px;
+
+    @include title_h5;
+
+    &:focus {
+      color: var(--black);
+      border: 1px solid var(--black);
+    }
+  }
 }
 
 .custom-select {

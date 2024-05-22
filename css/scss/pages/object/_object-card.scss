@@ -9,7 +9,6 @@
       margin-right: 20px;
     }
   }
-
   &_zaf {
     margin-top: 20px;
   }
@@ -100,7 +99,6 @@
   // sale
   &_sale {
     margin-top: 20px;
-    display: flex;
     
     &-item {
       padding: 30px;
@@ -111,23 +109,35 @@
       border-radius: 10px;
 
       &-1 {
-        margin-right: 15px;
+        gap: 15px;
         background-image: url('../../../../assets/images/object-card/sale-1.svg');
         border-bottom: 5px solid var(--green);
-
-        @include for-big-tablet {
-          margin-right: 0;
-        }
       }
       &-2 {
-        margin-left: 15px;
         background-image: url('../../../../assets/images/object-card/sale-2.svg');
         border-bottom: 5px solid var(--blue);
+      }
+      &-3 {
+        margin-top: 20px;
+        background-image: url('../../../../assets/images/object-card/sale-3.svg');
+        border-bottom: 5px solid var(--yellow);
 
         @include for-big-tablet {
-          margin-left: 0;
-          margin-top: 20px;
+          margin-top: 0;
         }
+      }
+      &-4 {
+        margin-top: 20px;
+        background-image: url('../../../../assets/images/object-card/sale-4.svg');
+        border-bottom: 5px solid var(--red);
+
+        @include for-big-tablet {
+          margin-top: 0;
+        }
+      }
+
+      @include for-big-tablet {
+        margin-top: 20px;
       }
     }
 
@@ -160,12 +170,23 @@
       }
     }
 
-    @include for-big-tablet {
-      display: block;
+    &-video {
+      height: 389px;
+      border-radius: 10px;
+
+      @include for-big-tablet {
+        margin-top: 20px;
+        height: 238px;
+      }
+    }
+    &-img {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
     }
 
-    @include for-tablet {
-      margin-top: 30px;
+    @include for-big-tablet {
+      margin-top: 0;
     }
   }
 
@@ -182,7 +203,6 @@
       justify-content: space-between;
     }
   }
-
   &_type {
     margin-top: 20px;
     padding: 30px;
@@ -429,12 +449,11 @@
       display: flex;
       max-width: 100%;
       overflow: auto;
-      background: linear-gradient(to right, var(--white) 90%,  rgba(255, 255, 255, 0.5) 100%);
-
+      
       &-number {
         color: var(--gray-input);
       }
-
+      
       &-section {
         width: 590px !important;
         margin: 0 19px 0 25px;
@@ -444,7 +463,7 @@
           min-height: 93px;
           display: flex;
           position: relative;
-
+          
           &-subtitle {
             writing-mode: vertical-rl;
             transform: rotate(-180deg);
@@ -455,7 +474,7 @@
           }
         }
       }
-
+      
       &-item {
         min-width: 65px;
         width: 100%;
@@ -466,12 +485,12 @@
         border-radius: 10px;
         overflow: hidden;
         position: relative;
-
+        
         &:is(.bron) {
           border: 1px solid var(--yellow);
           background-color: var(--yellow);
         }
-
+        
         &:is(.active) {
           border: 1px solid var(--orange);
           background-color: var(--orange);
@@ -479,11 +498,11 @@
         &:is(.active) > div {
           color: var(--white);
         }
-
+        
         &:last-child {
           margin-right: 0;
         }
-
+        
         &-costm2 {
           &-big {
             position: absolute;
@@ -491,15 +510,32 @@
             right: 10px;
           }
         }
-
+        
         &-text {
           &-big {
             margin-top: 10px;
           }
-
+          
           &-small {
             margin-top: 5px;
           }
+        }
+      }
+    }
+    
+    &-parent {
+      position: relative;
+      
+      &-gradient {
+        width: 98px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: -10px;
+        background: linear-gradient(to right, transparent 0%, rgba(255, 255, 255, 0.7) 25%, var(--white) 75%);
+
+        @include for-big-tablet {
+          display: none;
         }
       }
     }
@@ -507,6 +543,358 @@
     @include for-tablet {
       margin-top: 15px;
       padding: 20px;
+    }
+  }
+
+  // fre-info
+  &_free-info {
+    margin-top: 20px;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: var(--white);
+
+    &-head {
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--gray);
+
+      @include for-laptop {
+        display: none;
+      }
+    }
+
+    &-items {
+      padding: 20px 0;
+      border-bottom: 1px solid var(--gray);
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      @include for-laptop {
+        padding: 0 0 20px 0;
+      }
+
+    }
+
+    &-column {
+      @include for-laptop {
+        margin-top: 20px;
+      }
+    }
+
+    &-subtitle {
+      color: var(--gray-input);
+      
+      &-item {
+        margin-bottom: 10px;
+        color: var(--gray-input);
+        display: none;
+
+        @include for-laptop {
+          display: block;
+        }
+      }
+    }
+
+    &-corpus {
+      width: 47px;
+    }
+    &-queue {
+      width: 57px;
+    }
+    &-deadline {
+      width: 80px;
+    }
+    &-cl {
+      width: 92px;
+    }
+    &-floor {
+      width: 43px;
+    }
+    &-room {
+      width: 79px;
+    }
+    &-cost {
+      width: 97px;
+    }
+    &-type {
+      width: 93px;
+    }
+    &-park {
+      width: 85px;
+    }
+    &-terri {
+      width: 77px;
+    }
+    &-tcorpus {
+      width: 87px;
+    }
+    &-sek {
+      text-align: center;
+
+      @include for-laptop {
+        text-align-last: left;
+      }
+    }
+
+    &-title {
+      margin: 10px 0 20px;
+    }
+
+    &-types {
+      // max-width: 1144px;
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+
+      &-item {
+        text-align: center;
+        grid-column: span 1;
+
+        @include for-small-laptop {
+          margin-top: 20px;
+          text-align: left;
+          grid-column: span 2;
+        }
+
+        @include for-tablet {
+          grid-column: span 4;
+        }
+      }
+    }
+
+    @include for-laptop {
+      padding: 10px 30px 30px;
+    }
+
+    @include for-tablet {
+      margin-top: 15px;
+      padding: 0 20px 20px;
+    }
+  }
+
+  // finish 
+  &_finish {
+    margin-top: 30px;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: var(--white);
+
+    &-title {
+      @include for-tablet {
+        margin-top: 20px;
+      }
+    }
+
+    &-subtitle {
+      margin: 30px 0;
+
+      @include for-big-tablet {
+        margin: 20px 0;
+      }
+    }
+
+    &-cost {
+      margin: 30px 0 6px;
+      padding: 6px 10px 7px 12px;
+      border: none;
+      border-radius: 10px;
+      color: var(--white);
+      background-color: var(--green);
+
+      @include for-big-tablet {
+        margin: 20px 0 0;
+      }
+    }
+
+    &-list {
+      margin-top: 24px;
+      display: flex;
+      align-items: center;
+
+      &::before {
+        content: ' ';
+        width: 2px;
+        height: 10px;
+        display: block;
+        margin-right: 10px;
+        border-radius: 7px;
+        background-color: var(--black);
+      }
+
+      @include for-big-tablet {
+        margin-top: 20px;
+      }
+    }
+
+    @include for-big-tablet {
+      margin-top: 20px;
+      padding: 20px;
+    }
+  }
+
+  // 3d tur
+  &_3dtur {
+
+    &-img {
+      max-width: 625px;
+      max-height: 313px;
+      margin-top: 20px;
+      border-radius: 10px;
+
+      @include for-tablet {
+        margin-top: 15px;
+      }
+    }
+  }
+
+  // Files
+  &_files {
+    margin-top: 30px;
+
+    &-items {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+
+      @include for-laptop {
+        margin-top: 0;
+      }
+      
+      @include for-big-tablet {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    &-folder {
+      grid-column: span 1;
+
+      &-link {
+        margin-top: 10px;
+        display: block;
+        text-decoration: underline;
+        color: var(--orange);
+        cursor: pointer;
+        
+        &:hover {
+          text-decoration: underline;
+          color: var(--orange);
+        }
+      }
+
+      @include for-laptop {
+        grid-column: span 2;
+        margin-top: 20px;
+      }
+
+      @include for-small-tablet {
+        grid-column: span 4;
+      }
+    }
+  }
+
+  // Bank 
+  &_bank {
+    margin-top: 20px;
+    padding: 30px;
+    width: 100%;
+    border-radius: 10px;
+    overflow: auto;
+    background-color: var(--white);
+
+    &-head {
+      padding-bottom: 20px;
+      display: flex;
+      align-items: center;
+
+      &-title {
+        color: var(--gray-input);
+      }
+    }
+
+    &-items {
+      padding: 20px 0;
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      &-status {
+        height: 20px;
+
+        &:is(.true) {
+          background-image: url(../../../../assets/images/icons/true.svg);
+          background-repeat: no-repeat;
+        }
+        &:is(.false) {
+          background-image: url(../../../../assets/images/icons/false.svg);
+          background-repeat: no-repeat;
+        }
+      }
+
+      &::after {
+        content: '';
+        width: 100%;
+        height: 1px;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 1px;
+        background-color: var(--gray);
+
+        @include for-small-laptop {
+          width: 900px !important;
+        }
+      }
+    }
+
+    &-text {
+      margin-right: 50px;
+    }
+
+    &-num {
+      min-width: 47px;
+    }
+    &-ipot {
+      min-width: 55px;
+    }
+    &-voen {
+      min-width: 97px;
+    }
+    &-mat {
+      min-width: 90px;
+    }
+    &-subs {
+      min-width: 64px;
+    }
+    &-rass {
+      min-width: 70px;
+    }
+    &-banks {
+      min-width: 190px;
+    }
+
+    @include for-big-tablet {
+      padding: 20px;
+    }
+  }
+
+  // Map
+  &_map {
+    width: 100%;
+    height: 422px;
+    margin-top: 20px;
+    border-radius: 10px;
+
+    &-scheme {
+
+      @include for-big-tablet {
+        margin-top: 30px;
+      }
+    }
+
+    @include for-tablet {
+      height: 257px;
     }
   }
 }
@@ -534,7 +922,6 @@
 .form-check-label {
   color: var(--gray-input);
 }
-
 .accordion-border {
   border-bottom: 1px solid var(--gray);
 }

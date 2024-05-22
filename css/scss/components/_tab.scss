@@ -1,0 +1,138 @@
+.nav-cards {
+  display: flex;
+  justify-content: end;
+
+  &-object {
+    @include for-big-tablet {
+      display: none;
+    }
+  }
+}
+
+.cards-type {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+  cursor: pointer;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &-icon {
+    margin-right: 10px;
+  }
+
+  &:is(.active) {
+    color: var(--orange);
+  }
+
+  &:is(.active) > div > .type_list,
+  &:is(.active) > div > .type_tile,
+  &:is(.active) > div > div > .type_chess,
+  &:is(.active) > div > .type_chess {
+    background-color: var(--orange);
+  }
+
+  @include for-tablet {
+    margin-right: 20px;
+  }
+}
+
+.type {
+  &_list {
+    width: 15px;
+    height: 2px;
+    margin-bottom: 3px;
+    display: block;
+    border-radius: 1px;
+    background-color: var(--black);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &-object {
+      @include for-small-tablet {
+        width: 25px;
+        height: 3.3px;
+        border-radius: 1.67px;
+      }
+    }
+  }
+
+  &_tile {
+    width: 7px;
+    height: 6px;
+    margin: 0 1px 1px 0;
+    border-radius: 1px;
+    background-color: var(--black);
+
+    &-object {
+      @include for-small-tablet {
+        width: 11px;
+        height: 10px;
+        border-radius: 1.67px;
+      }
+    }
+  }
+
+  &_chess {
+    width: 7px;
+    height: 6px;
+    margin: 0 1px 1px 0;
+    border-radius: 1px;
+    background-color: var(--black);
+
+    &-top {
+      display: flex;
+    }
+
+    &-object {
+      @include for-small-tablet {
+        width: 11px;
+        height: 10px;
+        border-radius: 1.67px;
+      }
+    }
+
+    &-3 {
+      width: 15px;
+      height: 6px;
+
+      &-object {
+        @include for-small-tablet {
+          width: 23.5px;
+          height: 10px;
+          border-radius: 1.67px;
+        }
+      }
+    }
+  }
+}
+
+.finish-type {
+  margin-right: 30px;
+  color: var(--gray-input);
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:is(.active) {
+    color: var(--black);
+
+    &::after {
+      content: ' ';
+      height: 3px;
+      margin-top: 10px;
+      display: block;
+      background-color: var(--black);
+      border-radius: 3px;
+    }
+  }
+
+  @include for-tablet {
+    margin-right: 20px;
+  }
+}
