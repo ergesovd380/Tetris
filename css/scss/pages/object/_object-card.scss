@@ -90,6 +90,10 @@
         margin-bottom: 20px;
       }
 
+      &-name {
+        margin-bottom: 20px;
+      }
+
       &-btn {
         margin-top: 30px;
       }
@@ -651,6 +655,16 @@
         text-align: center;
         grid-column: span 1;
 
+        &-long {
+          width: 160px;
+          margin: 0 30px;
+
+          @include for-laptop {
+            width: auto;
+            margin: 0;
+          }
+        }
+
         @include for-small-laptop {
           margin-top: 20px;
           text-align: left;
@@ -848,30 +862,33 @@
       }
     }
 
-    &-text {
-      margin-right: 50px;
-    }
-
     &-num {
       min-width: 47px;
+      margin-right: 50px;
     }
     &-ipot {
       min-width: 55px;
+      margin-right: 50px;
     }
     &-voen {
       min-width: 97px;
+      margin-right: 50px;
     }
     &-mat {
       min-width: 90px;
+      margin-right: 50px;
     }
     &-subs {
       min-width: 64px;
+      margin-right: 50px;
     }
     &-rass {
       min-width: 70px;
+      margin-right: 50px;
     }
     &-banks {
       min-width: 190px;
+      margin-right: 50px;
     }
 
     @include for-big-tablet {
@@ -900,7 +917,7 @@
 }
 
 .form-switch .form-check-input {
-  width: 37px;
+  min-width: 37px;
   height: 20px;
   margin-right: 10px;
   background-image: url('../../../../assets/images/icons/checkbox-notactive.svg');
@@ -909,6 +926,7 @@
   box-shadow: inset 0px 4px 3px 1px rgba(0, 0, 0, 0.1),;
   border-radius: 2em;
   transition: background-position .15s ease-in-out;
+  cursor: pointer;
 
   &:focus {
     background-image: url('../../../../assets/images/icons/checkbox-notactive.svg');
@@ -918,9 +936,14 @@
     background-image: url('../../../../assets/images/icons/checkbox-active.svg');
     border: 2px solid #00AA40;
   }
+
+  &:checked + .form-check-label {
+    color: var(--black)
+  }
 }
 .form-check-label {
   color: var(--gray-input);
+  cursor: pointer;
 }
 .accordion-border {
   border-bottom: 1px solid var(--gray);

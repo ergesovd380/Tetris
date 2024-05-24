@@ -10,6 +10,8 @@
     border: 1px solid var(--gray-input);
     border-radius: 5px;
 
+    @include title_h5;
+
     @include for-big-tablet {
       width: 139px;
     }

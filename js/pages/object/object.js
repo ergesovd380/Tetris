@@ -1,6 +1,9 @@
 const Items = document.querySelectorAll('.custom-select-items');
+
 // Закрыть selected
 document.addEventListener('DOMContentLoaded', () => {
+  dividerHeader()
+
   Items.forEach((e) => {
     e.classList.add('d-none')
   })
@@ -11,8 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     document.querySelector('.accordion-collapse').classList.remove('collapse')
   }
-
-  dividerHeader()
 })
 
 document.addEventListener("click", function(e) {

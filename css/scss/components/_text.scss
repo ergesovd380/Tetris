@@ -4,6 +4,7 @@
     font-size: 52px;
     font-weight: 400;
     line-height: 52px;
+    letter-spacing: normal;
 
     @include for-tablet {
       font-size: 36px;
@@ -16,6 +17,7 @@
     font-size: 20px;
     font-weight: 700;
     line-height: 24.2px;
+    letter-spacing: normal;
   }
 
   &_h3 {
@@ -23,6 +25,7 @@
     font-size: 18px;
     font-weight: 700;
     line-height: 21.09px;
+    letter-spacing: normal;
   }
 
   &_h4 {
@@ -30,6 +33,7 @@
     font-size: 16px;
     font-weight: 600;
     line-height: 18.75px;
+    letter-spacing: normal;
   }
 
   &_h5 {
@@ -37,6 +41,7 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 16.41px;
+    letter-spacing: normal;
   }
 
   &_h6 {
@@ -44,6 +49,7 @@
     font-size: 12px;
     font-weight: 400;
     line-height: 14.06px;
+    letter-spacing: normal;
   }
 }
 
@@ -53,4 +59,5 @@
   font-weight: 400;
   line-height: 16.41px;
   text-decoration: underline;
+  letter-spacing: normal;
 }

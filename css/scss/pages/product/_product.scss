@@ -1,0 +1,455 @@
+.product {
+
+  &-card {
+
+    &-addr {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+
+      &-deadline {
+        @include for-tablet {
+          margin-top: 20px;
+        }
+      }
+
+      @include for-tablet {
+        display: block;
+      }
+    }
+
+    &-row {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 20px;
+
+      @include for-big-tablet {
+        margin-top: 20px;
+      }
+    }
+
+    &-column {
+      padding: 20px 30px;
+      border-radius: 10px;
+      background-color: var(--white);
+
+      &-big {
+        grid-column: span 4;
+
+        @include for-small-laptop {
+          grid-column: span 7;
+        }
+
+        @include for-big-tablet {
+          grid-column: span 4;
+        }
+      }
+
+      &-small {
+        grid-column: span 3;
+        text-align: center;
+        cursor: pointer;
+
+        @include for-small-laptop {
+          grid-column: span 7;
+        }
+
+        @include for-big-tablet {
+          grid-column: span 3;
+        }
+      }
+
+      &-cost {
+        margin-top: 5px;
+      }
+
+      @include for-tablet {
+        padding: 20px;
+      }
+    }
+
+    &-types {
+      padding: 30px 15px;
+      border-radius: 30px;
+      background-color: var(--white);
+
+      @include for-small-laptop {
+        padding: 10px 30px 30px;
+      }
+    }
+
+    &-tab {
+      margin-top: 40px;
+
+      &-column {
+        padding: 30px;
+        border-radius: 10px;
+        background-color: var(--white);
+
+        &-s {
+          @include for-big-tablet {
+            margin-top: 30px;
+          }
+        }
+
+        @include for-tablet {
+          padding: 20px;
+        }
+      }
+
+      &-bank {
+        width: 100%;
+        overflow: auto;
+
+        &-items {
+          &::after {
+            content: '';
+            width: 900px !important;
+            height: 1px;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 1px;
+            background-color: var(--gray);
+          }
+        }
+      }
+
+      &-files {
+    
+        &-items {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+        }
+    
+        &-folder {
+          grid-column: span 2;
+          margin-top: 20px;
+    
+          &-link {
+            margin-top: 10px;
+            display: block;
+            text-decoration: underline;
+            color: var(--orange);
+            cursor: pointer;
+            
+            &:hover {
+              text-decoration: underline;
+              color: var(--orange);
+            }
+          }
+    
+          @include for-tablet {
+            grid-column: span 4;
+          }
+        }
+      }
+
+      &-inf {
+        margin-bottom: 25px;
+        overflow: hidden;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &-free-info {
+      margin-top: 30px;
+    }
+  }
+
+  &-present {
+    position: relative;
+
+    &-desktop {
+      
+      @include for-big-tablet {
+        display: none;
+      }
+    }
+
+    &-mobile {
+      display: none;
+
+      @include for-big-tablet {
+        display: block;
+      }
+    }
+
+    &-title {
+      @include for-big-tablet {
+        position: absolute;
+        top: 0;
+        left: 12px;
+        display: block;
+        width: 696px;
+      }
+
+      @include for-tablet {
+        width: 516px;
+      }
+
+      @include for-small-tablet {
+        width: 95%;
+      }
+    }
+
+    &-left {
+      padding: 30px;
+      border-radius: 10px;
+      background-color: var(--white);
+
+      &-s {
+        margin-top: 30px;
+
+        @include for-big-tablet {
+          display: none;
+        }
+      }
+
+      @include for-small-laptop {
+        padding: 20px;
+      }
+
+      @include for-big-tablet {
+        padding: 30px;
+        margin-top: 145px;
+      }
+
+      @include for-tablet {
+        padding: 20px;
+        margin-top: 120px;
+      }
+    }
+
+    &-checkbox {
+      margin-top: 20px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    &-form {
+      @include for-laptop {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    &-mt4 {
+      margin-top: 40px;
+    }
+
+    &-mt3 {
+      margin-top: 30px;
+    }
+
+    &-mt2 {
+      margin-top: 20px;
+    }
+
+    &-mt1 {
+      margin-top: 10px;
+    }
+
+    &-data {
+      overflow: hidden;
+
+      &-title {
+        color: var(--gray-input);
+        margin-bottom: 25px;
+      }
+    }
+
+    &-input {
+      margin-top: 20px;
+    }
+
+    &-link {
+      color: var(--orange);
+      text-decoration: underline;
+      cursor: pointer;
+
+      &:hover {
+        color: var(--orange);
+        text-decoration: underline;
+      }
+    }
+
+    &-box {
+      margin-top: 30px;
+      padding: 30px;
+      border-radius: 10px;
+      background-color: var(--white);
+
+      @include for-tablet {
+        padding: 20px;
+      }
+    }
+
+    &-client {
+      display: flex;
+
+      &-d {
+        display: flex;
+
+        @include for-tablet {
+          margin-top: 20px;
+
+          &:first-child {
+            margin-top: 0;
+          }
+        }
+      }
+
+      &-title {
+        color: var(--gray-input);
+        margin-bottom: 10px;
+      }
+
+      &-data {
+        margin-right: 40px;
+      }
+
+      @include for-tablet {
+        display: block;
+      }
+    }
+
+    &-divider {
+      width: 100%;
+      height: 1px;
+      margin: 30px 0;
+      border-radius: 1px;
+      background-color: var(--gray-input);
+    }
+
+    &-addr {
+      margin-top: 4px;
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    &-3d {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &-text {
+        margin-left: 20px;
+      }
+
+      @include for-tablet {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        bottom: -30px;
+        right: 0;
+      }
+    }
+
+    &-company {
+      margin: 10px 0 30px;
+      color: var(--gray-input);
+
+      @include for-tablet {
+        margin: 10px 0 20px;
+      }
+    }
+
+    &-product {
+
+      &-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include for-big-tablet {
+          margin-top: 20px;
+        }
+      }
+
+      &-img {
+        width: 100%;
+        height: auto;
+
+        @include for-tablet {
+          height: 237px;
+        }
+      }
+
+      &-char {
+        margin-top: 20px;
+
+        @include for-tablet {
+          margin-top: 0;
+        }
+      }
+    }
+
+    &-empty {
+      padding: 6px 13px 7px 14px;
+      border-radius: 33px;
+      background-color: var(--yellow);
+    }
+
+    &-cost {
+      margin-top: 28px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &-dynamic {
+      margin-top: 20px;
+      display: flex;
+      align-items: end;
+
+      &-name {
+        margin-left: 10px;
+        cursor: pointer;
+      }
+    }
+
+    &-img {
+      width: 100%;
+      height: 260px;
+      border-radius: 10px;
+    }
+
+    &-adventage {
+      margin-top: 10px;
+
+      @include for-big-tablet {
+        margin-top: 30px;
+      }
+    }
+
+    &-map {
+      height: 422px;
+
+      &-img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+      }
+
+      @include for-tablet {
+        height: 270px;
+      }
+    }
+
+    &-swiper {
+      width: 100%;
+      height: 461px;
+
+      @include for-tablet {
+        height: 219px;
+      }
+    }
+  }
+}

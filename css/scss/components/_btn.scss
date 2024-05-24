@@ -19,6 +19,26 @@
     }
   }
 
+  &_100 {
+    width: 100%;
+    padding: 14px 0;
+    background-color: var(--blue);
+    color: var(--white);
+    border: none;
+    border-radius: 10px;
+    
+    @include title_h4;
+    
+    &:hover,
+    &:is(.active) {
+      background-color: var(--orange);
+    }
+
+    &:is(.disabled) {
+      background-color: var(--gray);
+    }
+  }
+
   &_small {
     padding: 13px 25px;
     background-color: var(--black);

@@ -1,19 +1,11 @@
-document.addEventListener('DOMContentLoaded', () => {
-  dividerHeader()
-  dividerList()
-  
-  // Закрыть selected
-  const Items = document.querySelectorAll('.custom-select-items');
-  Items.forEach((e) => {
-    e.classList.add('d-none')
-  })
+const Items = document.querySelectorAll('.custom-select-items');
 
-  const withWindow = window.innerWidth;
-  if(withWindow < 768) {
-    document.querySelector('.accordion-collapse').classList.add('collapse')
-  } else {
-    document.querySelector('.accordion-collapse').classList.remove('collapse')
-  }
+document.addEventListener('DOMContentLoaded', () => {
+  dividerHeader();
+
+  Items.forEach((e) => {
+    e.classList.add('d-none');
+  })
 })
 
 document.addEventListener("click", function(e) {
@@ -104,63 +96,7 @@ function dividerHeader() {
   }
 }
 
-function dividerList() {
-  const dividers = document.querySelectorAll('.accordion-border');
-  const list = [];
-  const tile = [];
-
-  for(let i=0; i<dividers.length; i++) {
-    if(dividers[i].classList.contains('accordion-list')) {
-      list.push(dividers[i]);
-    } else {
-      tile.push(dividers[i]);
-    }
-  }
-
-  const lastChildList = list.length - 1;
-  list[lastChildList].classList.remove('accordion-border');
-
-  const lastChildTile = tile.length - 1;
-  tile[lastChildTile].classList.remove('accordion-border');
-}
-
 // Swipers
-const swiperSmall = new Swiper(".swiper-s1", {
-  spaceBetween: 20,
-  slidesPerView: 7,
-  freeMode: true,
-  watchSlidesProgress: true,
-  breakpoints: {
-    1200: {
-        slidesPerView: 7,
-    },
-    300: {
-        slidesPerView: 6,
-    }
-  }
-});
-const swiperBig = new Swiper(".swiper-b1", {
-  spaceBetween: 10,
-  navigation: {
-    nextEl: ".swiper-next1",
-    prevEl: ".swiper-prev1",
-  },
-  thumbs: {
-    swiper: swiperSmall,
-  },
-  breakpoints: {
-    768: {
-      slidesPerView: 1,
-      loop: false
-    },
-    300: {
-      slidesPerView: 1.2,
-      spaceBetween: 20,
-      loop: true
-    }
-  }
-});
-
 const swiperSmall1 = new Swiper(".swiper-s2", {
   spaceBetween: 20,
   slidesPerView: 7,
@@ -168,10 +104,10 @@ const swiperSmall1 = new Swiper(".swiper-s2", {
   watchSlidesProgress: true,
   breakpoints: {
     1200: {
-        slidesPerView: 7,
+        slidesPerView: 9,
     },
     300: {
-        slidesPerView: 6,
+        slidesPerView: 7,
     }
   }
 });
@@ -196,58 +132,3 @@ const swiperBig1 = new Swiper(".swiper-b2", {
     }
   }
 });
-
-const swiperModalS = new Swiper(".swiper-modal-s", {
-  spaceBetween: 20,
-  slidesPerView: 5,
-  freeMode: true,
-  watchSlidesProgress: true,
-  breakpoints: {
-    1200: {
-        slidesPerView: 5,
-    },
-    300: {
-        slidesPerView: 4,
-    }
-  }
-});
-const swiperModalB = new Swiper(".swiper-modal-b", {
-  spaceBetween: 10,
-  thumbs: {
-    swiper: swiperModalS,
-  },
-  breakpoints: {
-    768: {
-      slidesPerView: 1,
-      loop: false
-    },
-    300: {
-      slidesPerView: 1,
-      spaceBetween: 20,
-      loop: true
-    }
-  }
-});
-
-// Modal Зафиксировать клиента
-const fileName = document.querySelector('.modal-zaf-added');
-window.addEventListener('DOMContentLoaded', () => {
-  fileName.classList.add('d-none');
-});
-function updateFileProj() {
-  const fileNameText = document.querySelector('.modal-zaf-added-name');
-  if (document.getElementById('add-doc').files.length > 0) {
-    fileName.classList.remove('d-none');
-    fileNameText.innerHTML = document.getElementById('add-doc').files[0].name;
-  };
-};
-function deleteFileProj() {
-  const fileNameText = document.querySelector('.modal-zaf-added-name');
-  if (document.getElementById('add-doc').files.length > 0) {
-    console.log('Start')
-    fileName.classList.add('d-none');
-    fileNameText.innerHTML = '';
-    const files = document.getElementById('add-doc').files;
-    Object.keys(files).forEach(key => delete items[key]);
-  };
-};

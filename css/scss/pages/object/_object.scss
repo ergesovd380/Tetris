@@ -2,6 +2,10 @@
   
   &_title {
     margin-bottom: 30px;
+
+    @include for-tablet {
+      margin-bottom: 20px;
+    }
   }
 
   &_btn {
@@ -73,6 +77,7 @@
         border-radius: 5px;
         vertical-align: sub;
         position: relative;
+        cursor: pointer;
 
         &::before {
           content: '';
@@ -95,6 +100,7 @@
       // Label
       &-label {
         margin-right: 30px;
+        cursor: pointer;
 
         @include for-big-tablet {
           margin-right: 20px;
@@ -280,6 +286,7 @@
   &-zaf {
     padding: 7px 18px;
     width: 222px;
+    border: none;
     border-radius: 35px;
     background-color: var(--yellow);
     cursor: pointer;
