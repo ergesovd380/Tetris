@@ -1,0 +1,169 @@
+.agencies {
+  
+  &-col1 {
+    padding: 20px 30px 30px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: var(--white);
+
+    &-title {
+      margin-top: 10px;
+
+      @include for-big-tablet {
+        max-width: 155px;
+        margin-top: 0;
+        margin-left: 20px;
+        text-align: left;
+      }
+    }
+
+    @include for-big-tablet {
+      padding: 20px;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &-mt1 {
+    margin-top: 10px;
+  }
+
+  &-mt2 {
+    margin-top: 20px;
+  }
+
+  &-btn {
+    margin-top: 20px;
+
+    @include for-big-tablet {
+      margin-top: 30px;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &-logo {
+    max-width: 86px;
+    max-height: 86px;
+  }
+
+  &-link {
+    margin-top: 20px;
+    display: block;
+    color: var(--black);
+    text-decoration: underline;
+
+    &:hover {
+      color: var(--black);
+      text-decoration: underline;
+    }
+  }
+
+  &-title {
+    display: flex;
+    align-items: end;
+
+    @include for-big-tablet {
+      margin-top: 30px;
+      display: block;
+    }
+  }
+
+  &-change {
+    margin: 0 0 5px 30px;
+    color: var(--gray-input);
+    text-decoration: underline;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--gray-input);
+      text-decoration: underline;
+    }
+
+    @include for-big-tablet {
+      margin: 0;
+      margin-top: 10px;
+    }
+  }
+
+  &-col2 {
+    margin-top: 30px;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: var(--white);
+
+    @include for-big-tablet {
+      margin-top: 20px;
+      padding: 20px;
+    }
+  }
+
+  &-form {
+    max-width: 802px;
+  }
+
+  &-desktop {
+
+    @include for-big-tablet {
+      display: none;
+    }
+  }
+
+  &-mobile {
+    display: none;
+
+    @include for-big-tablet {
+      display: block;
+    }
+  }
+
+  &-filter {
+    display: none;
+ 
+    @include for-big-tablet {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+  
+      &-btn {
+        width: 180px;
+        margin-top: 20px;
+        padding: 13px 22px;
+        letter-spacing: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        background-color: var(--black);
+        color: var(--white);
+        border: none;
+        border-radius: 10px;
+        
+        @include title_h5;
+    
+        &:hover,
+        &:is(.active) {
+          background-color: var(--orange);
+        }
+    
+        &:is(.disabled) {
+          background-color: var(--gray);
+        }
+  
+        @include for-mobile {
+          width: 150px;
+          white-space: wrap;
+        }
+      }
+    }
+  }
+
+  &-cancel {
+    margin-left: 50px;
+    color: var(--gray-input);
+    text-decoration: underline;
+
+    @include for-mobile {
+      margin-left: 40px;
+    }
+  }
+}

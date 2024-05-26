@@ -10,6 +10,7 @@
 
   &_btn {
     margin-right: 30px;
+    white-space: nowrap;
 
     @include for-tablet {
       margin-right: 20px;
@@ -316,6 +317,7 @@
       display: flex;
 
       &-mob {
+        margin-top: 15px;
         display: none;
 
         @include for-tablet {
@@ -441,6 +443,7 @@
 
     &-deadline {
       margin-bottom: 20px;
+      width: fit-content;
 
       &-desktop {
         @include for-tablet {
@@ -454,6 +457,10 @@
 
       @include for-small-laptop {
         margin: 0 0 20px 0;
+      }
+
+      @include for-tablet {
+        margin: 0;
       }
     }
 

@@ -8,6 +8,7 @@
       justify-content: space-between;
 
       &-deadline {
+        width: fit-content;
         @include for-tablet {
           margin-top: 20px;
         }

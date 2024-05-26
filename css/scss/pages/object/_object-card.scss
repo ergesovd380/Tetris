@@ -197,6 +197,33 @@
   // filter
   &_filter {
     margin-top: 40px;
+
+    &-form {
+      position: relative;
+    }
+
+    &-checkbox {
+      margin-top: 60px;
+      display: flex;
+      align-items: center;
+
+      &-group {
+
+        @include for-tablet {
+          padding-bottom: 60px;
+        }
+      }
+
+      @include for-big-tablet {
+        margin-top: 35px;
+      }
+
+      @include for-tablet {
+        position: absolute;
+        bottom: 180px;
+        left: 20px;
+      }
+    }
   }
 
   // corpuse
@@ -709,6 +736,7 @@
     }
 
     &-cost {
+      width: fit-content;
       margin: 30px 0 6px;
       padding: 6px 10px 7px 12px;
       border: none;

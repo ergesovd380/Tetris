@@ -1,0 +1,15 @@
+.instruct {
+  margin-top: 30px;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: var(--white);
+
+  &-text {
+    margin-top: 20px;
+  }
+
+  @include for-tablet {
+    margin-top: 15px;
+    padding: 20px;
+  }
+}

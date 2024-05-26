@@ -1,0 +1,361 @@
+.client {
+
+  &-lk {
+
+    &-title {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: end;
+
+      @include for-tablet {
+        width: 262px;
+        display: block;
+      }
+    }
+
+    &-link {
+      margin:  0 0 5px 40px;
+      color: var(--gray-input);
+      cursor: pointer;
+
+      @include for-tablet {
+        margin: 10px 0;
+      }
+    }
+
+    &-phone {
+      display: flex;
+      align-items: center;
+
+      &-btn {
+
+        @include for-tablet {
+          width: 100%;
+          margin-top: 20px;
+        }
+      }
+
+      @include for-tablet {
+        margin-top: 20px;
+      }
+    }
+
+    &-email {
+      margin-left: 30px;
+    }
+
+    &-file {
+      display: flex;
+      align-items: center;
+      margin-right: 10px;
+      
+      &-title {
+        margin-bottom: 10px;
+        color: var(--gray);
+
+        @include for-big-tablet {
+          margin-top: 20px;
+        }
+      }
+
+      &-name {
+        margin: 0 10px 0 8px;
+      }
+
+      &-input {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        @include for-tablet {
+          display: block;
+        }
+      }
+    }
+
+    &-mt2 {
+      margin-top: 20px;
+
+      @include for-big-tablet {
+        margin-top: 0;
+      } 
+    }
+
+    &-mt5 {
+      margin-top: 5px;
+    }
+
+    &-desktop {
+
+      &-flex {
+        padding-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      &-items {
+        padding: 20px 0;
+        border-top: 1px solid var(--gray-input);
+      }
+
+      &-fio {
+        width: 155px;
+        
+        &-data {
+          display: flex;
+          align-items: center;
+        }
+
+        &-checkbox {
+          margin-right: 15px;
+        }
+      }
+      &-name {
+        width: 105px;
+      }
+      &-num {
+        width: 50px;
+      }
+      &-plan {
+        width: 85px;
+      }
+      &-area {
+        width: 62px;
+      }
+      &-price {
+        width: 83px;
+
+        &-m2 {
+          width: 75px;
+        }
+      }
+      &-floor {
+        width: 35px;
+      }
+      &-finish {
+        width: 65px;
+      }
+      &-status {
+        width: 125px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &-btn {
+          padding: 6px 13px 7px 14px;
+          border-radius: 33px;
+          background-color: var(--yellow);
+        }
+      }
+
+      @include for-small-laptop {
+        display: none;
+      }
+    }
+
+    &-mobile {
+      display: none;
+
+      &-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      &-row {
+        margin-top: 4px;
+        padding-bottom: 25px;
+        display: flex;
+        position: relative;
+      }
+
+      &-img {
+        width: 68px;
+        height: 68px;
+        margin-right: 20px;
+        border-radius: 10px;
+      }
+
+      &-data {
+        width: 100%;
+
+        &-row {
+          display: grid;
+          grid-template-columns: repeat(12, 1fr);
+        }
+
+        &-col {
+          position: relative;
+
+          &::after {
+            content: '';
+            width: 1px;
+            height: 16px;
+            display: block;
+            background-color: var(--gray-input);
+            position: absolute;
+            top: 0;
+            right: 0;
+          }
+
+          &-1 {
+            grid-column: span 3;
+          }
+          &-2 {
+            grid-column: span 5;
+            text-align: center;
+          }
+          &-3 {
+            grid-column: span 4;
+            text-align: center;
+          }
+
+          &:last-child {
+
+            &::after {
+              display: none;
+            }
+          }
+        }
+      }
+
+      &-date {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+
+      &-btn {
+        margin-top: 30px;
+
+        @include for-tablet {
+          width: 100%;
+        }
+      }
+
+      @include for-small-laptop {
+        display: block;
+      }
+    }
+
+    &-checkbox {
+      width: 30px;
+      height: 30px;
+
+      &::before {
+        width: 30px;
+        height: 30px;
+        background-size: contain;
+      }
+
+      &-label {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &-search {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    &-input {
+      width: 289px;
+      padding: 15px 20px 14px;
+      color: var(--gray-input);
+      background-color: transparent;
+      border: 1px solid var(--gray-input);
+      border-radius: 5px 0 0 5px;
+
+      @include title_h5;
+
+      &:hover, 
+      &:focus {
+        color: var(--black);
+        border-color: var(--black);
+      }
+
+      @include for-tablet {
+        width: 243px;
+      }
+    }
+
+    &-select {
+      width: 137px;
+      padding: 15px 20px 14px;
+      background-color: transparent;
+      background-image: url(../../../../assets/images/icons/select-arrow.svg);
+      background-repeat: no-repeat;
+      background-position: 90% center;
+      border: 1px solid var(--gray-input);
+      cursor: pointer;
+
+      @include title_h5;
+
+      @include for-tablet {
+        border-radius: 0 5px 5px 0;
+      }
+    }
+
+    &-btn {
+      padding: 14px 30px;
+      color: var(--white);
+      background-color: var(--black);
+      border-radius: 0 5px 5px 0;
+      border: none;
+
+      @include title_h4;
+
+      @include for-tablet {
+        width: 100%;
+        position: absolute;
+        border-radius: 5px;
+        top: 60px;
+      }
+    }
+
+    @include for-tablet {
+      margin-top: 20px;
+      padding-bottom: 60px;
+    }
+  }
+
+  &-head {
+    padding-bottom: 20px;
+
+    @include for-small-laptop {
+      display: none;
+    }
+  }
+
+  &-items {
+    padding: 20px 0;
+    border-top: 1px solid var(--gray);
+
+    &-name {
+      margin-bottom: 10px;
+      color: var(--gray-input);
+      display: none;
+
+      @include for-small-laptop {
+        display: block;
+      }
+
+      @include for-small-laptop {
+        margin-top: 20px;
+      }
+    }
+
+    @include for-small-laptop {
+      padding: 0 0 20px;
+      border-top: none;
+      border-bottom: 1px solid var(--gray);
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+}

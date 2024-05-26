@@ -1,8 +1,16 @@
   // News
-  .news {
-    margin-top: 20px;
+.news {
+  margin-top: 20px;
 
-    &-img {
+  &-item {
+    margin-top: 30px;
+
+    @include for-tablet {
+      margin-top: 20px;
+    }
+  }
+
+  &-img {
       width: 100%;
       height: 242px;
       border-radius: 10px;
@@ -17,9 +25,9 @@
       @include for-big-tablet {
         height: 226px;
       }
-    }
+  }
 
-    &-date {
+  &-date {
       padding: 1px 7px;
       border-radius: 5px;
       color: var(--white);
@@ -31,19 +39,19 @@
       &-modal {
         top: 20px;
       }
-    }
+  }
 
-    &-title {
+  &-title {
       margin-top: 20px;
       cursor: pointer;
 
       @include for-tablet {
         margin-top: 15px;
       }
-    }
-
-    &-text {
-      margin-top: 10px;
-    }
   }
+
+  &-text {
+      margin-top: 10px;
+  }
+}
   

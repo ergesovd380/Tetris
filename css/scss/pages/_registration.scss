@@ -1,0 +1,84 @@
+.registration {
+  padding: 197px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: var(--white);
+  position: relative;
+
+  &-items {
+    max-width: 366px;
+    text-align: center;
+  }
+
+  &-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+
+  &-mt3 {
+    margin-top: 30px;
+
+    @include for-tablet {
+      margin-top: 20px;
+    }
+  }
+
+  &-mt2 {
+    margin-top: 20px;
+  }
+
+  &-subtitle {
+    margin-top: 30px;
+    font-weight: 600;
+  }
+
+  &-link {
+    color: var(--orange);
+    text-decoration: underline;
+    cursor: pointer;
+
+    &:hover, &:focus {
+      color: var(--orange);
+      text-decoration: underline;
+    }
+  }
+
+  &-form {
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  &-input {
+    margin-top: 10px;
+    width: 386px;
+
+    @include for-tablet {
+      width: 100%;
+    }
+  }
+
+  &-gray {
+    margin-top: 10px;
+    color: var(--gray-input);
+  }
+
+  &-back {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  &-icon {
+    margin-right: 10px;
+  }
+
+  @include for-tablet {
+    padding: 110px 20px;
+  }
+}
