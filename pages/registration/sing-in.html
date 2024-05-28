@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="../../css/bootstrap.min.css">
   <link rel="stylesheet" href="../../css/normalize.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="../../css/scss/main.css">
+  <link rel="stylesheet" href="../../css/main.css">
   <title>Tetris</title>
 </head>
 <body>
@@ -143,7 +143,9 @@
         <img src="../../assets/images/icons/close-modal.svg" alt="Img" class="registration-close">
         <img src="../../assets/images/logo/registration.svg" alt="Logo">
         <div class="registration-mt3 title_h1">Вход</div>
-        <div class="registration-mt3">Нет аккаунта? <a href="#" class="link registration-link">Регистрация </a></div>
+        <div class="registration-mt3">Нет аккаунта? 
+          <span class="link registration-link" data-bs-toggle="modal" data-bs-target="#registration">Регистрация </span>
+        </div>
         <div class="registration-form">
           <div class="title_h5">Телефон</div>
           <input type="phone" placeholder="+7 --" class="input_big registration-input">
@@ -154,6 +156,45 @@
         </div>
       </div>
     </section>
+
+    <!-- Modal registration -->
+    <div class="modal fade" id="registration" tabindex="-1" aria-labelledby="registration" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" style="max-width: 466px;">
+        <div class="modal-content">
+          <div class="modal-body modal-zaf">
+            <div class="modal-zaf-close" data-bs-dismiss="modal" aria-label="Close"><img src="../../assets/images/icons/close-modal.svg" alt="Icon"></div>
+            <div class="title_h2">Регистрация</div>
+            <form action="" class="modal-change-stage-mt1">    
+              <label for="surname" class="input_label modal-zaf-label">Фамилия</label>
+              <input type="text" id="surname" placeholder="Иванов" class="input_big">
+
+              <label for="name" class="input_label modal-zaf-label">Имя</label>
+              <input type="text" id="name" placeholder="Иван" class="input_big">
+
+              <label for="fathname" class="input_label modal-zaf-label">Отчество</label>
+              <input type="text" id="fathname" placeholder="Иванович" class="input_big">
+
+              <label for="email" class="input_label modal-zaf-label">E-mail</label>
+              <input type="email" id="email" placeholder="@" class="input_big">
+
+              <div class="modal-zaf-body modal-zaf-checkbox">
+                <div class="object_form-types-item product-present-checkbox">
+                  <input class="object_form-types-radio" type="checkbox" name="checkbox-type" id="check">
+                  <label for="check" class="object_form-types-label client-lk-desktop-fio-checkbox">
+                    <span class="object_form-types-checkbox-custom"></span>
+                  </label>
+                </div>
+                <label for="check" class="title_h6 modal-zaf-checkbox-text">Нажимая на кнопку, вы соглашаетесь на обработку персональных данных и с публичной офертой</label>
+              </div>
+              
+              <div class="modal-choose-btn">
+                <button class="btn_regular">Завершить регистрацию</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
 
   <footer class="footer">

@@ -21,9 +21,22 @@ html {
 }
 
 body {
-  min-height: 100vh;
+  height: 100%;
   margin: 0;
+  display: flex;
+  flex-direction: column;
   background-color: var(--bgc);
+}
+
+.header {
+  flex: 1 0 auto;
+}
+.footer {
+  flex: 0 0 auto;
+}
+
+.calendar-mt3 {
+  margin-top: 30px;
 }
 
 section {
@@ -107,4 +120,34 @@ select {
 }
 .offcanvas-footer {
   background-color: var(--gray-header);
+}
+
+
+.cookie {
+  padding: 40px 90px;
+  border-radius: 10px;
+  background-color: var(--gray-header);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &-text {
+    margin: 0 50px 0 70px;
+
+    @include for-small-laptop {
+      margin: 0 30px;
+      text-align: justify;
+    }
+
+    @include for-big-tablet {
+      margin: 10px 0 20px;
+      text-align: center;
+    }
+  }
+
+  @include for-big-tablet {
+    padding: 20px;
+    display: block;
+    text-align: center;
+  }
 }

@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="../../css/bootstrap.min.css">
   <link rel="stylesheet" href="../../css/normalize.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="../../css/scss/main.css">
+  <link rel="stylesheet" href="../../css/main.css">
   <title>Tetris</title>
 </head>
 <body>
@@ -355,7 +355,7 @@
 
     <!-- Modal Редактирование -->
     <div class="modal fade" id="redClient" tabindex="-1" aria-labelledby="redClient" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="max-width: 466px;">
+      <div class="modal-dialog modal-dialog-centered" style="max-width: 466px;">
         <div class="modal-content">
           <div class="modal-body modal-zaf">
             <div class="modal-zaf-close" data-bs-dismiss="modal" aria-label="Close"><img src="../../assets/images/icons/close-modal.svg" alt="Icon"></div>
@@ -394,11 +394,6 @@
                 </div>
                 <label for="add-doc-modal" class="link modal-zaf-add">+Добавить файлы</label>
                 <input type="file" onchange="updateFileProjModal()" id="add-doc-modal" class="modal-zaf-add-input">
-              </div>
-
-              <div class="modal-zaf-space">
-                <label for="coment" class="title_h5 input_label">Коментарии</label>
-                <textarea id="coment" rows="3" class="input_big" placeholder="Коментарии"></textarea>
               </div>
 
               <div class="modal-zaf-label">

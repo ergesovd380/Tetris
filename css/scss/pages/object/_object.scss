@@ -43,6 +43,21 @@
       @include flex-all-sb;
     }
 
+    &-desktop {
+
+      @include for-tablet {
+        display: none;
+      }
+    }
+
+    &-mobile {
+      display: none;
+
+      @include for-tablet {
+        display: block;
+      }
+    }
+
     &-checkboxes {
       margin-top: 60px;
       display: flex;

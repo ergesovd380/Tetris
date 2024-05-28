@@ -139,9 +139,9 @@ const swiperBig1 = new Swiper(".swiper-b2", {
 const ctx = document.getElementById('myChart').getContext('2d');
 const xValues = ['12.12.2022', '12.04.2023', '03.10.2023', '03.02.2024', ''];
 const yValues = [0, 5, 10, 40, 30, 80];
-// debugger;
 Chart.defaults.font.size = 12;
-
+Chart.defaults.font.family = 'Inter Regular';
+console.log(Chart.defaults)
 new Chart(ctx, {
   type: "line",
   data: {
@@ -165,9 +165,29 @@ new Chart(ctx, {
           // Include a dollar sign in the ticks
           callback: function(value, index, ticks) {
             return value + ' млн.₽';
-          }
+          },
+          align: 'center',
+          padding: 10
+        },
+        border: {
+          display: false
+        },
+        grid: {
+          drawTicks: false,
         }
-      }
+      },
+      x: {
+        ticks: {
+          align: 'start',
+          padding: 10
+        },
+        border: {
+          display: false,
+        },
+        grid: {
+          drawTicks: false,
+        }
+      },
     },
     ticks: {
       stepSize: 20,

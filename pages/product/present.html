@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="../../css/bootstrap.min.css">
   <link rel="stylesheet" href="../../css/normalize.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="../../css/scss/main.css">
+  <link rel="stylesheet" href="../../css/main.css">
   <title>Tetris</title>
 </head>
 <body>
@@ -337,7 +337,7 @@
                       <div class="product-present-mt1 title_h6">Базовая цена</div>
                     </div>
                   </div>
-                  <div class="product-present-dynamic">
+                  <div class="product-present-dynamic" data-bs-toggle="modal" data-bs-target="#dynamic">
                     <img src="../../assets/images/icons/dynamic.svg" alt="Icon" width="21" height="21">
                     <div class="link product-present-dynamic-name">Динамика цен</div>
                   </div>
@@ -393,7 +393,7 @@
                       <div class="product-present-mt1 title_h6">Базовая цена</div>
                     </div>
                   </div>
-                  <div class="product-present-dynamic">
+                  <div class="product-present-dynamic" data-bs-toggle="modal" data-bs-target="#dynamic">
                     <img src="../../assets/images/icons/dynamic.svg" alt="Icon" width="21" height="21">
                     <div class="link product-present-dynamic-name">Динамика цен</div>
                   </div>
@@ -616,6 +616,59 @@
         </div>
       </div>
     </section>
+
+    <!-- Modal Dynamic -->
+    <div class="modal fade" id="dynamic" tabindex="-1" aria-labelledby="dynamic" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="max-width: 960px;">
+        <div class="modal-content">
+          <div class="modal-body modal-zaf">
+            <div class="modal-zaf-close" data-bs-dismiss="modal" aria-label="Close"><img src="../../assets/images/icons/close-modal.svg" alt="Icon"></div>
+            <div class="title_h2">Динамика цен</div>
+            <div class="modal-product-card-subtitle">
+              <div class="title_h4">Квартира №234</div>
+              <div class="modal-product-card-subtitle-data">
+                <div class="modal-product-card-subtitle-item">
+                  <div class="modal-product-card-subtitle-name title_h5">Цена на старте</div>
+                  <div class="title_h5">5 000 000 ₽</div>
+                </div>
+                <div class="modal-product-card-subtitle-item">
+                  <div class="modal-product-card-subtitle-name title_h5">Текущая стоимость</div>
+                  <div class="title_h5">12 000 000 ₽</div>
+                </div>
+                <div style="width: 105px;">
+                  <div class="modal-product-card-subtitle-name title_h5">Прирост</div>
+                  <div class="title_h5">7 000 000 ₽</div>
+                </div>
+                <div class="modal-product-card-procent title_h6">+ 300%</div>
+              </div>
+            </div>
+            <div class="modal-product-card-graf">
+              <canvas id="myChart"></canvas>
+            </div>
+            <div class="modal-product-card-bottom row">
+              <div class="col-4 col-md-2">
+                <div class="title_h5" style="color: var(--gray-input);">Дата</div>
+                <div class="modal-product-card-cost title_h5">5 000 000 ₽</div>
+                <div class="modal-product-card-cost title_h5">5 000 000 ₽</div>
+                <div class="modal-product-card-cost title_h5">5 000 000 ₽</div>
+              </div>
+              <div class="col-4 col-md-2">
+                <div class="title_h5" style="color: var(--gray-input);">Стоимость</div>
+                <div class="modal-product-card-cost title_h5">12 000 000 ₽</div>
+                <div class="modal-product-card-cost title_h5">12 000 000 ₽</div>
+                <div class="modal-product-card-cost title_h5">12 000 000 ₽</div>
+              </div>
+              <div class="col-4 col-md-2">
+                <div class="title_h5" style="color: var(--gray-input);">Разница</div>
+                <div class="modal-product-card-cost title_h5">7 000 000 ₽</div>
+                <div class="modal-product-card-cost title_h5">7 000 000 ₽</div>
+                <div class="modal-product-card-cost title_h5">7 000 000 ₽</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
 
   <footer class="footer">

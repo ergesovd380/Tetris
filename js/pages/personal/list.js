@@ -1,10 +1,10 @@
 const Items = document.querySelectorAll('.custom-select-items');
 
 document.addEventListener('DOMContentLoaded', () => {
-  dividerHeader();
+  dividerHeader()
 
   Items.forEach((e) => {
-    e.classList.add('d-none');
+    e.classList.add('d-none')
   })
 })
 
@@ -34,7 +34,7 @@ document.addEventListener("click", function(e) {
     items.classList.remove('d-block');
     items.classList.add('d-none');
   }
-
+  
   // Header menu
   if(e.target.classList.contains('header_pages-item')) {
     dividerHeader();
@@ -95,101 +95,3 @@ function dividerHeader() {
     return;
   }
 }
-
-// Swipers
-const swiperSmall1 = new Swiper(".swiper-s2", {
-  spaceBetween: 20,
-  slidesPerView: 7,
-  freeMode: true,
-  watchSlidesProgress: true,
-  breakpoints: {
-    1200: {
-        slidesPerView: 9,
-    },
-    300: {
-        slidesPerView: 7,
-    }
-  }
-});
-const swiperBig1 = new Swiper(".swiper-b2", {
-  spaceBetween: 10,
-  navigation: {
-    nextEl: ".swiper-next2",
-    prevEl: ".swiper-prev2",
-  },
-  thumbs: {
-    swiper: swiperSmall1,
-  },
-  breakpoints: {
-    768: {
-      slidesPerView: 1,
-      loop: false
-    },
-    300: {
-      slidesPerView: 1.2,
-      spaceBetween: 20,
-      loop: true
-    }
-  }
-});
-
-const ctx = document.getElementById('myChart').getContext('2d');
-const xValues = ['12.12.2022', '12.04.2023', '03.10.2023', '03.02.2024', ''];
-const yValues = [0, 5, 10, 40, 30, 80];
-Chart.defaults.font.size = 12;
-Chart.defaults.font.family = 'Inter Regular';
-console.log(Chart.defaults)
-new Chart(ctx, {
-  type: "line",
-  data: {
-    labels: xValues,
-    data: yValues,
-    datasets: [{
-      label: 'My First Dataset',
-      data: yValues,
-      fill: false,
-      borderColor: '#FF6000',
-      tension: 0.1
-    }]
-  },
-  options: {
-    plugins: {
-      legend: false,
-    },
-    scales: {
-      y: {
-        ticks: {
-          // Include a dollar sign in the ticks
-          callback: function(value, index, ticks) {
-            return value + ' млн.₽';
-          },
-          align: 'center',
-          padding: 10
-        },
-        border: {
-          display: false
-        },
-        grid: {
-          drawTicks: false,
-        }
-      },
-      x: {
-        ticks: {
-          align: 'start',
-          padding: 10
-        },
-        border: {
-          display: false,
-        },
-        grid: {
-          drawTicks: false,
-        }
-      },
-    },
-    ticks: {
-      stepSize: 20,
-    },
-    responsive: true,
-    maintainAspectRatio: false
-  }
-});
