@@ -9,6 +9,25 @@
       height: 40px;
       background-color: var(--white);
       border-radius: 50%;
+      box-shadow: 0px 4px 3px 1px rgba(0, 0, 0, 0.2);
+      background-repeat: no-repeat;
+      background-position: center;
+
+      &-left {
+        background-image: url(../../../assets/images/icons/arrow-left-swiper.svg);
+  
+        &:hover {
+          background-image: url(../../../assets/images/icons/arrow-left-swiper-orange.svg);
+        } 
+      }
+
+      &-right {
+        background-image: url(../../../assets/images/icons/arrow-right-swiper.svg);
+  
+        &:hover {
+          background-image: url(../../../assets/images/icons/arrow-right-swiper-orange.svg);
+        } 
+      }
 
       &::after {
         display: none;

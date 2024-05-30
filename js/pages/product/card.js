@@ -1,5 +1,6 @@
+// Размер шрифта для графика
 document.addEventListener('DOMContentLoaded', () => {
-  dividerHeader()
+  dividerHeader();
 })
 
 document.addEventListener("click", function(e) {
@@ -100,7 +101,7 @@ const swiperBig = new Swiper(".swiper-b1", {
     }
   }
 });
-const swiperSmall1 = new Swiper(".swiper-s2", {
+const swiperSmall2 = new Swiper(".swiper-s2", {
   spaceBetween: 20,
   slidesPerView: 7,
   freeMode: true,
@@ -114,14 +115,84 @@ const swiperSmall1 = new Swiper(".swiper-s2", {
     }
   }
 });
-const swiperBig1 = new Swiper(".swiper-b2", {
+const swiperBig2 = new Swiper(".swiper-b2", {
   spaceBetween: 10,
   navigation: {
     nextEl: ".swiper-next2",
     prevEl: ".swiper-prev2",
   },
   thumbs: {
-    swiper: swiperSmall1,
+    swiper: swiperSmall2,
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 1,
+      loop: false
+    },
+    300: {
+      slidesPerView: 1.2,
+      spaceBetween: 20,
+      loop: true
+    }
+  }
+});
+const swiperSmall3 = new Swiper(".swiper-s3", {
+  spaceBetween: 20,
+  slidesPerView: 7,
+  freeMode: true,
+  watchSlidesProgress: true,
+  breakpoints: {
+    1200: {
+        slidesPerView: 6,
+    },
+    300: {
+        slidesPerView: 5,
+    }
+  }
+});
+const swiperBig3 = new Swiper(".swiper-b3", {
+  spaceBetween: 10,
+  navigation: {
+    nextEl: ".swiper-next3",
+    prevEl: ".swiper-prev3",
+  },
+  thumbs: {
+    swiper: swiperSmall3,
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 1,
+      loop: false
+    },
+    300: {
+      slidesPerView: 1.2,
+      spaceBetween: 20,
+      loop: true
+    }
+  }
+});
+const swiperSmall4 = new Swiper(".swiper-s4", {
+  spaceBetween: 20,
+  slidesPerView: 7,
+  freeMode: true,
+  watchSlidesProgress: true,
+  breakpoints: {
+    1200: {
+        slidesPerView: 6,
+    },
+    300: {
+        slidesPerView: 5,
+    }
+  }
+});
+const swiperBig4 = new Swiper(".swiper-b4", {
+  spaceBetween: 10,
+  navigation: {
+    nextEl: ".swiper-next4",
+    prevEl: ".swiper-prev4",
+  },
+  thumbs: {
+    swiper: swiperSmall4,
   },
   breakpoints: {
     768: {
@@ -139,7 +210,15 @@ const swiperBig1 = new Swiper(".swiper-b2", {
 const ctx = document.getElementById('myChart').getContext('2d');
 const xValues = ['12.12.2022', '12.04.2023', '03.10.2023', '03.02.2024', ''];
 const yValues = [0, 5, 10, 40, 30, 80];
-Chart.defaults.font.size = 12;
+let fontSize = () => {
+  const withWindow = window.innerWidth;
+  if(withWindow < 421) {
+    return 10;
+  } else {
+    return 12
+  }
+}
+Chart.defaults.font.size = fontSize();
 Chart.defaults.font.family = 'Inter Regular';
 console.log(Chart.defaults)
 new Chart(ctx, {

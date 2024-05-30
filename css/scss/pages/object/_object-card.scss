@@ -11,6 +11,14 @@
   }
   &_zaf {
     margin-top: 20px;
+    color: var(--black);
+  }
+  &-price {
+    @include title_h3;
+
+    @include for-mobile {
+      @include title_h4;
+    }
   }
 
   // information
@@ -163,14 +171,12 @@
 
     &-link {
       margin-top: 16px;
-      display: flex;
-      justify-content: end;
-    }
-    &-link > a {
+      text-align: right;
       color: var(--orange);
+      cursor: pointer;
 
-      &:hover {
-        text-decoration: underline;
+      &:hover{
+        color: var(--blue)
       }
     }
 

@@ -161,7 +161,7 @@ const swiperBig = new Swiper(".swiper-b1", {
   }
 });
 
-const swiperSmall1 = new Swiper(".swiper-s2", {
+const swiperSmall2 = new Swiper(".swiper-s2", {
   spaceBetween: 20,
   slidesPerView: 7,
   freeMode: true,
@@ -175,14 +175,86 @@ const swiperSmall1 = new Swiper(".swiper-s2", {
     }
   }
 });
-const swiperBig1 = new Swiper(".swiper-b2", {
+const swiperBig2 = new Swiper(".swiper-b2", {
   spaceBetween: 10,
   navigation: {
     nextEl: ".swiper-next2",
     prevEl: ".swiper-prev2",
   },
   thumbs: {
-    swiper: swiperSmall1,
+    swiper: swiperSmall2,
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 1,
+      loop: false
+    },
+    300: {
+      slidesPerView: 1.2,
+      spaceBetween: 20,
+      loop: true
+    }
+  }
+});
+
+const swiperSmall3 = new Swiper(".swiper-s3", {
+  spaceBetween: 20,
+  slidesPerView: 7,
+  freeMode: true,
+  watchSlidesProgress: true,
+  breakpoints: {
+    1200: {
+        slidesPerView: 7,
+    },
+    300: {
+        slidesPerView: 6,
+    }
+  }
+});
+const swiperBig3 = new Swiper(".swiper-b3", {
+  spaceBetween: 10,
+  navigation: {
+    nextEl: ".swiper-next3",
+    prevEl: ".swiper-prev3",
+  },
+  thumbs: {
+    swiper: swiperSmall3,
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 1,
+      loop: false
+    },
+    300: {
+      slidesPerView: 1.2,
+      spaceBetween: 20,
+      loop: true
+    }
+  }
+});
+
+const swiperSmall4 = new Swiper(".swiper-s4", {
+  spaceBetween: 20,
+  slidesPerView: 7,
+  freeMode: true,
+  watchSlidesProgress: true,
+  breakpoints: {
+    1200: {
+        slidesPerView: 7,
+    },
+    300: {
+        slidesPerView: 6,
+    }
+  }
+});
+const swiperBig4 = new Swiper(".swiper-b4", {
+  spaceBetween: 10,
+  navigation: {
+    nextEl: ".swiper-next4",
+    prevEl: ".swiper-prev4",
+  },
+  thumbs: {
+    swiper: swiperSmall4,
   },
   breakpoints: {
     768: {

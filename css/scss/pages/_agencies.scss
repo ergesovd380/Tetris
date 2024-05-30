@@ -76,7 +76,7 @@
     cursor: pointer;
 
     &:hover {
-      color: var(--gray-input);
+      color: var(--orange);
       text-decoration: underline;
     }
 
@@ -151,7 +151,7 @@
   
         @include for-mobile {
           width: 150px;
-          white-space: wrap;
+          white-space:inherit;
         }
       }
     }

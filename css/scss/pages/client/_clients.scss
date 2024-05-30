@@ -18,6 +18,10 @@
       color: var(--gray-input);
       cursor: pointer;
 
+      &:hover {
+        color: var(--orange);
+      }
+
       @include for-tablet {
         margin: 10px 0;
       }
@@ -147,6 +151,20 @@
           border-radius: 33px;
           background-color: var(--yellow);
         }
+
+        &-close {
+          width: 12.73px;
+          height: 12.73px;
+          cursor: pointer;
+          background-image: url(../../../assets/images/icons/close-modal.svg);
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain;
+    
+          &:hover {
+            background-image: url(../../../assets/images/icons/close-modal-black.svg);
+          }
+        }
       }
 
       @include for-small-laptop {
@@ -263,6 +281,7 @@
 
     &-input {
       width: 289px;
+      height: 45px;
       padding: 15px 20px 14px;
       color: var(--gray-input);
       background-color: transparent;
@@ -284,12 +303,15 @@
 
     &-select {
       width: 137px;
+      height: 45px;
       padding: 15px 20px 14px;
+      color: var(--black);
       background-color: transparent;
       background-image: url(../../../../assets/images/icons/select-arrow.svg);
       background-repeat: no-repeat;
       background-position: 90% center;
       border: 1px solid var(--gray-input);
+      border-left: none;
       cursor: pointer;
 
       @include title_h5;
@@ -300,6 +322,7 @@
     }
 
     &-btn {
+      height: 45px;
       padding: 14px 30px;
       color: var(--white);
       background-color: var(--black);

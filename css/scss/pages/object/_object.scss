@@ -176,12 +176,24 @@
       align-items: center;
       cursor: pointer;
 
+      &:hover {
+        color: var(--black);
+      }
+      &:hover > .object_form-remove-garbage {
+        background-image: url(../../../../assets/images/icons/garbage-black.svg);
+      }
+
       &-garbage {
-        width: 25px;
+        min-width: 25px;
         height: 25px;
         margin-right: 10px;
+        background-image: url(../../../../assets/images/icons/garbage.svg);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
 
         @include for-tablet {
+          margin-right: 0;
           margin-bottom: 6px;
         }
       }
@@ -304,6 +316,7 @@
     width: 222px;
     border: none;
     border-radius: 35px;
+    color: var(--black);
     background-color: var(--yellow);
     cursor: pointer;
 

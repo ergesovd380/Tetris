@@ -41,6 +41,7 @@ body {
 
 section {
   margin-top: 50px;
+  scroll-behavior:auto;
 
   @include for-tablet {
     margin-top: 20px;

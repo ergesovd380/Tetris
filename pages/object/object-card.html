@@ -186,12 +186,8 @@
                 <img src="../../assets/images/object-card/img-8.svg" alt="Img" />
               </div>
             </div>
-            <div class="swiper-next1 swiper-button-next swiper-big_btn">
-              <img src="../../assets/images/icons/arrow-right-swiper.svg" alt="">
-            </div>
-            <div class="swiper-prev1 swiper-button-prev swiper-big_btn">
-              <img src="../../assets/images/icons/arrow-left-swiper.svg" alt="">
-            </div>
+            <div class="swiper-next1 swiper-button-next swiper-big_btn swiper-big_btn-right"></div>
+            <div class="swiper-prev1 swiper-button-prev swiper-big_btn  swiper-big_btn-left"></div>
           </div>
           <div thumbsSlider="" class="swiper swiper-s1 swiper-small">
             <div class="swiper-wrapper">
@@ -225,7 +221,7 @@
 
         <div class="col-12 col-lg-4">
           <div class="object-card_inf-row1">
-            <div class="title_h3">2,23 млн. - 12,7 млн. ₽ </div>
+            <div class="object-card-price">2,23 млн. - 12,7 млн. ₽ </div>
             <div class="object-card_inf-divider"></div>
             <div class="object-card_inf-size">
               <div class="object-card_inf-size-icon"><img src="../../assets/images/icons/home.svg" alt="Home icon"></div>
@@ -262,7 +258,7 @@
             <div class="object-card_sale-title title_h2">Скидка 3000 рублей при оплате золотом</div>
             <div class="object-card_sale-deadline title_h5">Срок действия: бессрочно</div>
             <div class="object-card_sale-text title_h5">Расположен в многолетнем хвойном лесу на первой береговой линии Финского залива в самом сердце Курортного района Санкт‐Петербурга. Уникальное расположение и собственные....</div>
-            <div class="object-card_sale-link"><a href="#" class="link">Подробнее</a></div>
+            <div class="object-card_sale-link link">Подробнее</div>
           </div>
         </div>
         <div class="col-12 col-lg-6">
@@ -270,7 +266,7 @@
             <div class="object-card_sale-title title_h2">Скидка 3000 рублей при оплате золотом</div>
             <div class="object-card_sale-deadline title_h5">Срок действия: бессрочно</div>
             <div class="object-card_sale-text title_h5">Расположен в многолетнем хвойном лесу на первой береговой линии Финского залива в самом сердце Курортного района Санкт‐Петербурга. Уникальное расположение и собственные....</div>
-            <div class="object-card_sale-link"><a href="#" class="link">Подробнее</a></div>
+            <div class="object-card_sale-link link">Подробнее</div>
           </div>
         </div>
       </div>
@@ -279,15 +275,15 @@
     <section class="object-card_filter">
       <!-- Object filter btns -->
       <div class="object_filter-btns">
-        <button class="btn_small object_btn">Квартирография</button>
-        <button class="btn_small object_btn active" style="min-width: 195px; padding: 13px 20px;">Сводная информация</button>
-        <button class="btn_small object_btn">Отделка</button>
-        <button class="btn_small object_btn">Акции</button>
-        <button class="btn_small object_btn">Описание</button>
-        <button class="btn_small object_btn">Карта</button>
-        <button class="btn_small object_btn">Файлы</button>
-        <button class="btn_small object_btn">План</button>
-        <button class="btn_small object_btn">Новости</button>
+        <a href=""><button class="btn_small object_btn active">Квартирография</button></a>
+        <a href="#free-info-section"><button class="btn_small object_btn">Сводная информация</button></a>
+        <a href="#finish-section"><button class="btn_small object_btn">Отделка</button></a>
+        <a href="#sale-section"><button class="btn_small object_btn">Акции</button></a>
+        <a href="#3d-section"><button class="btn_small object_btn">Описание</button></a>
+        <a href="#map-section"><button class="btn_small object_btn">Карта</button></a>
+        <a href="#file-section"><button class="btn_small object_btn">Файлы</button></a>
+        <a href="#map-section"><button class="btn_small object_btn">План</button></a>
+        <a href="#news-section"><button class="btn_small object_btn">Новости</button></a>
       </div>
       <!-- Object filter title -->
       <div class="object_filter-title title_h1">Квартирография</div>
@@ -328,7 +324,9 @@
                     <div class="custom-select custom-select-small title_h5">
                       <div class="custom-select-selected custom-select-selected-small select-num">Выбор</div>
                       <div class="custom-select-items select-num-items">
-                        <span class="custom-select-line custom-select-line-small"></span>
+                        <div class="custom-select-line">
+                          <div class="custom-select-line-small"></div>
+                        </div>
                         <div class="custom-select-item select-num-item">100</div>
                         <div class="custom-select-item select-num-item">200</div>
                         <div class="custom-select-item select-num-item">300</div>
@@ -336,13 +334,15 @@
                     </div>
                   </div>
                   <div class="col-6 object_form-column">
-                    <div >
+                    <div>
                       <div class="title_h5 input_label">Корпус</div>
                       <!-- Select -->
                       <div class="custom-select custom-select-small title_h5">
                         <div class="custom-select-selected custom-select-selected-small select-kor">Выбор</div>
                         <div class="custom-select-items select-kor-items">
-                          <span class="custom-select-line custom-select-line-small"></span>
+                          <div class="custom-select-line">
+                            <div class="custom-select-line-small"></div>
+                          </div>
                           <div class="custom-select-item select-kor-item">100</div>
                           <div class="custom-select-item select-kor-item">200</div>
                           <div class="custom-select-item select-kor-item">300</div>
@@ -361,12 +361,12 @@
                   </div>
                 </div>
                 <!-- Общая площадь -->
-                <div class="object_form-input">
-                  <div class="title_h5 input_label">Общая площадь</div>
+                <div class="object_form-input title_h5">
+                  <div class="input_label not-active">Общая площадь</div>
                   <div class="object_form-flex">
-                    <input type="number" placeholder="От" class="input_small title_h5">
+                    <input type="number" placeholder="От" class="input_small not-active">
                     <img src="../../assets/images/icons/line.svg" alt="Line icon">
-                    <input type="number" placeholder="До" class="input_small title_h5">
+                    <input type="number" placeholder="До" class="input_small not-active">
                   </div>
                 </div>
                 <!-- Способ оплаты -->
@@ -376,7 +376,9 @@
                   <div class="custom-select custom-select-big title_h5">
                     <div class="custom-select-selected custom-select-selected-big select-pay">Выбор</div>
                     <div class="custom-select-items select-pay-items">
-                      <span class="custom-select-line custom-select-line-big"></span>
+                      <div class="custom-select-line">
+                        <div class="custom-select-line-big"></div>
+                      </div>
                       <div class="custom-select-item select-pay-item">100</div>
                       <div class="custom-select-item select-pay-item">200</div>
                       <div class="custom-select-item select-pay-item">300</div>
@@ -390,7 +392,9 @@
                   <div class="custom-select custom-select-small title_h5">
                     <div class="custom-select-selected custom-select-selected-small select-storey">Выбор</div>
                     <div class="custom-select-items select-storey-items">
-                      <span class="custom-select-line custom-select-line-small"></span>
+                      <div class="custom-select-line">
+                        <div class="custom-select-line-small"></div>
+                      </div>
                       <div class="custom-select-item select-storey-item">100</div>
                       <div class="custom-select-item select-storey-item">200</div>
                       <div class="custom-select-item select-storey-item">300</div>
@@ -407,7 +411,9 @@
                   <div class="custom-select custom-select-big title_h5">
                     <div class="custom-select-selected custom-select-selected-big select-deadline">Выбор</div>
                     <div class="custom-select-items select-deadline-items">
-                      <span class="custom-select-line custom-select-line-big"></span>
+                      <div class="custom-select-line">
+                        <div class="custom-select-line-big"></div>
+                      </div>
                       <div class="custom-select-item select-deadline-item">100</div>
                       <div class="custom-select-item select-deadline-item">200</div>
                       <div class="custom-select-item select-deadline-item">300</div>
@@ -422,7 +428,9 @@
                     <div class="custom-select custom-select-small title_h5">
                       <div class="custom-select-selected custom-select-selected-small select-type1">Выбор</div>
                       <div class="custom-select-items select-type1-items">
-                        <span class="custom-select-line custom-select-line-small"></span>
+                        <div class="custom-select-line">
+                          <div class="custom-select-line-small"></div>
+                        </div>
                         <div class="custom-select-item select-type1-item">100</div>
                         <div class="custom-select-item select-type1-item">200</div>
                         <div class="custom-select-item select-type1-item">300</div>
@@ -436,7 +444,9 @@
                       <div class="custom-select custom-select-small title_h5">
                         <div class="custom-select-selected custom-select-selected-small select-type2">Выбор</div>
                         <div class="custom-select-items select-type2-items">
-                          <span class="custom-select-line custom-select-line-small"></span>
+                          <div class="custom-select-line">
+                            <div class="custom-select-line-small"></div>
+                          </div>
                           <div class="custom-select-item select-type2-item">100</div>
                           <div class="custom-select-item select-type2-item">200</div>
                           <div class="custom-select-item select-type2-item">300</div>
@@ -461,7 +471,9 @@
                     <div class="custom-select custom-select-big title_h5">
                       <div class="custom-select-selected custom-select-selected-big select-bank">Выбор</div>
                       <div class="custom-select-items select-bank-items">
-                        <span class="custom-select-line custom-select-line-big"></span>
+                        <div class="custom-select-line">
+                          <div class="custom-select-line-big"></div>
+                        </div>
                         <div class="custom-select-item select-bank-item">100</div>
                         <div class="custom-select-item select-bank-item">200</div>
                         <div class="custom-select-item select-bank-item">300</div>
@@ -485,7 +497,9 @@
                   <div class="custom-select custom-select-big title_h5">
                     <div class="custom-select-selected custom-select-selected-big select-term">Выбор</div>
                     <div class="custom-select-items select-term-items">
-                      <span class="custom-select-line custom-select-line-big"></span>
+                      <div class="custom-select-line">
+                        <div class="custom-select-line-big"></div>
+                      </div>
                       <div class="custom-select-item select-term-item">100</div>
                       <div class="custom-select-item select-term-item">200</div>
                       <div class="custom-select-item select-term-item">300</div>
@@ -508,7 +522,9 @@
                   <div class="custom-select custom-select-big title_h5">
                     <div class="custom-select-selected custom-select-selected-big select-finish">Выбор</div>
                     <div class="custom-select-items select-finish-items">
-                      <span class="custom-select-line custom-select-line-big"></span>
+                      <div class="custom-select-line">
+                        <div class="custom-select-line-big"></div>
+                      </div>
                       <div class="custom-select-item select-finish-item">100</div>
                       <div class="custom-select-item select-finish-item">200</div>
                       <div class="custom-select-item select-finish-item">300</div>
@@ -522,7 +538,9 @@
                   <div class="custom-select custom-select-small title_h5">
                     <div class="custom-select-selected custom-select-selected-small select-storeyMob">Выбор</div>
                     <div class="custom-select-items select-storeyMob-items">
-                      <span class="custom-select-line custom-select-line-small"></span>
+                      <div class="custom-select-line">
+                        <div class="custom-select-line-small"></div>
+                      </div>
                       <div class="custom-select-item select-storeyMob-item">100</div>
                       <div class="custom-select-item select-storeyMob-item">200</div>
                       <div class="custom-select-item select-storeyMob-item">300</div>
@@ -560,7 +578,7 @@
                 <div class="object_form-btns">
                   <button class="btn_regular object_form-search" data-bs-toggle="modal" data-bs-target="#cardProduct" type="button">Показать варианты</button>
                   <div class="object_form-remove">
-                    <img src="../../assets/images/icons/garbage.svg" class="object_form-remove-garbage" alt="Garbage icon">
+                    <div class="object_form-remove-garbage"></div>
                     <div class="link">Сбросить фильтр</div>
                   </div>
                 </div>
@@ -2207,7 +2225,7 @@
       </div>
     </section>
     <!-- Information -->
-    <section>
+    <section id="free-info-section">
       <div class="title_h1">Свободная информация</div>
       <div class="object-card_free-info">
         <div>
@@ -2437,11 +2455,11 @@
       </div>
     </section>
     <!-- Object-card finish -->
-    <section>
+    <section id="finish-section">
       <div class="title_h1">Отделка</div>
       <!-- Object information -->
       <div class="object-card_finish">
-        <div class="nav" id="nav-tab" role="tablist">
+        <div class="nav product-card-characteristic" id="nav-tab" role="tablist">
           <div 
             class="finish-type active title_h4" 
             id="finish-tab" 
@@ -2513,12 +2531,8 @@
                       <img src="../../assets/images/object-card/img-8.svg" alt="Img" />
                     </div>
                   </div>
-                  <div class="swiper-next2 swiper-button-next swiper-big_btn">
-                    <img src="../../assets/images/icons/arrow-right-swiper.svg" alt="">
-                  </div>
-                  <div class="swiper-prev2 swiper-button-prev swiper-big_btn">
-                    <img src="../../assets/images/icons/arrow-left-swiper.svg" alt="">
-                  </div>
+                  <div class="swiper-next2 swiper-button-next swiper-big_btn swiper-big_btn-right"></div>
+                  <div class="swiper-prev2 swiper-button-prev swiper-big_btn  swiper-big_btn-left"></div>
                 </div>
                 <div thumbsSlider="" class="swiper swiper-s2 swiper-small">
                   <div class="swiper-wrapper">
@@ -2563,24 +2577,174 @@
           </div>
           <!-- Type PreClean -->
           <div class="tab-pane fade" id="nav-preclean" role="tabpanel">
-            <div class="title_h1">Type PreClean</div>
+            <div class="row">
+              <div class="object-card_finish-subtitle col-12 title_h5">
+                Расположен в многолетнем хвойном лесу на первой береговой линии Финского залива в самом сердце Курортного района Санкт‐Петербурга. Уникальное расположение и собственные спортивно‐оздоровительные и рекреационные объекты создают идеальные условия для обретения гармонии вне городской суеты, занятий спортом на свежем воздухе и укрепления здоровья. Проект объединяет в себе доступность основных автомагистралей, комфорт современных зданий и развитую инфраструктуру с преимуществами жизни на берегу Финского залива, вдали от пробок и интенсивного ритма мегаполиса.
+              </div>
+
+              <div class="col-12 col-lg-8">
+                <div class="swiper swiper-b3 swiper-big">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="../../assets/images/object-card/img-1.svg" alt="Img" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="../../assets/images/object-card/img-2.svg" alt="Img" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="../../assets/images/object-card/img-3.svg" alt="Img" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="../../assets/images/object-card/img-4.svg" alt="Img" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="../../assets/images/object-card/img-5.svg" alt="Img" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="../../assets/images/object-card/img-6.svg" alt="Img" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="../../assets/images/object-card/img-7.svg" alt="Img" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="../../assets/images/object-card/img-8.svg" alt="Img" />
+                    </div>
+                  </div>
+                  <div class="swiper-next3 swiper-button-next swiper-big_btn swiper-big_btn-right"></div>
+                  <div class="swiper-prev3 swiper-button-prev swiper-big_btn  swiper-big_btn-left"></div>
+                </div>
+                <div thumbsSlider="" class="swiper swiper-s3 swiper-small">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide swiper-small_item">
+                      <img src="../../assets/images/object-card/img-1.svg" alt="Img" />
+                    </div>
+                    <div class="swiper-slide swiper-small_item">
+                      <img src="../../assets/images/object-card/img-2.svg" alt="Img" />
+                    </div>
+                    <div class="swiper-slide swiper-small_item">
+                      <img src="../../assets/images/object-card/img-3.svg" alt="Img" />
+                    </div>
+                    <div class="swiper-slide swiper-small_item">
+                      <img src="../../assets/images/object-card/img-4.svg" alt="Img" />
+                    </div>
+                    <div class="swiper-slide swiper-small_item">
+                      <img src="../../assets/images/object-card/img-5.svg" alt="Img" />
+                    </div>
+                    <div class="swiper-slide swiper-small_item">
+                      <img src="../../assets/images/object-card/img-6.svg" alt="Img" />
+                    </div>
+                    <div class="swiper-slide swiper-small_item">
+                      <img src="../../assets/images/object-card/img-7.svg" alt="Img" />
+                    </div>
+                    <div class="swiper-slide swiper-small_item">
+                      <img src="../../assets/images/object-card/img-8.svg" alt="Img" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="col-12 col-lg-4">
+                <div class="title_h2 object-card_finish-title">Чистовая отделка</div>
+                <div class="object-card_finish-cost title_h4">5 000  ₽ за м. кв.</div>
+                <div class="object-card_finish-list title_h5">Пятикамерные стеклопакеты</div>
+                <div class="object-card_finish-list title_h5">Ламинат 32 класса</div>
+                <div class="object-card_finish-list title_h5">Двери Волховец</div>
+                <div class="object-card_finish-list title_h5">Обои текстильные премиум</div>
+                <div class="object-card_finish-list title_h5">Керамогранит</div>
+              </div>
+            </div>
           </div>
           <!-- Type Draft -->
           <div class="tab-pane fade object-card_type-parent" id="nav-draft" role="tabpanel">
-            <div class="title_h1">Type Draft</div>
+            <div class="row">
+              <div class="object-card_finish-subtitle col-12 title_h5">
+                Расположен в многолетнем хвойном лесу на первой береговой линии Финского залива в самом сердце Курортного района Санкт‐Петербурга. Уникальное расположение и собственные спортивно‐оздоровительные и рекреационные объекты создают идеальные условия для обретения гармонии вне городской суеты, занятий спортом на свежем воздухе и укрепления здоровья. Проект объединяет в себе доступность основных автомагистралей, комфорт современных зданий и развитую инфраструктуру с преимуществами жизни на берегу Финского залива, вдали от пробок и интенсивного ритма мегаполиса.
+              </div>
+
+              <div class="col-12 col-lg-8">
+                <div class="swiper swiper-b4 swiper-big">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="../../assets/images/object-card/img-1.svg" alt="Img" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="../../assets/images/object-card/img-2.svg" alt="Img" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="../../assets/images/object-card/img-3.svg" alt="Img" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="../../assets/images/object-card/img-4.svg" alt="Img" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="../../assets/images/object-card/img-5.svg" alt="Img" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="../../assets/images/object-card/img-6.svg" alt="Img" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="../../assets/images/object-card/img-7.svg" alt="Img" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="../../assets/images/object-card/img-8.svg" alt="Img" />
+                    </div>
+                  </div>
+                  <div class="swiper-next4 swiper-button-next swiper-big_btn swiper-big_btn-right"></div>
+                  <div class="swiper-prev4 swiper-button-prev swiper-big_btn  swiper-big_btn-left"></div>
+                </div>
+                <div thumbsSlider="" class="swiper swiper-s4 swiper-small">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide swiper-small_item">
+                      <img src="../../assets/images/object-card/img-1.svg" alt="Img" />
+                    </div>
+                    <div class="swiper-slide swiper-small_item">
+                      <img src="../../assets/images/object-card/img-2.svg" alt="Img" />
+                    </div>
+                    <div class="swiper-slide swiper-small_item">
+                      <img src="../../assets/images/object-card/img-3.svg" alt="Img" />
+                    </div>
+                    <div class="swiper-slide swiper-small_item">
+                      <img src="../../assets/images/object-card/img-4.svg" alt="Img" />
+                    </div>
+                    <div class="swiper-slide swiper-small_item">
+                      <img src="../../assets/images/object-card/img-5.svg" alt="Img" />
+                    </div>
+                    <div class="swiper-slide swiper-small_item">
+                      <img src="../../assets/images/object-card/img-6.svg" alt="Img" />
+                    </div>
+                    <div class="swiper-slide swiper-small_item">
+                      <img src="../../assets/images/object-card/img-7.svg" alt="Img" />
+                    </div>
+                    <div class="swiper-slide swiper-small_item">
+                      <img src="../../assets/images/object-card/img-8.svg" alt="Img" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="col-12 col-lg-4">
+                <div class="title_h2 object-card_finish-title">Чистовая отделка</div>
+                <div class="object-card_finish-cost title_h4">5 000  ₽ за м. кв.</div>
+                <div class="object-card_finish-list title_h5">Пятикамерные стеклопакеты</div>
+                <div class="object-card_finish-list title_h5">Ламинат 32 класса</div>
+                <div class="object-card_finish-list title_h5">Двери Волховец</div>
+                <div class="object-card_finish-list title_h5">Обои текстильные премиум</div>
+                <div class="object-card_finish-list title_h5">Керамогранит</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
     <!-- 3d tur -->
-    <section>
+    <section id="3d-section">
       <div class="title_h1">3D- тур</div>
       <div class="object-card_3dtur-img">
         <img src="../../assets/images/object-card/3dtur.svg" alt="Img">
       </div>
     </section>
     <!-- Sale -->
-    <section>
+    <section id="sale-section">
       <div class="title_h1">Акции</div>
       <div class="object-card_sale row">
         <div class="col-12 col-lg-6">
@@ -2588,7 +2752,7 @@
             <div class="object-card_sale-title title_h2">Скидка 3000 рублей при оплате золотом</div>
             <div class="object-card_sale-deadline title_h5">Срок действия: бессрочно</div>
             <div class="object-card_sale-text title_h5">Расположен в многолетнем хвойном лесу на первой береговой линии Финского залива в самом сердце Курортного района Санкт‐Петербурга. Уникальное расположение и собственные....</div>
-            <div class="object-card_sale-link"><a href="#" class="link" data-bs-toggle="modal" data-bs-target="#sale">Подробнее</a></div>
+            <div class="object-card_sale-link link" data-bs-toggle="modal" data-bs-target="#sale">Подробнее</div>
           </div>
         </div>
         <div class="col-12 col-lg-6">
@@ -2596,7 +2760,7 @@
             <div class="object-card_sale-title title_h2">Скидка 3000 рублей при оплате золотом</div>
             <div class="object-card_sale-deadline title_h5">Срок действия: бессрочно</div>
             <div class="object-card_sale-text title_h5">Расположен в многолетнем хвойном лесу на первой береговой линии Финского залива в самом сердце Курортного района Санкт‐Петербурга. Уникальное расположение и собственные....</div>
-            <div class="object-card_sale-link"><a href="#" class="link" data-bs-toggle="modal" data-bs-target="#sale">Подробнее</a></div>
+            <div class="object-card_sale-link link" data-bs-toggle="modal" data-bs-target="#sale">Подробнее</div>
           </div>
         </div>
         <div class="col-12 col-lg-6">
@@ -2604,7 +2768,7 @@
             <div class="object-card_sale-title title_h2">Скидка 3000 рублей при оплате золотом</div>
             <div class="object-card_sale-deadline title_h5">Срок действия: бессрочно</div>
             <div class="object-card_sale-text title_h5">Расположен в многолетнем хвойном лесу на первой береговой линии Финского залива в самом сердце Курортного района Санкт‐Петербурга. Уникальное расположение и собственные....</div>
-            <div class="object-card_sale-link"><a href="#" class="link" data-bs-toggle="modal" data-bs-target="#sale">Подробнее</a></div>
+            <div class="object-card_sale-link link" data-bs-toggle="modal" data-bs-target="#sale">Подробнее</div>
           </div>
         </div>
         <div class="col-12 col-lg-6">
@@ -2612,7 +2776,7 @@
             <div class="object-card_sale-title title_h2">Скидка 3000 рублей при оплате золотом</div>
             <div class="object-card_sale-deadline title_h5">Срок действия: бессрочно</div>
             <div class="object-card_sale-text title_h5">Расположен в многолетнем хвойном лесу на первой береговой линии Финского залива в самом сердце Курортного района Санкт‐Петербурга. Уникальное расположение и собственные....</div>
-            <div class="object-card_sale-link"><a href="#" class="link" data-bs-toggle="modal" data-bs-target="#sale">Подробнее</a></div>
+            <div class="object-card_sale-link link" data-bs-toggle="modal" data-bs-target="#sale">Подробнее</div>
           </div>
         </div>
       </div>
@@ -2630,7 +2794,7 @@
       </div>
     </section>
     <!-- Files -->
-    <section class="object-card_files">
+    <section class="object-card_files" id="file-section">
       <div class="title_h1">Файлы</div>
       <div class="object-card_files-items">
         <div class="object-card_files-folder">
@@ -2697,7 +2861,7 @@
       </div>
     </section>
     <!-- Map / Scheme -->
-    <section>
+    <section id="map-section">
       <div class="row">
         <div class="col-12 col-lg-6">
           <div class="title_h1">Карта</div>
@@ -2712,7 +2876,7 @@
       </div>
     </section>
     <!-- News -->
-    <section>
+    <section id="news-section">
       <div class="title_h1">Новости</div>
       <div class="row">
         <div class="news col-12 col-md-6 col-xl-4">
@@ -2736,7 +2900,7 @@
             <div class="news-date title_h6">21.01.2024</div>
             <img src="../../assets/images/object-card/news-3.svg" class="news-img-item" alt="Img">
           </div>
-          <div class="news-title title_h3">Заголовок новости/статьи</div>
+          <div class="news-title title_h3" data-bs-toggle="modal" data-bs-target="#news">Заголовок новости/статьи</div>
           <div class="news-text title_h5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.....</div>
         </div>
       </div>
@@ -2747,7 +2911,7 @@
       <div class="modal-dialog modal-dialog-centered" style="max-width: 466px;">
         <div class="modal-content">
           <div class="modal-body modal-zaf">
-            <div class="modal-zaf-close" data-bs-dismiss="modal" aria-label="Close"><img src="../../assets/images/icons/close-modal.svg" alt="Icon"></div>
+            <div class="modal-zaf-close" data-bs-dismiss="modal" aria-label="Close"></div>
             <div class="title_h2">Зафиксировать клиента</div>
             <div class="modal-zaf-body">
               <label for="surname" class="title_h5 input_label">Фамилия</label>
@@ -2779,7 +2943,7 @@
                 <div class="modal-zaf-added">
                   <img src="../../assets/images/icons/file.svg" alt="Icon">
                   <span class="title_h5 modal-zaf-added-name"></span>
-                  <img src="../../assets/images/icons/close-modal.svg" class="modal-zaf-added-close" alt="Icon" onclick="deleteFileProj()">
+                  <div class="modal-zaf-added-close" onclick="deleteFileProj()"></div>
                 </div>
                 <label for="add-doc" class="link modal-zaf-add">+Добавить файлы</label>
                 <input type="file" onchange="updateFileProj()" id="add-doc" class="modal-zaf-add-input">
@@ -2804,7 +2968,7 @@
       <div class="modal-dialog modal-dialog-centered" style="max-width: 673px;">
         <div class="modal-content">
           <div class="modal-body modal-zaf">
-            <div class="modal-zaf-close" data-bs-dismiss="modal" aria-label="Close"><img src="../../assets/images/icons/close-modal.svg" alt="Icon"></div>
+            <div class="modal-zaf-close" data-bs-dismiss="modal" aria-label="Close"></div>
             <div class="title_h2">Регламент</div>
             <div class="modal-reg-text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -2825,7 +2989,7 @@
       <div class="modal-dialog modal-dialog-centered" style="max-width: 960px;">
         <div class="modal-content">
           <div class="modal-body modal-zaf">
-            <div class="modal-zaf-close" data-bs-dismiss="modal" aria-label="Close"><img src="../../assets/images/icons/close-modal.svg" alt="Icon"></div>
+            <div class="modal-zaf-close" data-bs-dismiss="modal" aria-label="Close"></div>
             <div class="title_h2">2-комн. квартира, 56,7 м² в ЖК Счастливые лица</div>
             <div class="modal-cards">
               <div class="modal-cards-map">
@@ -2925,7 +3089,7 @@
       <div class="modal-dialog modal-dialog-centered" style="max-width: 673px;">
         <div class="modal-content">
           <div class="modal-body modal-zaf">
-            <div class="modal-zaf-close" data-bs-dismiss="modal" aria-label="Close"><img src="../../assets/images/icons/close-modal.svg" alt="Icon"></div>
+            <div class="modal-zaf-close" data-bs-dismiss="modal" aria-label="Close"></div>
             <div class="title_h2">Скидка 3000 рублей при оплате золотом</div>
             <div class="modal-reg-text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -2946,7 +3110,7 @@
       <div class="modal-dialog modal-dialog-centered" style="max-width: 673px;">
         <div class="modal-content">
           <div class="modal-body modal-zaf">
-            <div class="modal-zaf-close" data-bs-dismiss="modal" aria-label="Close"><img src="../../assets/images/icons/close-modal.svg" alt="Icon"></div>
+            <div class="modal-zaf-close" data-bs-dismiss="modal" aria-label="Close"></div>
             <div class="title_h2">Скидка 3000 рублей при оплате золотом</div>
             <div class="modal-news-img">
               <div class="modal-news-date title_h6">21.01.2024</div>

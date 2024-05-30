@@ -16,19 +16,19 @@
 /* stylelint-disable */
 @font-face {
   font-family: AireExterior;
-  src: url(../../assets/fonts/AireExterior.ttf);
+  src: url(../assets/fonts/AireExterior.ttf);
 }
 @font-face {
   font-family: Inter Bolt;
-  src: url(../../assets/fonts/Inter-Bold.ttf);
+  src: url(../assets/fonts/Inter-Bold.ttf);
 }
 @font-face {
   font-family: Inter Semi Bolt;
-  src: url(../../assets/fonts/Inter-SemiBold.ttf);
+  src: url(../assets/fonts/Inter-SemiBold.ttf);
 }
 @font-face {
   font-family: Inter Regular;
-  src: url(../../assets/fonts/Inter-Regular.ttf);
+  src: url(../assets/fonts/Inter-Regular.ttf);
 }
 html {
   box-sizing: border-box;
@@ -57,6 +57,7 @@ body {
 
 section {
   margin-top: 50px;
+  scroll-behavior: auto;
 }
 @media (max-width: 767.5px) {
   section {
@@ -299,11 +300,15 @@ select:focus {
   padding: 10px 20px;
   border: none;
   border-radius: 10px;
+  color: var(--black);
   background-color: var(--white);
 }
 
 .input_label {
   margin-bottom: 10px;
+}
+.input_label:is(.not-active) {
+  color: var(--red);
 }
 .input_small {
   width: 178px;
@@ -315,6 +320,20 @@ select:focus {
   font-size: 14px;
   font-weight: 400;
   line-height: 16.41px;
+}
+.input_small:focus, .input_small:hover {
+  color: var(--black);
+  border-color: var(--black);
+}
+.input_small:focus::-webkit-input-placeholder, .input_small:hover::-webkit-input-placeholder {
+  color: var(--black);
+}
+.input_small:is(.not-active) {
+  color: var(--red);
+  border: 1px solid var(--red);
+}
+.input_small:is(.not-active)::-webkit-input-placeholder {
+  color: var(--red);
 }
 @media (max-width: 991.5px) {
   .input_small {
@@ -342,9 +361,19 @@ select:focus {
   font-weight: 400;
   line-height: 16.41px;
 }
-.input_big:focus {
+.input_big:focus, .input_big:hover {
   color: var(--black);
-  border: 1px solid var(--black);
+  border-color: var(--black);
+}
+.input_big:focus::-webkit-input-placeholder, .input_big:hover::-webkit-input-placeholder {
+  color: var(--black);
+}
+.input_big:is(.not-active) {
+  color: var(--red);
+  border: 1px solid var(--red);
+}
+.input_big:is(.not-active)::-webkit-input-placeholder {
+  color: var(--red);
 }
 
 .custom-select {
@@ -353,9 +382,17 @@ select:focus {
   border-radius: 5px;
   position: relative;
 }
+.custom-select:focus, .custom-select:hover {
+  color: var(--black);
+  border-color: var(--black);
+}
+.custom-select:is(.not-active) {
+  color: var(--red);
+  border: 1px solid var(--red);
+}
 .custom-select-selected {
   cursor: pointer;
-  background: url(../../assets/images/icons/arrow-gray.svg) no-repeat;
+  background: url(../assets/images/icons/arrow-gray.svg) no-repeat;
 }
 .custom-select-selected-big {
   padding: 15px 20px 14px;
@@ -366,7 +403,7 @@ select:focus {
   background-position: 90% center;
 }
 .custom-select-items {
-  padding: 8px 0 15px;
+  padding: 0 0 15px;
 }
 .custom-select-item {
   padding: 7px 20px;
@@ -398,18 +435,20 @@ select:focus {
   width: 100%;
 }
 .custom-select-line {
-  height: 1px;
-  background-color: var(--gray-input);
-  position: absolute;
-  top: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
 }
 .custom-select-line-big {
+  height: 1px;
   width: 90%;
-  left: 5%;
+  background-color: var(--gray-input);
 }
 .custom-select-line-small {
+  height: 1px;
   width: 80%;
-  left: 10%;
+  background-color: var(--gray-input);
 }
 
 .nav-cards {
@@ -583,6 +622,21 @@ select:focus {
   height: 40px;
   background-color: var(--white);
   border-radius: 50%;
+  box-shadow: 0px 4px 3px 1px rgba(0, 0, 0, 0.2);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.swiper-big_btn-left {
+  background-image: url(../assets/images/icons/arrow-left-swiper.svg);
+}
+.swiper-big_btn-left:hover {
+  background-image: url(../assets/images/icons/arrow-left-swiper-orange.svg);
+}
+.swiper-big_btn-right {
+  background-image: url(../assets/images/icons/arrow-right-swiper.svg);
+}
+.swiper-big_btn-right:hover {
+  background-image: url(../assets/images/icons/arrow-right-swiper-orange.svg);
 }
 .swiper-big_btn::after {
   display: none;
@@ -668,10 +722,19 @@ select:focus {
   position: relative;
 }
 .modal-zaf-close {
+  width: 18px;
+  height: 18px;
   cursor: pointer;
   position: absolute;
   top: 10px;
   right: 10px;
+  background-image: url(../assets/images/icons/close-modal.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.modal-zaf-close:hover {
+  background-image: url(../assets/images/icons/close-modal-black.svg);
 }
 .modal-zaf-body {
   margin-top: 30px;
@@ -706,6 +769,13 @@ select:focus {
   height: 12.73px;
   margin-bottom: 10px;
   cursor: pointer;
+  background-image: url(../assets/images/icons/close-modal.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.modal-zaf-added-close:hover {
+  background-image: url(../assets/images/icons/close-modal-black.svg);
 }
 .modal-zaf-checkbox {
   display: flex;
@@ -881,11 +951,20 @@ select:focus {
     width: 90px;
   }
 }
+.modal-change-stage {
+  padding: 40px;
+  position: relative;
+}
 .modal-change-stage-text {
   max-width: 331px;
 }
 .modal-change-stage-mt1 {
   margin-top: 10px;
+}
+@media (max-width: 767.5px) {
+  .modal-change-stage {
+    padding: 20px 38px 20px 20px;
+  }
 }
 .modal-choose-btn {
   margin-top: 30px;
@@ -918,13 +997,14 @@ select:focus {
 .header_account-select {
   padding: 8px 20px 10px;
   margin-right: 124px;
+  color: var(--black);
   border: 1px solid var(--black);
   border-radius: 26px;
   font-family: "Inter Regular";
   font-size: 14px;
   font-weight: 400;
   line-height: 16.41px;
-  background: url(../../assets/images/icons/select-arrow.svg) no-repeat;
+  background: url(../assets/images/icons/select-arrow.svg) no-repeat;
   background-position: 90% center;
 }
 @media (max-width: 991.5px) {
@@ -977,7 +1057,7 @@ select:focus {
   align-items: center;
   justify-content: center;
 }
-.header_pages-item:hover, .header_pages-item:is(.active) {
+.header_pages-item:hover, .header_pages-item:active, .header_pages-item:is(.active) {
   background-color: var(--orange);
 }
 @media (max-width: 991.5px) {
@@ -1016,6 +1096,7 @@ select:focus {
 }
 .header_tsec-data {
   margin-right: 40px;
+  color: var(--black);
 }
 @media (max-width: 991.5px) {
   .header_tsec-data {
@@ -1309,7 +1390,7 @@ select:focus {
   height: 20px;
   border-radius: 5px;
   background-color: black;
-  background-image: url("../../../assets/images/icons/checkbox.svg");
+  background-image: url("../assets/images/icons/checkbox.svg");
   transform: scale(0);
   background-size: auto;
   background-repeat: no-repeat;
@@ -1376,13 +1457,24 @@ select:focus {
   align-items: center;
   cursor: pointer;
 }
+.object_form-remove:hover {
+  color: var(--black);
+}
+.object_form-remove:hover > .object_form-remove-garbage {
+  background-image: url(../assets/images/icons/garbage-black.svg);
+}
 .object_form-remove-garbage {
-  width: 25px;
+  min-width: 25px;
   height: 25px;
   margin-right: 10px;
+  background-image: url(../assets/images/icons/garbage.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 @media (max-width: 767.5px) {
   .object_form-remove-garbage {
+    margin-right: 0;
     margin-bottom: 6px;
   }
 }
@@ -1498,6 +1590,7 @@ select:focus {
   width: 222px;
   border: none;
   border-radius: 35px;
+  color: var(--black);
   background-color: var(--yellow);
   cursor: pointer;
 }
@@ -1751,6 +1844,21 @@ select:focus {
 }
 .object-card_zaf {
   margin-top: 20px;
+  color: var(--black);
+}
+.object-card-price {
+  font-family: "Inter Bolt";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.09px;
+}
+@media (max-width: 400px) {
+  .object-card-price {
+    font-family: "Inter Semi Bolt";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 18.75px;
+  }
 }
 .object-card_inf {
   margin-top: 30px;
@@ -1847,16 +1955,16 @@ select:focus {
 }
 .object-card_sale-item-1 {
   gap: 15px;
-  background-image: url("../../../../assets/images/object-card/sale-1.svg");
+  background-image: url("../assets/images/object-card/sale-1.svg");
   border-bottom: 5px solid var(--green);
 }
 .object-card_sale-item-2 {
-  background-image: url("../../../../assets/images/object-card/sale-2.svg");
+  background-image: url("../assets/images/object-card/sale-2.svg");
   border-bottom: 5px solid var(--blue);
 }
 .object-card_sale-item-3 {
   margin-top: 20px;
-  background-image: url("../../../../assets/images/object-card/sale-3.svg");
+  background-image: url("../assets/images/object-card/sale-3.svg");
   border-bottom: 5px solid var(--yellow);
 }
 @media (max-width: 991.5px) {
@@ -1866,7 +1974,7 @@ select:focus {
 }
 .object-card_sale-item-4 {
   margin-top: 20px;
-  background-image: url("../../../../assets/images/object-card/sale-4.svg");
+  background-image: url("../assets/images/object-card/sale-4.svg");
   border-bottom: 5px solid var(--red);
 }
 @media (max-width: 991.5px) {
@@ -1895,14 +2003,12 @@ select:focus {
 }
 .object-card_sale-link {
   margin-top: 16px;
-  display: flex;
-  justify-content: end;
-}
-.object-card_sale-link > a {
+  text-align: right;
   color: var(--orange);
+  cursor: pointer;
 }
-.object-card_sale-link > a:hover {
-  text-decoration: underline;
+.object-card_sale-link:hover {
+  color: var(--blue);
 }
 .object-card_sale-video {
   height: 389px;
@@ -1967,7 +2073,7 @@ select:focus {
 }
 .object-card_type-accordion-header:is(.collapsed) > .object-card_type-accordion-header-btn {
   color: var(--orange);
-  background-image: url(../../../../assets/images/icons/arrow-orange.svg);
+  background-image: url(../assets/images/icons/arrow-orange.svg);
   background-repeat: no-repeat;
   background-position: 100% center;
 }
@@ -1982,14 +2088,14 @@ select:focus {
 .object-card_type-accordion-header-btn {
   display: flex;
   justify-content: end;
-  background-image: url(../../../../assets/images/icons/arrow-top.svg);
+  background-image: url(../assets/images/icons/arrow-top.svg);
   background-repeat: no-repeat;
   background-position: 100% center;
   cursor: pointer;
 }
 .object-card_type-accordion-header-btn:hover {
   color: var(--orange);
-  background-image: url(../../../../assets/images/icons/arrow-orange.svg);
+  background-image: url(../assets/images/icons/arrow-orange.svg);
   background-repeat: no-repeat;
   background-position: 100% center;
 }
@@ -2121,14 +2227,14 @@ select:focus {
 .object-card_type-list-body-heart {
   width: 20px;
   height: 20px;
-  background-image: url(../../../../assets/images/icons/heart.svg);
+  background-image: url(../assets/images/icons/heart.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
 .object-card_type-list-body-heart:hover, .object-card_type-list-body-heart:is(.active) {
   width: 20px;
   height: 20px;
-  background-image: url(../../../../assets/images/icons/heart-active.svg);
+  background-image: url(../assets/images/icons/heart-active.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -2535,11 +2641,11 @@ select:focus {
   height: 20px;
 }
 .object-card_bank-items-status:is(.true) {
-  background-image: url(../../../../assets/images/icons/true.svg);
+  background-image: url(../assets/images/icons/true.svg);
   background-repeat: no-repeat;
 }
 .object-card_bank-items-status:is(.false) {
-  background-image: url(../../../../assets/images/icons/false.svg);
+  background-image: url(../assets/images/icons/false.svg);
   background-repeat: no-repeat;
 }
 .object-card_bank-items::after {
@@ -2612,7 +2718,7 @@ select:focus {
   min-width: 37px;
   height: 20px;
   margin-right: 10px;
-  background-image: url("../../../../assets/images/icons/checkbox-notactive.svg");
+  background-image: url("../assets/images/icons/checkbox-notactive.svg");
   background-position: left center;
   border: 2px solid #DCDCDC;
   box-shadow: inset 0px 4px 3px 1px rgba(0, 0, 0, 0.1);
@@ -2621,11 +2727,11 @@ select:focus {
   cursor: pointer;
 }
 .form-switch .form-check-input:focus {
-  background-image: url("../../../../assets/images/icons/checkbox-notactive.svg");
+  background-image: url("../assets/images/icons/checkbox-notactive.svg");
 }
 .form-switch .form-check-input:checked {
   background-color: var(--green);
-  background-image: url("../../../../assets/images/icons/checkbox-active.svg");
+  background-image: url("../assets/images/icons/checkbox-active.svg");
   border: 2px solid #00AA40;
 }
 .form-switch .form-check-input:checked + .form-check-label {
@@ -3153,6 +3259,9 @@ select:focus {
   color: var(--gray-input);
   cursor: pointer;
 }
+.client-lk-link:hover {
+  color: var(--orange);
+}
 @media (max-width: 767.5px) {
   .client-lk-link {
     margin: 10px 0;
@@ -3269,6 +3378,18 @@ select:focus {
   border-radius: 33px;
   background-color: var(--yellow);
 }
+.client-lk-desktop-status-close {
+  width: 12.73px;
+  height: 12.73px;
+  cursor: pointer;
+  background-image: url(../assets/images/icons/close-modal.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.client-lk-desktop-status-close:hover {
+  background-image: url(../assets/images/icons/close-modal-black.svg);
+}
 @media (max-width: 1199.5px) {
   .client-lk-desktop {
     display: none;
@@ -3366,6 +3487,7 @@ select:focus {
 }
 .client-search-input {
   width: 289px;
+  height: 45px;
   padding: 15px 20px 14px;
   color: var(--gray-input);
   background-color: transparent;
@@ -3387,12 +3509,15 @@ select:focus {
 }
 .client-search-select {
   width: 137px;
+  height: 45px;
   padding: 15px 20px 14px;
+  color: var(--black);
   background-color: transparent;
-  background-image: url(../../../../assets/images/icons/select-arrow.svg);
+  background-image: url(../assets/images/icons/select-arrow.svg);
   background-repeat: no-repeat;
   background-position: 90% center;
   border: 1px solid var(--gray-input);
+  border-left: none;
   cursor: pointer;
   font-family: "Inter Regular";
   font-size: 14px;
@@ -3405,6 +3530,7 @@ select:focus {
   }
 }
 .client-search-btn {
+  height: 45px;
   padding: 14px 30px;
   color: var(--white);
   background-color: var(--black);
@@ -3630,7 +3756,7 @@ select:focus {
   cursor: pointer;
 }
 .agencies-change:hover {
-  color: var(--gray-input);
+  color: var(--orange);
   text-decoration: underline;
 }
 @media (max-width: 991.5px) {
@@ -3703,7 +3829,7 @@ select:focus {
 @media (max-width: 991.5px) and (max-width: 400px) {
   .agencies-filter-btn {
     width: 150px;
-    white-space: wrap;
+    white-space: inherit;
   }
 }
 .agencies-cancel {
@@ -3943,6 +4069,11 @@ select:focus {
 }
 
 .profil-img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+}
+.profil-img-div {
   width: 230px;
   height: 230px;
   border-radius: 10px;
