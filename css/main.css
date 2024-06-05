@@ -3614,7 +3614,7 @@ select:focus {
 }
 
 .registration {
-  padding: 197px 0;
+  height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
