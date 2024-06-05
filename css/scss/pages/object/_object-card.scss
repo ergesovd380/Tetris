@@ -122,16 +122,16 @@
 
       &-1 {
         gap: 15px;
-        background-image: url('../../../../assets/images/object-card/sale-1.svg');
+        background-image: url('../../../../assets/images/object-card/sale-1.webp');
         border-bottom: 5px solid var(--green);
       }
       &-2 {
-        background-image: url('../../../../assets/images/object-card/sale-2.svg');
+        background-image: url('../../../../assets/images/object-card/sale-2.webp');
         border-bottom: 5px solid var(--blue);
       }
       &-3 {
         margin-top: 20px;
-        background-image: url('../../../../assets/images/object-card/sale-3.svg');
+        background-image: url('../../../../assets/images/object-card/sale-3.webp');
         border-bottom: 5px solid var(--yellow);
 
         @include for-big-tablet {
@@ -140,7 +140,7 @@
       }
       &-4 {
         margin-top: 20px;
-        background-image: url('../../../../assets/images/object-card/sale-4.svg');
+        background-image: url('../../../../assets/images/object-card/sale-4.webp');
         border-bottom: 5px solid var(--red);
 
         @include for-big-tablet {

@@ -1019,6 +1019,10 @@ select:focus {
   align-items: center;
   justify-content: space-between;
 }
+.header_account-data-reg {
+  text-align: center;
+  cursor: pointer;
+}
 .header_account-img {
   margin-right: 16px;
   width: 39px;
@@ -1955,16 +1959,16 @@ select:focus {
 }
 .object-card_sale-item-1 {
   gap: 15px;
-  background-image: url("../assets/images/object-card/sale-1.svg");
+  background-image: url("../assets/images/object-card/sale-1.webp");
   border-bottom: 5px solid var(--green);
 }
 .object-card_sale-item-2 {
-  background-image: url("../assets/images/object-card/sale-2.svg");
+  background-image: url("../assets/images/object-card/sale-2.webp");
   border-bottom: 5px solid var(--blue);
 }
 .object-card_sale-item-3 {
   margin-top: 20px;
-  background-image: url("../assets/images/object-card/sale-3.svg");
+  background-image: url("../assets/images/object-card/sale-3.webp");
   border-bottom: 5px solid var(--yellow);
 }
 @media (max-width: 991.5px) {
@@ -1974,7 +1978,7 @@ select:focus {
 }
 .object-card_sale-item-4 {
   margin-top: 20px;
-  background-image: url("../assets/images/object-card/sale-4.svg");
+  background-image: url("../assets/images/object-card/sale-4.webp");
   border-bottom: 5px solid var(--red);
 }
 @media (max-width: 991.5px) {

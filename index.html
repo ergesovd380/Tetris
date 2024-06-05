@@ -6,7 +6,6 @@
   <link rel="shortcut icon" href="./assets/images/logo/favicon.svg" type="image/x-icon">
   <link rel="stylesheet" href="./css/bootstrap.min.css">
   <link rel="stylesheet" href="./css/normalize.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./css/main.css">
   <title>Tetris</title>
 </head>
@@ -26,12 +25,16 @@
               <option value="Агентство Ландыш">Агентство Ландыш - 2</option>
               <option value="Агентство Ландыш">Агентство Ландыш - 3</option>
             </select>
-            <div class="header_account-data">
+            <div class="header_account-data d-none">
               <img class="header_account-img" src="./assets/images/header/user.jpg" alt="User-img">
               <div class="title_h4">Иван Иванов</div>
               <div class="header_account-out">
                 <img src="./assets/images/icons/out.svg" alt="Out-icon">
               </div>
+            </div>
+            <div class="header_account-data-reg" data-bs-toggle="modal" data-bs-target="#registration">
+              <img src="./assets/images/icons/registration.svg" alt="Icon">
+              <div class="title_h5">Вход</div>
             </div>
           </div>
 
@@ -57,12 +60,16 @@
               <div class="offcanvas-header">
                 <div></div>
                 <div class="header_account-mob">
-                  <div class="header_account-data">
+                  <div class="header_account-data d-none">
                     <img class="header_account-img" src="./assets/images/header/user.jpg" alt="User-img">
                     <div class="title_h4">Иван Иванов</div>
                     <div class="header_account-out">
                       <img src="./assets/images/icons/out.svg" alt="Out-icon">
                     </div>
+                  </div>
+                  <div class="header_account-data-reg" data-bs-toggle="modal" data-bs-target="#registration" data-bs-dismiss="offcanvas">
+                    <img src="./assets/images/icons/registration.svg" alt="Icon">
+                    <div class="title_h5">Вход</div>
                   </div>
                 </div>
                 <button class="btn" data-bs-dismiss="offcanvas">
@@ -137,19 +144,762 @@
     </div>
   </header>
 
-  <main class="container">
-    <section class="registration">
-      <div class="registration-items">
-        <img src="./assets/images/icons/close-modal.svg" alt="Img" class="registration-close">
-        <img src="./assets/images/logo/registration.svg" alt="Logo">
-        <div class="registration-mt3 title_h1">Регистрация</div>
-        <div class="registration-subtitle title_h4">Для регистрации перейдите в Telegram-бот и следуйте указаниям</div>
-        <div class="registration-mt3">
-          <button class="btn_regular">Перейти в Telegram</button>
+  <main>
+    <!-- Object Section start -->
+    <section class="container object">
+      <!-- Object title -->
+      <div class="object_title title_h1">Объекты</div>
+      <!-- Object filter btns -->
+      <div class="object_filter-btns">
+        <button class="btn_small object_btn active">Новостройки</button>
+        <button class="btn_small object_btn">Загородная</button>
+        <button class="btn_small object_btn">Зарубежная</button>
+      </div>
+      <!-- Object filter form (accardion) -->
+      <div class="accordion accordion-flush object_accardion" id="accordionFlushExample">
+        <div class="accordion-header object_form-accardion" id="flush-headingOne">
+          <button 
+              class="btn_accardion title_h4" 
+              type="button"
+              data-bs-toggle="collapse" 
+              data-bs-target="#flush-collapseOne" 
+              aria-expanded="false" 
+              aria-controls="flush-collapseOne">
+              <img src="./assets/images/icons/filter.svg" alt="Filter icon">
+              Открыть фильтр
+          </button>
         </div>
-        <div class="registration-mt3">Уже есть аккаунт? <a href="./pages/registration/sing-in.html" class="link registration-link">Вход</a></div>
+        <div 
+          id="flush-collapseOne" 
+          class="accordion-collapse collapse"
+          aria-labelledby="flush-headingOne" 
+          data-bs-parent="#accordionFlushExample">
+          <form class="object_form">
+            <div 
+              class="object_accardion-close" 
+              data-bs-toggle="collapse" 
+              data-bs-target="#flush-collapseOne">
+              <div class="link">Свернуть фильтр</div>
+            </div>
+            <div class="row">
+              <!-- Первый столбец -->
+              <div class="col-12 col-md-6 col-xxl-4">
+                <!-- Номер и Корпус -->
+                <div class="row">
+                  <div class="col-6">
+                    <div class="title_h5 input_label">Номер</div>
+                    <!-- Select -->
+                    <div class="custom-select custom-select-small title_h5">
+                      <div class="custom-select-selected custom-select-selected-small select-num">Выбор</div>
+                      <div class="custom-select-items select-num-items">
+                        <div class="custom-select-line">
+                          <div class="custom-select-line-small"></div>
+                        </div>
+                        <div class="custom-select-item select-num-item">100</div>
+                        <div class="custom-select-item select-num-item">200</div>
+                        <div class="custom-select-item select-num-item">300</div>
+                      </div>  
+                    </div>
+                  </div>
+                  <div class="col-6 object_form-column">
+                    <div >
+                      <div class="title_h5 input_label">Корпус</div>
+                      <!-- Select -->
+                      <div class="custom-select custom-select-small title_h5">
+                        <div class="custom-select-selected custom-select-selected-small select-kor">Выбор</div>
+                        <div class="custom-select-items select-kor-items">
+                          <div class="custom-select-line">
+                            <div class="custom-select-line-small"></div>
+                          </div>
+                          <div class="custom-select-item select-kor-item">100</div>
+                          <div class="custom-select-item select-kor-item">200</div>
+                          <div class="custom-select-item select-kor-item">300</div>
+                        </div>  
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Цена -->
+                <div class="object_form-input">
+                  <div class="title_h5 input_label">Цена</div>
+                  <div class="object_form-flex">
+                    <input type="number" placeholder="От" class="input_small title_h5">
+                    <img src="./assets/images/icons/line.svg" alt="Line icon">
+                    <input type="number" placeholder="До" class="input_small title_h5">
+                  </div>
+                </div>
+                <!-- Общая площадь -->
+                <div class="object_form-input">
+                  <div class="title_h5 input_label">Общая площадь</div>
+                  <div class="object_form-flex">
+                    <input type="number" placeholder="От" class="input_small title_h5">
+                    <img src="./assets/images/icons/line.svg" alt="Line icon">
+                    <input type="number" placeholder="До" class="input_small title_h5">
+                  </div>
+                </div>
+                <!-- Способ оплаты -->
+                <div class="object_form-input">
+                  <div class="title_h5 input_label">Способ оплаты</div>
+                  <!-- Select -->
+                  <div class="custom-select custom-select-big title_h5">
+                    <div class="custom-select-selected custom-select-selected-big select-pay">Выбор</div>
+                    <div class="custom-select-items select-pay-items">
+                      <div class="custom-select-line">
+                        <div class="custom-select-line-big"></div>
+                      </div>
+                      <div class="custom-select-item select-pay-item">100</div>
+                      <div class="custom-select-item select-pay-item">200</div>
+                      <div class="custom-select-item select-pay-item">300</div>
+                    </div>  
+                  </div>
+                </div>
+                <!-- Этажность Desktop -->
+                <div class="object_form-input object_form-desktop">
+                  <div class="title_h5 input_label">Этажность</div>
+                  <!-- Select -->
+                  <div class="custom-select custom-select-small title_h5">
+                    <div class="custom-select-selected custom-select-selected-small select-storey">Выбор</div>
+                    <div class="custom-select-items select-storey-items">
+                      <div class="custom-select-line">
+                        <div class="custom-select-line-small"></div>
+                      </div>
+                      <div class="custom-select-item select-storey-item">100</div>
+                      <div class="custom-select-item select-storey-item">200</div>
+                      <div class="custom-select-item select-storey-item">300</div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+              <!-- Второй столбец -->
+              <div class="col-12 col-md-6 col-xxl-4">
+                <!-- Срок сдачи -->
+                <div class="object_form-input-2">
+                  <div class="title_h5 input_label">Срок сдачи</div>
+                  <!-- Select -->
+                  <div class="custom-select custom-select-big title_h5">
+                    <div class="custom-select-selected custom-select-selected-big select-deadline">Выбор</div>
+                    <div class="custom-select-items select-deadline-items">
+                      <div class="custom-select-line">
+                        <div class="custom-select-line-big"></div>
+                      </div>
+                      <div class="custom-select-item select-deadline-item">100</div>
+                      <div class="custom-select-item select-deadline-item">200</div>
+                      <div class="custom-select-item select-deadline-item">300</div>
+                    </div>  
+                  </div>
+                </div>
+                <!-- Тип помещения и Количество комнат -->
+                <div class="row object_form-input">
+                  <div class="col-6">
+                    <div class="title_h5 input_label">Тип помещения</div>
+                    <!-- Select -->
+                    <div class="custom-select custom-select-small title_h5">
+                      <div class="custom-select-selected custom-select-selected-small select-type1">Выбор</div>
+                      <div class="custom-select-items select-type1-items">
+                        <div class="custom-select-line">
+                          <div class="custom-select-line-small"></div>
+                        </div>
+                        <div class="custom-select-item select-type1-item">100</div>
+                        <div class="custom-select-item select-type1-item">200</div>
+                        <div class="custom-select-item select-type1-item">300</div>
+                      </div>  
+                    </div>
+                  </div>
+                  <div class="col-6 object_form-column">
+                    <div>
+                      <div class="title_h5 input_label">Количество комнат</div>
+                      <!-- Select -->
+                      <div class="custom-select custom-select-small title_h5">
+                        <div class="custom-select-selected custom-select-selected-small select-type2">Выбор</div>
+                        <div class="custom-select-items select-type2-items">
+                          <div class="custom-select-line">
+                            <div class="custom-select-line-small"></div>
+                          </div>
+                          <div class="custom-select-item select-type2-item">100</div>
+                          <div class="custom-select-item select-type2-item">200</div>
+                          <div class="custom-select-item select-type2-item">300</div>
+                        </div>  
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Площадь кухни -->
+                <div class="object_form-input">
+                  <div class="title_h5 input_label">Площадь кухни</div>
+                  <div class="object_form-flex">
+                    <input type="number" placeholder="От" class="input_small title_h5">
+                    <img src="./assets/images/icons/line.svg" alt="Line icon">
+                    <input type="number" placeholder="До" class="input_small title_h5">
+                  </div>
+                </div>
+                <!-- Банк -->
+                <div class="object_form-input">
+                  <div class="title_h5 input_label">Банк</div>
+                    <!-- Select -->
+                    <div class="custom-select custom-select-big title_h5">
+                      <div class="custom-select-selected custom-select-selected-big select-bank">Выбор</div>
+                      <div class="custom-select-items select-bank-items">
+                        <div class="custom-select-line">
+                          <div class="custom-select-line-big"></div>
+                        </div>
+                        <div class="custom-select-item select-bank-item">100</div>
+                        <div class="custom-select-item select-bank-item">200</div>
+                        <div class="custom-select-item select-bank-item">300</div>
+                      </div>  
+                    </div>
+                </div>
+              </div>
+              <!-- Третий столбец -->
+              <div class="col-12 col-md-6 col-xxl-4">
+                <!-- Срок передачи -->
+                <div class="object_form-input-3">
+                  <div class="title_h5 input_label">Срок передачи</div>
+                  <!-- Select -->
+                  <div class="custom-select custom-select-big title_h5">
+                    <div class="custom-select-selected custom-select-selected-big select-term">Выбор</div>
+                    <div class="custom-select-items select-term-items">
+                      <div class="custom-select-line">
+                        <div class="custom-select-line-big"></div>
+                      </div>
+                      <div class="custom-select-item select-term-item">100</div>
+                      <div class="custom-select-item select-term-item">200</div>
+                      <div class="custom-select-item select-term-item">300</div>
+                    </div>  
+                  </div>
+                </div>
+                <!-- Отделка -->
+                <div class="object_form-input">
+                  <div class="title_h5 input_label">Отделка</div>
+                  <!-- Select -->
+                  <div class="custom-select custom-select-big title_h5">
+                    <div class="custom-select-selected custom-select-selected-big select-finish">Выбор</div>
+                    <div class="custom-select-items select-finish-items">
+                      <div class="custom-select-line">
+                        <div class="custom-select-line-big"></div>
+                      </div>
+                      <div class="custom-select-item select-finish-item">100</div>
+                      <div class="custom-select-item select-finish-item">200</div>
+                      <div class="custom-select-item select-finish-item">300</div>
+                    </div>  
+                  </div>
+                </div>
+                <!-- Этажность Mobile -->
+                <div class="object_form-input object_form-mobile">
+                  <div class="title_h5 input_label">Этажность</div>
+                  <!-- Select -->
+                  <div class="custom-select custom-select-small title_h5">
+                    <div class="custom-select-selected custom-select-selected-small select-storeyMob">Выбор</div>
+                    <div class="custom-select-items select-storeyMob-items">
+                      <div class="custom-select-line">
+                        <div class="custom-select-line-small"></div>
+                      </div>
+                      <div class="custom-select-item select-storeyMob-item">100</div>
+                      <div class="custom-select-item select-storeyMob-item">200</div>
+                      <div class="custom-select-item select-storeyMob-item">300</div>
+                    </div>  
+                  </div>
+                </div>
+                <!-- Checkboxes -->
+                <div class="object_form-checkboxes">
+                  <!-- Балкон -->
+                  <div class="object_form-types-item">
+                    <input class="object_form-types-radio" checked type="radio" name="checkbox-type" id="balcony">
+                    <label for="balcony" class="object_form-types-label title_h5">
+                      <span class="object_form-types-checkbox-custom"></span>
+                      Балкон
+                    </label>
+                  </div>
+                  <!-- Лоджия -->
+                  <div class="object_form-types-item">
+                    <input class="object_form-types-radio" type="radio" name="checkbox-type" id="loggia">
+                    <label for="loggia" class="object_form-types-label title_h5">
+                      <span class="object_form-types-checkbox-custom"></span>
+                      Лоджия
+                    </label>
+                  </div>
+                  <!-- Терраса -->
+                  <div class="object_form-types-item">
+                    <input class="object_form-types-radio" type="radio" name="checkbox-type" id="terrace">
+                    <label for="terrace" class="object_form-types-label title_h5">
+                      <span class="object_form-types-checkbox-custom"></span>
+                      Терраса
+                    </label>
+                  </div>
+                </div>
+                <!-- Btns -->
+                <div class="object_form-btns">
+                  <button class="btn_regular object_form-search">Показать варианты</button>
+                  <div class="object_form-remove">
+                    <div class="object_form-remove-garbage"></div>
+                    <div class="link">Сбросить фильтр</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
     </section>
+
+    <!-- Cards -->
+    <section class="container cards">
+      <!-- Cards type -->
+      <div class="nav nav-cards nav-cards-object" id="nav-tab" role="tablist">
+        <!-- Список -->
+        <div 
+          class="cards-type active" 
+          id="cards-tab-list" 
+          data-bs-toggle="tab" 
+          data-bs-target="#nav-list" 
+          role="tab" 
+          aria-controls="nav-list" 
+          aria-selected="true"
+        >
+          <!-- Icon -->
+          <div class="cards-type-icon">
+            <span class="type_list"></span>
+            <span class="type_list"></span>
+            <span class="type_list"></span>
+          </div>
+          Список
+        </div>
+        <!-- Плитка -->
+        <div 
+          class="cards-type" 
+          id="cards-tab-list" 
+          data-bs-toggle="tab" 
+          data-bs-target="#nav-tile" 
+          role="tab" 
+          aria-controls="nav-tile" 
+          aria-selected="false"
+        >
+          <!-- Icon -->
+          <div>
+            <div class="type_tile"></div>
+            <div class="type_tile"></div>
+          </div>
+          <div class="cards-type-icon">
+            <div class="type_tile"></div>
+            <div class="type_tile"></div>
+          </div>
+          Плитка
+        </div>
+      </div>
+      <div class="tab-content" id="nav-tabContent">
+        <!-- Cads List -->
+        <div class="tab-pane fade show active" id="nav-list" role="tabpanel">
+          <div class="cards_list">
+            <div class="cards_list-colm">
+              <div class="cards_list-img-div">
+                <img src="./assets/images/object/img.webp" class="cards-img cards_list-img" alt="Img">
+              </div>
+              <div style="overflow: hidden;">
+                <a href="./pages/object/object-card.html"><div class="title_h2 cards-title cards_list-title">ЖК Лазурная невозможность</div></a>
+                <div class="cards_list-item">
+                  <div class="cards-addr cards_list-addr title_h5">
+                    <img class="cards-addr-icon cards_list-addr-icon" src="./assets/images/icons/map-black.svg" alt="Map icon">
+                    <div class="cards_list-addr-title">
+                      Санкт-Петербург, пр. Королева, 65
+                    </div>
+                  </div>
+                  <div class="cards-map cards_list-map">
+                    <div class="cards_list-map-title">На карте</div>
+                    <img src="./assets/images/icons/map.svg" class="cards_list-map-icon" alt="Map icon">
+                  </div>
+                  <div class="cards-com cards_list-com title_h4">Главстройтехпроммонтаж</div>
+                  <div class="cards_list-cost title_h3">5,1–6,5 млн ₽</div>
+                  <button class="cards-zaf cards_list-zaf cards_list-zaf-desktop title_h5">
+                    <img src="./assets/images/icons/document.svg" alt="Img">
+                    Зафиксировать клиента
+                  </button>
+                  <div class="cards-deadline cards_list-deadline cards_list-deadline-desktop title_h6">Срок cдачи 3 кв. 2025</div>
+                </div>
+                <div class="cards_list-data">
+                  <div class="cards_list-data-item row">
+                    <div class="col title_h5">Студии</div>
+                    <div class="col title_h5">5,1–6,5 млн ₽</div>
+                    <div class="col title_h5" style="color: var(--gray-input);">18-25 м.кв.</div>
+                    <div class="col title_h5" style="color: var(--gray-input);">18 предложений</div>
+                  </div>
+                  <div class="cards_list-data-item row">
+                    <div class="col title_h5">Студии</div>
+                    <div class="col title_h5">5,1–6,5 млн ₽</div>
+                    <div class="col title_h5" style="color: var(--gray-input);">18-25 м.кв.</div>
+                    <div class="col title_h5" style="color: var(--gray-input);">18 предложений</div>
+                  </div>
+                  <div class="cards_list-data-item row">
+                    <div class="col title_h5">Студии</div>
+                    <div class="col title_h5">5,1–6,5 млн ₽</div>
+                    <div class="col title_h5" style="color: var(--gray-input);">18-25 м.кв.</div>
+                    <div class="col title_h5" style="color: var(--gray-input);">18 предложений</div>
+                  </div>
+                  <div class="cards_list-data-item row">
+                    <div class="col title_h5">Студии</div>
+                    <div class="col title_h5">5,1–6,5 млн ₽</div>
+                    <div class="col title_h5" style="color: var(--gray-input);">18-25 м.кв.</div>
+                    <div class="col title_h5" style="color: var(--gray-input);">18 предложений</div>
+                  </div>
+                  <div class="cards_list-data-item row">
+                    <div class="col title_h5">Студии</div>
+                    <div class="col title_h5">5,1–6,5 млн ₽</div>
+                    <div class="col title_h5" style="color: var(--gray-input);">18-25 м.кв.</div>
+                    <div class="col title_h5" style="color: var(--gray-input);">18 предложений</div>
+                  </div>
+                  <div class="cards_list-data-item row">
+                    <div class="col title_h5">Студии</div>
+                    <div class="col title_h5">5,1–6,5 млн ₽</div>
+                    <div class="col title_h5" style="color: var(--gray-input);">18-25 м.кв.</div>
+                    <div class="col title_h5" style="color: var(--gray-input);">18 предложений</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cards_list-colm-mob">
+              <button class="cards-zaf cards_list-zaf title_h5">
+                <img src="./assets/images/icons/document.svg" alt="Img">
+                Зафиксировать клиента
+              </button>
+              <div class="cards-deadline cards_list-deadline title_h6">Срок cдачи 3 кв. 2025</div>
+            </div>
+          </div>
+          <div class="cards_list">
+            <div class="cards_list-colm">
+              <div class="cards_list-img-div">
+                <img src="./assets/images/object/img.webp" class="cards-img cards_list-img" alt="Img">
+              </div>
+              <div style="overflow: hidden;">
+                <a href="./pages/object/object-card.html"><div class="title_h2 cards-title cards_list-title">ЖК Лазурная невозможность</div></a>
+                <div class="cards_list-item">
+                  <div class="cards-addr cards_list-addr title_h5">
+                    <img class="cards-addr-icon cards_list-addr-icon" src="./assets/images/icons/map-black.svg" alt="Map icon">
+                    <div class="cards_list-addr-title">
+                      Санкт-Петербург, пр. Королева, 65
+                    </div>
+                  </div>
+                  <div class="cards-map cards_list-map">
+                    <div class="cards_list-map-title">На карте</div>
+                    <img src="./assets/images/icons/map.svg" class="cards_list-map-icon" alt="Map icon">
+                  </div>
+                  <div class="cards-com cards_list-com title_h4">Главстройтехпроммонтаж</div>
+                  <div class="cards_list-cost title_h3">5,1–6,5 млн ₽</div>
+                  <button class="cards-zaf cards_list-zaf cards_list-zaf-desktop title_h5">
+                    <img src="./assets/images/icons/document.svg" alt="Img">
+                    Зафиксировать клиента
+                  </button>
+                  <div class="cards-deadline cards_list-deadline cards_list-deadline-desktop title_h6">Срок cдачи 3 кв. 2025</div>
+                </div>
+                <div class="cards_list-data">
+                  <div class="cards_list-data-item row">
+                    <div class="col title_h5">Студии</div>
+                    <div class="col title_h5">5,1–6,5 млн ₽</div>
+                    <div class="col title_h5" style="color: var(--gray-input);">18-25 м.кв.</div>
+                    <div class="col title_h5" style="color: var(--gray-input);">18 предложений</div>
+                  </div>
+                  <div class="cards_list-data-item row">
+                    <div class="col title_h5">Студии</div>
+                    <div class="col title_h5">5,1–6,5 млн ₽</div>
+                    <div class="col title_h5" style="color: var(--gray-input);">18-25 м.кв.</div>
+                    <div class="col title_h5" style="color: var(--gray-input);">18 предложений</div>
+                  </div>
+                  <div class="cards_list-data-item row">
+                    <div class="col title_h5">Студии</div>
+                    <div class="col title_h5">5,1–6,5 млн ₽</div>
+                    <div class="col title_h5" style="color: var(--gray-input);">18-25 м.кв.</div>
+                    <div class="col title_h5" style="color: var(--gray-input);">18 предложений</div>
+                  </div>
+                  <div class="cards_list-data-item row">
+                    <div class="col title_h5">Студии</div>
+                    <div class="col title_h5">5,1–6,5 млн ₽</div>
+                    <div class="col title_h5" style="color: var(--gray-input);">18-25 м.кв.</div>
+                    <div class="col title_h5" style="color: var(--gray-input);">18 предложений</div>
+                  </div>
+                  <div class="cards_list-data-item row">
+                    <div class="col title_h5">Студии</div>
+                    <div class="col title_h5">5,1–6,5 млн ₽</div>
+                    <div class="col title_h5" style="color: var(--gray-input);">18-25 м.кв.</div>
+                    <div class="col title_h5" style="color: var(--gray-input);">18 предложений</div>
+                  </div>
+                  <div class="cards_list-data-item row">
+                    <div class="col title_h5">Студии</div>
+                    <div class="col title_h5">5,1–6,5 млн ₽</div>
+                    <div class="col title_h5" style="color: var(--gray-input);">18-25 м.кв.</div>
+                    <div class="col title_h5" style="color: var(--gray-input);">18 предложений</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cards_list-colm-mob">
+              <button class="cards-zaf cards_list-zaf title_h5">
+                <img src="./assets/images/icons/document.svg" alt="Img">
+                Зафиксировать клиента
+              </button>
+              <div class="cards-deadline cards_list-deadline title_h6">Срок cдачи 3 кв. 2025</div>
+            </div>
+          </div>
+        </div>
+        <!-- Cards Tile -->
+        <div class="tab-pane fade" id="nav-tile" role="tabpanel">
+          <div class="row">
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+              <div class="cards_tile">
+                <div class="cards_tile-img-div">
+                  <img src="./assets/images/object/img-tile.webp" class="cards-img cards_tile-img" alt="Img">
+                  <div class="cards-deadline cards_tile-deadline title_h6">Срок здачи 3 кв. 2025</div>
+                </div>
+                <a href="./pages/object/object-card.html"><div class="cards-title cards_tile-title title_h3">ЖК Лазурная невозможность</div></a>
+                <div class="cards-com  cards_tile-com title_h4">Главстройтехпроммонтаж</div>
+                <div class="cards-addr cards_tile-addr title_h6">
+                  <img class="cards-addr-icon" src="./assets/images/icons/map-black.svg" alt="Map icon">
+                  <div class="">
+                    Санкт-Петербург, пр. Королева, 65
+                  </div>
+                </div>
+                <div class="cards_tile-cost title_h3">5,1–6,5 млн ₽</div>
+                <div class="cards-zaf cards_tile-zaf title_h5">
+                  <img src="./assets/images/icons/document.svg" alt="Img">
+                  Зафиксировать клиента
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+              <div class="cards_tile">
+                <div class="cards_tile-img-div">
+                  <img src="./assets/images/object/img-tile.webp" class="cards-img cards_tile-img" alt="Img">
+                  <div class="cards-deadline cards_tile-deadline title_h6">Срок здачи 3 кв. 2025</div>
+                </div>
+                <a href="./pages/object/object-card.html"><div class="cards-title cards_tile-title title_h3">ЖК Лазурная невозможность</div></a>
+                <div class="cards-com  cards_tile-com title_h4">Главстройтехпроммонтаж</div>
+                <div class="cards-addr cards_tile-addr title_h6">
+                  <img class="cards-addr-icon" src="./assets/images/icons/map-black.svg" alt="Map icon">
+                  <div class="">
+                    Санкт-Петербург, пр. Королева, 65
+                  </div>
+                </div>
+                <div class="cards_tile-cost title_h3">5,1–6,5 млн ₽</div>
+                <button class="cards-zaf cards_tile-zaf title_h5">
+                  <img src="./assets/images/icons/document.svg" alt="Img">
+                  Зафиксировать клиента
+                </button>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+              <div class="cards_tile">
+                <div class="cards_tile-img-div">
+                  <img src="./assets/images/object/img-tile.webp" class="cards-img cards_tile-img" alt="Img">
+                  <div class="cards-deadline cards_tile-deadline title_h6">Срок здачи 3 кв. 2025</div>
+                </div>
+                <a href="./pages/object/object-card.html"><div class="cards-title cards_tile-title title_h3">ЖК Лазурная невозможность</div></a>
+                <div class="cards-com  cards_tile-com title_h4">Главстройтехпроммонтаж</div>
+                <div class="cards-addr cards_tile-addr title_h6">
+                  <img class="cards-addr-icon" src="./assets/images/icons/map-black.svg" alt="Map icon">
+                  <div class="">
+                    Санкт-Петербург, пр. Королева, 65
+                  </div>
+                </div>
+                <div class="cards_tile-cost title_h3">5,1–6,5 млн ₽</div>
+                <button class="cards-zaf cards_tile-zaf title_h5">
+                  <img src="./assets/images/icons/document.svg" alt="Img">
+                  Зафиксировать клиента
+                </button>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+              <div class="cards_tile">
+                <div class="cards_tile-img-div">
+                  <img src="./assets/images/object/img-tile.webp" class="cards-img cards_tile-img" alt="Img">
+                  <div class="cards-deadline cards_tile-deadline title_h6">Срок здачи 3 кв. 2025</div>
+                </div>
+                <a href="./pages/object/object-card.html"><div class="cards-title cards_tile-title title_h3">ЖК Лазурная невозможность</div></a>
+                <div class="cards-com  cards_tile-com title_h4">Главстройтехпроммонтаж</div>
+                <div class="cards-addr cards_tile-addr title_h6">
+                  <img class="cards-addr-icon" src="./assets/images/icons/map-black.svg" alt="Map icon">
+                  <div class="">
+                    Санкт-Петербург, пр. Королева, 65
+                  </div>
+                </div>
+                <div class="cards_tile-cost title_h3">5,1–6,5 млн ₽</div>
+                <button class="cards-zaf cards_tile-zaf title_h5">
+                  <img src="./assets/images/icons/document.svg" alt="Img">
+                  Зафиксировать клиента
+                </button>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+              <div class="cards_tile">
+                <div class="cards_tile-img-div">
+                  <img src="./assets/images/object/img-tile.webp" class="cards-img cards_tile-img" alt="Img">
+                  <div class="cards-deadline cards_tile-deadline title_h6">Срок здачи 3 кв. 2025</div>
+                </div>
+                <a href="./pages/object/object-card.html"><div class="cards-title cards_tile-title title_h3">ЖК Лазурная невозможность</div></a>
+                <div class="cards-com  cards_tile-com title_h4">Главстройтехпроммонтаж</div>
+                <div class="cards-addr cards_tile-addr title_h6">
+                  <img class="cards-addr-icon" src="./assets/images/icons/map-black.svg" alt="Map icon">
+                  <div class="">
+                    Санкт-Петербург, пр. Королева, 65
+                  </div>
+                </div>
+                <div class="cards_tile-cost title_h3">5,1–6,5 млн ₽</div>
+                <button class="cards-zaf cards_tile-zaf title_h5">
+                  <img src="./assets/images/icons/document.svg" alt="Img">
+                  Зафиксировать клиента
+                </button>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+              <div class="cards_tile">
+                <div class="cards_tile-img-div">
+                  <img src="./assets/images/object/img-tile.webp" class="cards-img cards_tile-img" alt="Img">
+                  <div class="cards-deadline cards_tile-deadline title_h6">Срок здачи 3 кв. 2025</div>
+                </div>
+                <a href="./pages/object/object-card.html"><div class="cards-title cards_tile-title title_h3">ЖК Лазурная невозможность</div></a>
+                <div class="cards-com  cards_tile-com title_h4">Главстройтехпроммонтаж</div>
+                <div class="cards-addr cards_tile-addr title_h6">
+                  <img class="cards-addr-icon" src="./assets/images/icons/map-black.svg" alt="Map icon">
+                  <div class="">
+                    Санкт-Петербург, пр. Королева, 65
+                  </div>
+                </div>
+                <div class="cards_tile-cost title_h3">5,1–6,5 млн ₽</div>
+                <button class="cards-zaf cards_tile-zaf title_h5">
+                  <img src="./assets/images/icons/document.svg" alt="Img">
+                  Зафиксировать клиента
+                </button>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+              <div class="cards_tile">
+                <div class="cards_tile-img-div">
+                  <img src="./assets/images/object/img-tile.webp" class="cards-img cards_tile-img" alt="Img">
+                  <div class="cards-deadline cards_tile-deadline title_h6">Срок здачи 3 кв. 2025</div>
+                </div>
+                <a href="./pages/object/object-card.html"><div class="cards-title cards_tile-title title_h3">ЖК Лазурная невозможность</div></a>
+                <div class="cards-com  cards_tile-com title_h4">Главстройтехпроммонтаж</div>
+                <div class="cards-addr cards_tile-addr title_h6">
+                  <img class="cards-addr-icon" src="./assets/images/icons/map-black.svg" alt="Map icon">
+                  <div class="">
+                    Санкт-Петербург, пр. Королева, 65
+                  </div>
+                </div>
+                <div class="cards_tile-cost title_h3">5,1–6,5 млн ₽</div>
+                <button class="cards-zaf cards_tile-zaf title_h5">
+                  <img src="./assets/images/icons/document.svg" alt="Img">
+                  Зафиксировать клиента
+                </button>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+              <div class="cards_tile">
+                <div class="cards_tile-img-div">
+                  <img src="./assets/images/object/img-tile.webp" class="cards-img cards_tile-img" alt="Img">
+                  <div class="cards-deadline cards_tile-deadline title_h6">Срок здачи 3 кв. 2025</div>
+                </div>
+                <a href="./pages/object/object-card.html"><div class="cards-title cards_tile-title title_h3">ЖК Лазурная невозможность</div></a>
+                <div class="cards-com  cards_tile-com title_h4">Главстройтехпроммонтаж</div>
+                <div class="cards-addr cards_tile-addr title_h6">
+                  <img class="cards-addr-icon" src="./assets/images/icons/map-black.svg" alt="Map icon">
+                  <div class="">
+                    Санкт-Петербург, пр. Королева, 65
+                  </div>
+                </div>
+                <div class="cards_tile-cost title_h3">5,1–6,5 млн ₽</div>
+                <button class="cards-zaf cards_tile-zaf title_h5">
+                  <img src="./assets/images/icons/document.svg" alt="Img">
+                  Зафиксировать клиента
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal Регистрация -->
+    <div class="modal fade" id="registration" tabindex="-1" aria-labelledby="registration" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" style="max-width: 960px;">
+        <div class="modal-content">
+          <div class="modal-body registration">
+            <div class="registration-items">
+              <img src="./assets/images/icons/close-modal.svg" alt="Img" class="registration-close" data-bs-dismiss="modal" aria-label="Close">
+              <img src="./assets/images/logo/registration.svg" alt="Logo">
+              <div class="registration-mt3 title_h1">Регистрация</div>
+              <div class="registration-subtitle title_h4">Для регистрации перейдите в Telegram-бот и следуйте указаниям</div>
+              <div class="registration-mt3">
+                <button class="btn_regular">Перейти в Telegram</button>
+              </div>
+              <div class="registration-mt3">Уже есть аккаунт? 
+                <a class="link registration-link" data-bs-toggle="modal" data-bs-target="#sing_in" data-bs-dismiss="modal">Вход</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal sing-in -->
+    <div class="modal fade" id="sing_in" tabindex="-1" aria-labelledby="sing_in" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" style="max-width: 960px;">
+        <div class="modal-content">
+          <div class="modal-body registration">
+            <div class="registration-items">
+              <img src="./assets/images/icons/close-modal.svg" alt="Img" class="registration-close" data-bs-dismiss="modal" aria-label="Close">
+              <img src="./assets/images/logo/registration.svg" alt="Logo">
+              <div class="registration-mt3 title_h1">Вход</div>
+              <div class="registration-mt3">Нет аккаунта? 
+                <span class="link registration-link" data-bs-toggle="modal" data-bs-target="#registration-sing_in" data-bs-dismiss="modal">Регистрация</span>
+              </div>
+              <div class="registration-form">
+                <div class="title_h5">Телефон</div>
+                <input type="phone" placeholder="+7 --" class="input_big registration-input">
+              </div>
+              <div class="registration-gray title_h6">Мы отправим одноразовый пароль в Telegram</div>
+              <div class="registration-mt3">
+                <button class="btn_regular">Получить одноразовый пароль</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal for sing-in form -->
+    <div class="modal fade" id="registration-sing_in" tabindex="-1" aria-labelledby="registration-sing_in" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" style="max-width: 466px;">
+        <div class="modal-content">
+          <div class="modal-body modal-zaf">
+            <div class="modal-zaf-close" data-bs-dismiss="modal" aria-label="Close"></div>
+            <div class="title_h2">Регистрация</div>
+            <form action="" class="modal-change-stage-mt1">    
+              <label for="surname" class="input_label modal-zaf-label">Фамилия</label>
+              <input type="text" id="surname" placeholder="Иванов" class="input_big">
+
+              <label for="name" class="input_label modal-zaf-label">Имя</label>
+              <input type="text" id="name" placeholder="Иван" class="input_big">
+
+              <label for="fathname" class="input_label modal-zaf-label">Отчество</label>
+              <input type="text" id="fathname" placeholder="Иванович" class="input_big">
+
+              <label for="email" class="input_label modal-zaf-label">E-mail</label>
+              <input type="email" id="email" placeholder="@" class="input_big">
+
+              <div class="modal-zaf-body modal-zaf-checkbox">
+                <div class="object_form-types-item product-present-checkbox">
+                  <input class="object_form-types-radio" type="checkbox" name="checkbox-type" id="check">
+                  <label for="check" class="object_form-types-label client-lk-desktop-fio-checkbox">
+                    <span class="object_form-types-checkbox-custom"></span>
+                  </label>
+                </div>
+                <label for="check" class="title_h6 modal-zaf-checkbox-text">Нажимая на кнопку, вы соглашаетесь на обработку персональных данных и с публичной офертой</label>
+              </div>
+              
+              <div class="modal-choose-btn">
+                <button class="btn_regular">Завершить регистрацию</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
 
   <footer class="footer">
@@ -186,7 +936,6 @@
   </footer>
 
   <script src="./js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="./js/pages/error.js"></script>
+  <script src="./js/pages/object/object.js"></script>
 </body>
 </html>
