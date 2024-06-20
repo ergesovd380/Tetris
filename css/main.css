@@ -3586,6 +3586,16 @@ select:focus {
     margin-top: 20px;
   }
 }
+.client-items-link {
+  color: var(--black);
+}
+.client-items-link:hover {
+  color: var(--black);
+}
+.client-items-col {
+  flex-wrap: wrap;
+  overflow: hidden;
+}
 @media (max-width: 1199.5px) {
   .client-items {
     padding: 0 0 20px;

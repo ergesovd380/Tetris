@@ -371,6 +371,19 @@
       }
     }
 
+    &-link {
+      color: var(--black);
+
+      &:hover {
+        color: var(--black);
+      }
+    }
+
+    &-col {
+      flex-wrap: wrap;
+      overflow: hidden;
+    }
+
     @include for-small-laptop {
       padding: 0 0 20px;
       border-top: none;
