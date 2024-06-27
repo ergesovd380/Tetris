@@ -376,11 +376,39 @@ select:focus {
   color: var(--red);
 }
 
+.select_parent {
+  position: relative;
+  height: 74px;
+}
+.select_index-1 {
+  z-index: 8;
+}
+.select_index-2 {
+  z-index: 7;
+}
+.select_index-3 {
+  z-index: 6;
+}
+.select_index-4 {
+  z-index: 5;
+}
+.select_index-5 {
+  z-index: 4;
+}
+.select_index-6 {
+  z-index: 3;
+}
+.select_index-7 {
+  z-index: 2;
+}
+.select_index-8 {
+  z-index: 1;
+}
+
 .custom-select {
   color: var(--gray-input);
   border: 1px solid var(--gray-input);
   border-radius: 5px;
-  position: relative;
 }
 .custom-select:focus, .custom-select:hover {
   color: var(--black);
