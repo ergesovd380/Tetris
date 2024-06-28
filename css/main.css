@@ -406,6 +406,7 @@ select:focus {
 }
 
 .custom-select {
+  padding: 15px 20px 14px;
   color: var(--gray-input);
   border: 1px solid var(--gray-input);
   border-radius: 5px;
@@ -419,27 +420,32 @@ select:focus {
   border: 1px solid var(--red);
 }
 .custom-select-selected {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
   cursor: pointer;
   background: url(../assets/images/icons/arrow-gray.svg) no-repeat;
 }
 .custom-select-selected-big {
-  padding: 15px 20px 14px;
-  background-position: 95% center;
+  background-position: 100% center;
 }
 .custom-select-selected-small {
-  padding: 15px 20px 14px;
-  background-position: 90% center;
-}
-.custom-select-items {
-  padding: 0 0 15px;
+  background-position: 100% center;
 }
 .custom-select-item {
-  padding: 7px 20px;
+  padding: 7px 0px;
   cursor: pointer;
 }
 .custom-select-item:hover {
   color: var(--black);
   text-decoration: underline;
+}
+.custom-select-checkbox {
+  padding: 7px 0px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
 }
 .custom-select-small {
   width: 178px;
@@ -467,15 +473,16 @@ select:focus {
   align-items: center;
   justify-content: center;
   margin-bottom: 8px;
+  padding-top: 15px;
 }
 .custom-select-line-big {
   height: 1px;
-  width: 90%;
+  width: 100%;
   background-color: var(--gray-input);
 }
 .custom-select-line-small {
   height: 1px;
-  width: 80%;
+  width: 100%;
   background-color: var(--gray-input);
 }
 
@@ -1431,6 +1438,20 @@ select:focus {
   top: -1px;
   left: -1px;
 }
+.object_form-types-checkbox-custom-small {
+  min-width: 13px;
+  width: 13px;
+  height: 13px;
+  border-radius: 3px;
+  margin-right: 4px;
+}
+.object_form-types-checkbox-custom-small::before {
+  width: 13px;
+  height: 13px;
+  margin: 1px 0 0 1px;
+  border-radius: 3px;
+  background-size: contain;
+}
 .object_form-types-label {
   margin-right: 30px;
   cursor: pointer;
@@ -1439,6 +1460,10 @@ select:focus {
   .object_form-types-label {
     margin-right: 20px;
   }
+}
+.object_form-types-label-small {
+  margin: 0;
+  display: flex;
 }
 .object_form-types-radio:checked + .object_form-types-label .object_form-types-checkbox-custom {
   border: none;

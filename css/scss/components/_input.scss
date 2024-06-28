@@ -123,6 +123,7 @@
 }
 
 .custom-select {
+  padding: 15px 20px 14px;
   color: var(--gray-input);
   border: 1px solid var(--gray-input);
   border-radius: 5px;
@@ -139,32 +140,37 @@
   }
 
   &-selected {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
     cursor: pointer;
     background: url(../../assets/images/icons/arrow-gray.svg) no-repeat;
 
     &-big {
-      padding: 15px 20px 14px;
-      background-position: 95% center;
+      background-position: 100% center;
     }
 
     &-small {
-      padding: 15px 20px 14px;
-      background-position: 90% center;
+      background-position: 100% center;
     }
   }
 
-  &-items {
-    padding: 0 0 15px;
-  }
-
   &-item {
-    padding: 7px 20px;
+    padding: 7px 0px;
     cursor: pointer;
 
     &:hover {
       color: var(--black);
       text-decoration: underline;
     }
+  }
+
+  &-checkbox {
+    padding: 7px 0px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
   }
   
   &-small {
@@ -192,16 +198,17 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 8px;
+    padding-top: 15px;
 
     &-big {
       height: 1px;
-      width: 90%;
+      width: 100%;
       background-color: var(--gray-input);
     }
 
     &-small {
       height: 1px;
-      width: 80%;
+      width: 100%;
       background-color: var(--gray-input);
     }
   }

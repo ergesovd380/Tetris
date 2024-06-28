@@ -111,6 +111,22 @@
           top: -1px;
           left: -1px;
         }
+
+        &-small {
+          min-width: 13px;
+          width: 13px;
+          height: 13px;
+          border-radius: 3px;
+          margin-right: 4px;
+
+          &::before {
+            width: 13px;
+            height: 13px;
+            margin: 1px 0 0 1px;
+            border-radius: 3px;
+            background-size: contain;
+          }
+        }
       }
 
       // Label
@@ -120,6 +136,11 @@
 
         @include for-big-tablet {
           margin-right: 20px;
+        }
+
+        &-small {
+          margin: 0;
+          display: flex;
         }
       }
 

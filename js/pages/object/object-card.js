@@ -20,6 +20,7 @@ document.addEventListener("click", function(e) {
   // Открыть и закрыть select
   const item = e.target.classList[2];
   const selectClass = '.' + item + '-items';
+  console.log(selectClass);
   const selectItems = document.querySelector(selectClass);
   if(selectItems) {
     if(selectItems.classList.contains('d-none')) {
@@ -31,16 +32,25 @@ document.addEventListener("click", function(e) {
     }
   }
 
-  // // Выбрать элемент и закрыть select
-  if(e.target.classList.contains("custom-select-item")) {
-    const itemText = e.target.innerText;
-    let classToArr = e.target.classList[1].split('-');
+  // Выбрать элемент и закрыть select
+  if(e.target.classList.contains("select_checkbox")) {
+    let classToArr = e.target.classList[0];
+    let checkboxes = document.getElementsByClassName(classToArr);
+    classToArr = e.target.classList[0].split('-');
     classToArr.pop();
     const selected = document.querySelector('.' + classToArr.join('-'));
-    const items = document.querySelector('.' + e.target.classList[1] + 's');
-    selected.innerHTML = itemText;
-    items.classList.remove('d-block');
-    items.classList.add('d-none');
+    let checkboxesChecked = [];
+
+    for (var index = 0; index < checkboxes.length; index++) {
+      if (checkboxes[index].checked) {
+        checkboxesChecked.push(checkboxes[index].value);
+        selected.innerHTML = checkboxesChecked.join(', ');
+      }
+    }
+
+    if(checkboxesChecked.length < 1) {
+      selected.innerHTML = 'Выбор';
+    }
   }
 
   // Header menu
