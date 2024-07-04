@@ -77,6 +77,13 @@
       color: var(--red);
     }
   }
+
+  &_search {
+    padding-left: 51px;
+    background-image: url(../../../assets/images/icons/search.svg);
+    background-repeat: no-repeat;
+    background-position: 15px center;
+  }
 }
 
 .select {

@@ -81,6 +81,24 @@
       }
     }
 
+    &-list {
+      max-height: 140px;
+      margin-top: 20px;
+      padding: 10px;
+      overflow: auto;
+      border: 1px solid var(--gray-input);
+      border-radius: 10px;
+
+      &-item {
+        height: 25px;
+        cursor: pointer;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
     @include for-tablet {
       padding: 20px;
     }

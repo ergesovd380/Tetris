@@ -375,6 +375,12 @@ select:focus {
 .input_big:is(.not-active)::-webkit-input-placeholder {
   color: var(--red);
 }
+.input_search {
+  padding-left: 51px;
+  background-image: url(../assets/images/icons/search.svg);
+  background-repeat: no-repeat;
+  background-position: 15px center;
+}
 
 .select_parent {
   position: relative;
@@ -820,6 +826,21 @@ select:focus {
 .modal-zaf-checkbox-text {
   max-width: 310px;
   color: var(--gray);
+}
+.modal-zaf-list {
+  max-height: 140px;
+  margin-top: 20px;
+  padding: 10px;
+  overflow: auto;
+  border: 1px solid var(--gray-input);
+  border-radius: 10px;
+}
+.modal-zaf-list-item {
+  height: 25px;
+  cursor: pointer;
+}
+.modal-zaf-list-item:hover {
+  text-decoration: underline;
 }
 @media (max-width: 767.5px) {
   .modal-zaf {

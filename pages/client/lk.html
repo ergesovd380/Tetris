@@ -154,7 +154,7 @@
             <div class="title_h4">+7 (435) 345-45-45</div>
             <div class="client-lk-email title_h5">test@mail.ru</div>
           </div>
-          <button class="btn_regular client-lk-phone-btn">Подобрать варианты</button>
+          <button class="btn_regular client-lk-phone-btn" data-bs-toggle="modal" data-bs-target="#searchClient">Подобрать варианты</button>
         </div>
       </div>
       <!-- Client file -->
@@ -398,6 +398,39 @@
 
               <div class="modal-zaf-label">
                 <button class="btn_regular">Сохранить</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+
+    <!-- Modal Поиск клиента -->
+    <div class="modal fade" id="searchClient" tabindex="-1" aria-labelledby="searchClient" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" style="max-width: 466px;">
+        <div class="modal-content">
+          <div class="modal-body modal-zaf">
+            <div class="modal-zaf-close" data-bs-dismiss="modal" aria-label="Close"></div>
+            <div class="title_h2">Выбор клиента</div>
+            <div class="modal-zaf-body">
+
+              <div class="link modal-zaf-add">+Добавить нового клиента</div>
+
+              <div class="modal-zaf-space">
+                <input type="text" id="city" class="input_big input_search" placeholder="Поиск">
+              </div>
+
+              <div class="modal-zaf-list title_h5">
+                <div class="modal-zaf-list-item">List - 1</div>
+                <div class="modal-zaf-list-item">List - 2</div>
+                <div class="modal-zaf-list-item">List - 3</div>
+                <div class="modal-zaf-list-item">List - 4</div>
+                <div class="modal-zaf-list-item">List - 5</div>
+                <div class="modal-zaf-list-item">List - 6</div>
+              </div>
+
+              <div class="modal-zaf-label">
+                <button class="btn_regular">Выбрать</button>
               </div>
             </div>
           </div>
