@@ -83,14 +83,19 @@
 
     &-list {
       max-height: 140px;
-      margin-top: 20px;
       padding: 10px;
       overflow: auto;
-      border: 1px solid var(--gray-input);
-      border-radius: 10px;
 
       &-item {
-        height: 25px;
+        margin: 10px 0;
+        padding-left: 27px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+        background-image: url(../../../assets/images/icons/search-small.svg);
+        background-repeat: no-repeat;
+        background-position: 0 center;
         cursor: pointer;
 
         &:hover {

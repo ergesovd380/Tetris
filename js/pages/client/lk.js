@@ -1,10 +1,12 @@
 const fileName = document.querySelector('.client-lk-added');
 const fileNameModal = document.querySelector('.modal-zaf-added');
+const searchClient = document.querySelector('.modal-zaf-list');
 document.addEventListener('DOMContentLoaded', () => {
   dividerHeader()
 
   fileName.classList.add('d-none');
   fileNameModal.classList.add('d-none');
+  searchClient.classList.add('d-none');
 })
 
 document.addEventListener("click", function(e) {
@@ -13,6 +15,18 @@ document.addEventListener("click", function(e) {
     dividerHeader();
   }
 });
+
+function searchList() {
+  const searchInput = document.querySelector('.input_search').value;
+  console.log(searchInput.length)
+  if(searchInput.length > 1) {
+    searchClient.classList.remove('d-none');
+    searchClient.classList.add('d-block');
+  } else {
+    searchClient.classList.remove('d-block');
+    searchClient.classList.add('d-none');
+  }
+}
 
 // Header divider
 function dividerHeader() {
