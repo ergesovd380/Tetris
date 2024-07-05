@@ -2881,6 +2881,9 @@ select:focus {
 .news-text {
   margin-top: 10px;
 }
+.news_pagination {
+  margin-top: 15px;
+}
 
 .comand {
   margin-top: 30px;

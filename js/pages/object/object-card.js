@@ -333,3 +333,11 @@ function deleteFileProj() {
     Object.keys(files).forEach(key => delete items[key]);
   };
 };
+
+
+var d = new Date();
+d.setDate(d.getDate() + 7);
+d.setSeconds(0);
+var dateStr = d.getFullYear() + '-' + paddatepart(1 + d.getMonth()) + '-' + paddatepart(d.getDate()) + 'T' + paddatepart(d.getHours()) + ':' + paddatepart(d.getMinutes()) + ':' + paddatepart(d.getSeconds()) + '+00:00';
+
+console.log(dateStr)
