@@ -16,19 +16,19 @@
 /* stylelint-disable */
 @font-face {
   font-family: AireExterior;
-  src: url(../assets/fonts/AireExterior.ttf);
+  src: url(../../assets/fonts/AireExterior.ttf);
 }
 @font-face {
   font-family: Inter Bolt;
-  src: url(../assets/fonts/Inter-Bold.ttf);
+  src: url(../../assets/fonts/Inter-Bold.ttf);
 }
 @font-face {
   font-family: Inter Semi Bolt;
-  src: url(../assets/fonts/Inter-SemiBold.ttf);
+  src: url(../../assets/fonts/Inter-SemiBold.ttf);
 }
 @font-face {
   font-family: Inter Regular;
-  src: url(../assets/fonts/Inter-Regular.ttf);
+  src: url(../../assets/fonts/Inter-Regular.ttf);
 }
 html {
   box-sizing: border-box;
@@ -377,7 +377,7 @@ select:focus {
 }
 .input_search {
   padding-left: 51px;
-  background-image: url(../assets/images/icons/search.svg);
+  background-image: url(../../../assets/images/icons/search.svg);
   background-repeat: no-repeat;
   background-position: 15px center;
 }
@@ -431,7 +431,7 @@ select:focus {
   -webkit-line-clamp: 1;
   overflow: hidden;
   cursor: pointer;
-  background: url(../assets/images/icons/arrow-gray.svg) no-repeat;
+  background: url(../../assets/images/icons/arrow-gray.svg) no-repeat;
 }
 .custom-select-selected-big {
   background-position: 100% center;
@@ -668,16 +668,16 @@ select:focus {
   background-position: center;
 }
 .swiper-big_btn-left {
-  background-image: url(../assets/images/icons/arrow-left-swiper.svg);
+  background-image: url(../../../assets/images/icons/arrow-left-swiper.svg);
 }
 .swiper-big_btn-left:hover {
-  background-image: url(../assets/images/icons/arrow-left-swiper-orange.svg);
+  background-image: url(../../../assets/images/icons/arrow-left-swiper-orange.svg);
 }
 .swiper-big_btn-right {
-  background-image: url(../assets/images/icons/arrow-right-swiper.svg);
+  background-image: url(../../../assets/images/icons/arrow-right-swiper.svg);
 }
 .swiper-big_btn-right:hover {
-  background-image: url(../assets/images/icons/arrow-right-swiper-orange.svg);
+  background-image: url(../../../assets/images/icons/arrow-right-swiper-orange.svg);
 }
 .swiper-big_btn::after {
   display: none;
@@ -769,13 +769,13 @@ select:focus {
   position: absolute;
   top: 10px;
   right: 10px;
-  background-image: url(../assets/images/icons/close-modal.svg);
+  background-image: url(../../../assets/images/icons/close-modal.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
 }
 .modal-zaf-close:hover {
-  background-image: url(../assets/images/icons/close-modal-black.svg);
+  background-image: url(../../../assets/images/icons/close-modal-black.svg);
 }
 .modal-zaf-body {
   margin-top: 30px;
@@ -810,13 +810,13 @@ select:focus {
   height: 12.73px;
   margin-bottom: 10px;
   cursor: pointer;
-  background-image: url(../assets/images/icons/close-modal.svg);
+  background-image: url(../../../assets/images/icons/close-modal.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
 }
 .modal-zaf-added-close:hover {
-  background-image: url(../assets/images/icons/close-modal-black.svg);
+  background-image: url(../../../assets/images/icons/close-modal-black.svg);
 }
 .modal-zaf-checkbox {
   display: flex;
@@ -839,7 +839,7 @@ select:focus {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
   overflow: hidden;
-  background-image: url(../assets/images/icons/search-small.svg);
+  background-image: url(../../../assets/images/icons/search-small.svg);
   background-repeat: no-repeat;
   background-position: 0 center;
   cursor: pointer;
@@ -1065,7 +1065,7 @@ select:focus {
   font-size: 14px;
   font-weight: 400;
   line-height: 16.41px;
-  background: url(../assets/images/icons/select-arrow.svg) no-repeat;
+  background: url(../../assets/images/icons/select-arrow.svg) no-repeat;
   background-position: 90% center;
 }
 @media (max-width: 991.5px) {
@@ -1455,7 +1455,7 @@ select:focus {
   height: 20px;
   border-radius: 5px;
   background-color: black;
-  background-image: url("../assets/images/icons/checkbox.svg");
+  background-image: url("../../../assets/images/icons/checkbox.svg");
   transform: scale(0);
   background-size: auto;
   background-repeat: no-repeat;
@@ -1544,13 +1544,13 @@ select:focus {
   color: var(--black);
 }
 .object_form-remove:hover > .object_form-remove-garbage {
-  background-image: url(../assets/images/icons/garbage-black.svg);
+  background-image: url(../../../../assets/images/icons/garbage-black.svg);
 }
 .object_form-remove-garbage {
   min-width: 25px;
   height: 25px;
   margin-right: 10px;
-  background-image: url(../assets/images/icons/garbage.svg);
+  background-image: url(../../../../assets/images/icons/garbage.svg);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -2038,16 +2038,16 @@ select:focus {
 }
 .object-card_sale-item-1 {
   gap: 15px;
-  background-image: url("../assets/images/object-card/sale-1.webp");
+  background-image: url("../../../../assets/images/object-card/sale-1.webp");
   border-bottom: 5px solid var(--green);
 }
 .object-card_sale-item-2 {
-  background-image: url("../assets/images/object-card/sale-2.webp");
+  background-image: url("../../../../assets/images/object-card/sale-2.webp");
   border-bottom: 5px solid var(--blue);
 }
 .object-card_sale-item-3 {
   margin-top: 20px;
-  background-image: url("../assets/images/object-card/sale-3.webp");
+  background-image: url("../../../../assets/images/object-card/sale-3.webp");
   border-bottom: 5px solid var(--yellow);
 }
 @media (max-width: 991.5px) {
@@ -2057,7 +2057,7 @@ select:focus {
 }
 .object-card_sale-item-4 {
   margin-top: 20px;
-  background-image: url("../assets/images/object-card/sale-4.webp");
+  background-image: url("../../../../assets/images/object-card/sale-4.webp");
   border-bottom: 5px solid var(--red);
 }
 @media (max-width: 991.5px) {
@@ -2156,7 +2156,7 @@ select:focus {
 }
 .object-card_type-accordion-header:is(.collapsed) > .object-card_type-accordion-header-btn {
   color: var(--orange);
-  background-image: url(../assets/images/icons/arrow-orange.svg);
+  background-image: url(../../../../assets/images/icons/arrow-orange.svg);
   background-repeat: no-repeat;
   background-position: 100% center;
 }
@@ -2171,14 +2171,14 @@ select:focus {
 .object-card_type-accordion-header-btn {
   display: flex;
   justify-content: end;
-  background-image: url(../assets/images/icons/arrow-top.svg);
+  background-image: url(../../../../assets/images/icons/arrow-top.svg);
   background-repeat: no-repeat;
   background-position: 100% center;
   cursor: pointer;
 }
 .object-card_type-accordion-header-btn:hover {
   color: var(--orange);
-  background-image: url(../assets/images/icons/arrow-orange.svg);
+  background-image: url(../../../../assets/images/icons/arrow-orange.svg);
   background-repeat: no-repeat;
   background-position: 100% center;
 }
@@ -2310,14 +2310,14 @@ select:focus {
 .object-card_type-list-body-heart {
   width: 20px;
   height: 20px;
-  background-image: url(../assets/images/icons/heart.svg);
+  background-image: url(../../../../assets/images/icons/heart.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
 .object-card_type-list-body-heart:hover, .object-card_type-list-body-heart:is(.active) {
   width: 20px;
   height: 20px;
-  background-image: url(../assets/images/icons/heart-active.svg);
+  background-image: url(../../../../assets/images/icons/heart-active.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -2724,11 +2724,11 @@ select:focus {
   height: 20px;
 }
 .object-card_bank-items-status:is(.true) {
-  background-image: url(../assets/images/icons/true.svg);
+  background-image: url(../../../../assets/images/icons/true.svg);
   background-repeat: no-repeat;
 }
 .object-card_bank-items-status:is(.false) {
-  background-image: url(../assets/images/icons/false.svg);
+  background-image: url(../../../../assets/images/icons/false.svg);
   background-repeat: no-repeat;
 }
 .object-card_bank-items::after {
@@ -2801,7 +2801,7 @@ select:focus {
   min-width: 37px;
   height: 20px;
   margin-right: 10px;
-  background-image: url("../assets/images/icons/checkbox-notactive.svg");
+  background-image: url("../../../../assets/images/icons/checkbox-notactive.svg");
   background-position: left center;
   border: 2px solid #DCDCDC;
   box-shadow: inset 0px 4px 3px 1px rgba(0, 0, 0, 0.1);
@@ -2810,11 +2810,11 @@ select:focus {
   cursor: pointer;
 }
 .form-switch .form-check-input:focus {
-  background-image: url("../assets/images/icons/checkbox-notactive.svg");
+  background-image: url("../../../../assets/images/icons/checkbox-notactive.svg");
 }
 .form-switch .form-check-input:checked {
   background-color: var(--green);
-  background-image: url("../assets/images/icons/checkbox-active.svg");
+  background-image: url("../../../../assets/images/icons/checkbox-active.svg");
   border: 2px solid #00AA40;
 }
 .form-switch .form-check-input:checked + .form-check-label {
@@ -3468,13 +3468,13 @@ select:focus {
   width: 12.73px;
   height: 12.73px;
   cursor: pointer;
-  background-image: url(../assets/images/icons/close-modal.svg);
+  background-image: url(../../../assets/images/icons/close-modal.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
 }
 .client-lk-desktop-status-close:hover {
-  background-image: url(../assets/images/icons/close-modal-black.svg);
+  background-image: url(../../../assets/images/icons/close-modal-black.svg);
 }
 @media (max-width: 1199.5px) {
   .client-lk-desktop {
@@ -3599,7 +3599,7 @@ select:focus {
   padding: 15px 20px 14px;
   color: var(--black);
   background-color: transparent;
-  background-image: url(../assets/images/icons/select-arrow.svg);
+  background-image: url(../../../../assets/images/icons/select-arrow.svg);
   background-repeat: no-repeat;
   background-position: 90% center;
   border: 1px solid var(--gray-input);
@@ -3970,7 +3970,10 @@ select:focus {
   }
 }
 .list-input {
-  margin-left: 10px;
+  margin: 25px 0 0 10px;
+}
+.list-input-bg {
+  background-color: var(--bgc);
 }
 @media (max-width: 991.5px) {
   .list-input {
@@ -4005,14 +4008,12 @@ select:focus {
   }
 }
 .list-col {
-  margin-top: 30px;
   padding: 30px;
   border-radius: 10px;
   background-color: var(--white);
 }
 @media (max-width: 1199.5px) {
   .list-col {
-    margin-top: 20px;
     padding: 0;
     border-radius: 0px;
     background-color: transparent;
