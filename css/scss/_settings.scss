@@ -23,13 +23,7 @@ html {
 body {
   height: 100%;
   margin: 0;
-  display: grid;
-  grid-template-rows: auto 1fr; 
   background-color: var(--bgc);
-}
-
-.footer {
-  grid-row: auto;
 }
 
 .calendar-mt3 {
